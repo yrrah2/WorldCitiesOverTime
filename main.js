@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+http://jonathansoma.com/tutorials/d3/using-attr-and-style/const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 function getRandomColor() {
@@ -102,10 +102,11 @@ Promise.all([
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
  
-  
+  svg.selectAll('path.voronoi').each(
+      function (d, i) { console.log(d); }
+  );
  
   render();
-  svg.selectAll('path.voronoi').attr("fill", getRandomColor() );
 });
 
 //
