@@ -1,0 +1,84 @@
+body { margin: 0 }
+
+#world {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+#world:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.sphere {
+  fill: aqua;
+  fill-opacity: 0.04;
+}
+
+.land {
+  fill: darkgrey;
+  fill-opacity: 0.2;
+}
+
+.graticule {
+  stroke: black;
+  stroke-width: 0.1;
+  stroke-opacity: 0.3;
+  fill: none;
+}
+
+.plate {
+  fill: darkslategrey;
+  fill-opacity: 0;
+  stroke: darkslategrey;
+  stroke-width: 0.3;
+  stroke-opacity: 0.5;
+}
+
+.plate:hover {
+  fill-opacity: 0.07;
+}
+
+.voronoi {
+  fill: red;
+  fill-opacity: 0;
+  stroke: black;
+  stroke-width: 0.2;
+  stroke-opacity: 0.3;
+}
+
+.voronoi:hover {
+  fill-opacity: 0.1;
+}
+
+.urquhart {
+  stroke: maroon;
+  stroke-width: 0.4;
+  stroke-opacity: 0.7;
+  fill: none;
+}
+
+.volcano {
+  stroke: maroon;
+  stroke-width: 0;
+  stroke-opacity: 0.4;
+  fill: maroon;
+  fill-opacity: 0.5;
+  cursor: default;
+  transition: stroke-width 0.7s;
+}
+
+.volcano:hover {
+  stroke-width: 6px;
+  transition: stroke-width 0.07s;
+}
+
+.tooltip {
+  color: #eee;
+  background: rgba(0,0,140,0.7);
+  padding: 5px;
+  border-radius: 3px;
+  font: 11px sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
