@@ -51,7 +51,7 @@ d3.geoZoom()
 
 Promise.all([
   fetch('http://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
-  fetch('https://gist.githubusercontent.com/vasturiano/3c27138769a04d1780562ce04afbedf2/raw/29a74a1e56d6e6b4e8902317e82e78362bbbaed5/world_volcanoes.json').then(r => r.json())
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, volcanoes]) => {
   // water
   svg.append('path').attr('class', 'geo sphere')
@@ -67,7 +67,7 @@ Promise.all([
     .style('display', 'none');
 
     const voronoi = d3.geoVoronoi()
-    .x(d => d.lon)
+    .x(d => d.lng)
     .y(d => d.lat)
     (volcanoes);
 
@@ -86,7 +86,7 @@ Promise.all([
       .attr('class', 'geo volcano')
       .datum(d => ({
         type: 'Point',
-        coordinates: [d.lon, d.lat],
+        coordinates: [d.lng, d.lat],
         properties: d
       }))
       .on('mousemove', ({properties: d}) => tip.show(getVolcanoDesc(d), followCursor.node()))
