@@ -29,9 +29,9 @@ const followCursor = svg.append('circle').style('pointer-events', 'none'); // he
 svg.on('mousemove', () => followCursor.attr('cx', d3.event.pageX).attr('cy', d3.event.pageY));
 
 const getCityDesc = d => `
-  <div><b>${d.name}</b>, ${d.country}</div>
-  <div>(${d.type})</div>
-  <div>Elevation: <em>${d.elevation}</em>m</div>
+  <div><b>${d.city}</b></div>
+  <div>Longitude: ${d.longitude}</div>
+  <div>Latitude: ${d.latitude}</div>
 `;
 
 const projection = d3.geoOrthographic()
