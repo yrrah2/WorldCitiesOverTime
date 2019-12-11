@@ -1,0 +1,37 @@
+[
+  {
+    "city": "Paris",
+    "longitude": 2.352332,
+    "latitude": 48.8565426
+  },
+  {
+    "city": "Trier",
+    "longitude": 6.635907,
+    "latitude": 49.7540291
+  },
+  {
+    "city": "Rome",
+    "longitude": 12.4922896,
+    "latitude": 41.8902861
+  },
+  {
+    "city": "Istanbul",
+    "longitude": 28.9800877,
+    "latitude": 41.0085506
+  },
+  {
+    "city": "Valencia",
+    "longitude": -0.3771437,
+    "latitude": 39.4675146
+  },
+  {
+    "city": "Kiev",
+    "longitude": 30.5267693,
+    "latitude": 50.4531709
+  },
+  {
+    "city": "Kirch",
+    "longitude": 36.4883031,
+    "latitude": 45.3664864
+  }
+]
