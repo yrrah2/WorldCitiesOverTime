@@ -103,7 +103,7 @@ Promise.all([
       .on('mouseout', tip.hide);
  
   svg.selectAll('path.voronoi').each(
-      function (d, i) { console.log(this); console.log(i); }
+      function (d, i) { console.log(this.style); }
   );
  
   render();
