@@ -68,13 +68,15 @@ const height = window.innerHeight;
 
       // graticules
       svg.append('path').attr('class', 'geo graticule')
-        .datum(d3.geoGraticule10());
+        .datum(d3.geoGraticule10())
+        .style('display', 'none');
 
       // tectonic plates
       svg.append('g').selectAll('.plate')
         .data(tectonicPlates.features)
         .enter().append('path')
           .attr('class', 'geo plate')
+          .style('display', 'none')
           .on('mousemove', ({properties: p}) => tip.show(`Plate: ${p.PlateName} (${p.Code})`, followCursor.node()))
           .on('mouseout', tip.hide);
 
@@ -88,7 +90,6 @@ const height = window.innerHeight;
         .data(voronoi.polygons().features)
         .enter().append('path')
           .attr('class', 'geo voronoi')
-          .style('display', 'none') // hidden by default
           .on('mousemove', ({properties: { site: d }}) => tip.show(getVolcanoDesc(d), followCursor.node()))
           .on('mouseout', tip.hide);
 
@@ -98,6 +99,7 @@ const height = window.innerHeight;
       // urquhart links
       svg.append('path')
         .attr('class', 'geo urquhart')
+        .style('display', 'none')
         .datum(urquhart);
 
       // volcano points
