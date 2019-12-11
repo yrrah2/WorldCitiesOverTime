@@ -25,7 +25,7 @@ const tip = d3.tip()
   .html(d => d);
 
 svg.call(tip);
-const followCursor = svg.append('circle').style('pointer-events', 'none'); // helper to make tip follow cursor
+//const followCursor = svg.append('circle').style('pointer-events', 'none'); // helper to make tip follow cursor
 //svg.on('mousemove', () => followCursor.attr('cx', d3.event.pageX).attr('cy', d3.event.pageY));
 
 const getCityDesc = d => `
@@ -76,7 +76,7 @@ Promise.all([
     .data(voronoi.polygons().features)
     .enter().append('path')
       .attr('class', 'geo voronoi')
-      .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d), followCursor.node()))
+      .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
 
   // city points
@@ -89,7 +89,7 @@ Promise.all([
         coordinates: [d.longitude, d.latitude],
         properties: d
       }))
-      .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d), followCursor.node()))
+      .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
 
   render();
