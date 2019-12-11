@@ -4,10 +4,10 @@
 const gui = new dat.GUI();
 const controls = {
   'Volcanoes': true,
-  'Graticule Grid': true,
-  'Tectonic Plates': true,
-  'Voronoi Layer': false,
-  'Urquhart Layer': true
+  'Graticule Grid': false,
+  'Tectonic Plates': false,
+  'Voronoi Layer': true,
+  'Urquhart Layer': false
 };
 gui.add(controls, 'Volcanoes').onChange(enabled => d3.selectAll('.volcano').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
