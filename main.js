@@ -50,7 +50,7 @@ d3.geoZoom()
   (svg.node());
 
 Promise.all([
-  fetch('http://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
+  fetch('https://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, volcanoes]) => {
   // water
