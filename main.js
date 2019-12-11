@@ -1,4 +1,4 @@
- const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+var color = d3.scale.category20(); const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 function getRandomColor() {
@@ -101,7 +101,9 @@ Promise.all([
       }))
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
-
+ 
+  svg.selectAll('path.voronoi').attr("fill", getRandomColor() );
+ 
   render();
 });
 
@@ -109,5 +111,4 @@ Promise.all([
 
 function render() {
   svg.selectAll('path.geo').attr('d', path);
-  svg.selectAll('path.voronoi').attr("fill", getRandomColor() );
 }
