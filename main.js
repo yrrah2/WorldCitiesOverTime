@@ -102,9 +102,10 @@ Promise.all([
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
  
-  svg.selectAll('path.voronoi').attr("fill", getRandomColor() );
+  
  
   render();
+  svg.selectAll('path.voronoi').attr("fill", getRandomColor() );
 });
 
 //
