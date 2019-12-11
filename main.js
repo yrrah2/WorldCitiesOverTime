@@ -1,5 +1,15 @@
  const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
+// Random Colour Generator
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 // Controls
 const gui = new dat.GUI();
 const controls = {
