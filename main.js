@@ -99,4 +99,5 @@ Promise.all([
 
 function render() {
   svg.selectAll('path.geo').attr('d', path);
+  svg.selectAll('path.voronoi').forEach(polygon => polygon.style.fill = getRandomColor());
 }
