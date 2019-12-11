@@ -67,8 +67,8 @@ Promise.all([
     .style('display', 'none');
 
     const voronoi = d3.geoVoronoi()
-    .x(d => d.lng)
-    .y(d => d.lat)
+    .x(d => d.longitude)
+    .y(d => d.latitude)
     (volcanoes);
 
   // voronoi polygons
@@ -86,7 +86,7 @@ Promise.all([
       .attr('class', 'geo volcano')
       .datum(d => ({
         type: 'Point',
-        coordinates: [d.lng, d.lat],
+        coordinates: [d.longitude, d.latitude],
         properties: d
       }))
       .on('mousemove', ({properties: d}) => tip.show(getVolcanoDesc(d), followCursor.node()))
