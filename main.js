@@ -1,22 +1,22 @@
  const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
-    // Controls
-    const gui = new dat.GUI();
-    const controls = {
-      'Volcanoes': true,
-      'Graticule Grid': true,
-      'Tectonic Plates': true,
-      'Voronoi Layer': false,
-      'Urquhart Layer': true
-    };
-    gui.add(controls, 'Volcanoes').onChange(enabled => d3.selectAll('.volcano').style('display', enabled ? null : 'none'));
-    gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
-    gui.add(controls, 'Tectonic Plates').onChange(enabled => d3.selectAll('.plate').style('display', enabled ? null : 'none'));
-    gui.add(controls, 'Voronoi Layer').onChange(enabled => d3.selectAll('.voronoi').style('display', enabled ? null : 'none'));
-    gui.add(controls, 'Urquhart Layer').onChange(enabled => d3.selectAll('.urquhart').style('display', enabled ? null : 'none'));
+// Controls
+const gui = new dat.GUI();
+const controls = {
+  'Volcanoes': true,
+  'Graticule Grid': true,
+  'Tectonic Plates': true,
+  'Voronoi Layer': false,
+  'Urquhart Layer': true
+};
+gui.add(controls, 'Volcanoes').onChange(enabled => d3.selectAll('.volcano').style('display', enabled ? null : 'none'));
+gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
+gui.add(controls, 'Tectonic Plates').onChange(enabled => d3.selectAll('.plate').style('display', enabled ? null : 'none'));
+gui.add(controls, 'Voronoi Layer').onChange(enabled => d3.selectAll('.voronoi').style('display', enabled ? null : 'none'));
+gui.add(controls, 'Urquhart Layer').onChange(enabled => d3.selectAll('.urquhart').style('display', enabled ? null : 'none'));
 
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
     const svg = d3.select('#world').append('svg')
       .attr('width', width)
@@ -54,9 +54,9 @@
       (svg.node());
 
     Promise.all([
-      fetch('//unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
-      fetch('plates.stitched.geo.json').then(r => r.json()),
-      fetch('world_volcanoes.json').then(r => r.json())
+      fetch('http://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
+      fetch('https://gist.githubusercontent.com/vasturiano/3c27138769a04d1780562ce04afbedf2/raw/29a74a1e56d6e6b4e8902317e82e78362bbbaed5/plates.stitched.geo.json').then(r => r.json()),
+      fetch('https://gist.githubusercontent.com/vasturiano/3c27138769a04d1780562ce04afbedf2/raw/29a74a1e56d6e6b4e8902317e82e78362bbbaed5/world_volcanoes.json').then(r => r.json())
     ]).then(([world, tectonicPlates, volcanoes]) => {
       // water
       svg.append('path').attr('class', 'geo sphere')
