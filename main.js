@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+dconst MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 function getRandomColor() {
@@ -103,7 +103,7 @@ Promise.all([
       .on('mouseout', tip.hide);
  
   svg.selectAll('path.voronoi').each(
-      function (d, i) { console.log(d); }
+      function (d, i) { console.log(this); console.log(i); }
   );
  
   render();
