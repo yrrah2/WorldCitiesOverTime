@@ -103,7 +103,7 @@ Promise.all([
       .on('mouseout', tip.hide);
  
   svg.selectAll('path.voronoi').each(
-      function (d, i) { this.style.fill = "red"; }
+      function (d, i) { this.style.fill = getRandomColor(); }
   );
  
   render();
