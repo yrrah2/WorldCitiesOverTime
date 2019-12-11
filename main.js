@@ -3,11 +3,11 @@
 // Controls
 const gui = new dat.GUI();
 const controls = {
-  'Volcanoes': true,
+  'Cities': true,
   'Graticule Grid': false,
   'Voronoi Layer': true,
 };
-gui.add(controls, 'Volcanoes').onChange(enabled => d3.selectAll('.volcano').style('display', enabled ? null : 'none'));
+gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Voronoi Layer').onChange(enabled => d3.selectAll('.voronoi').style('display', enabled ? null : 'none'));
 
@@ -21,14 +21,14 @@ const svg = d3.select('#world').append('svg')
 const tip = d3.tip()
   .attr('class', 'tooltip')
   .direction('s')
-  .offset([30, 10])
+  .offset([60, 10])
   .html(d => d);
 
 svg.call(tip);
 const followCursor = svg.append('circle').style('pointer-events', 'none'); // helper to make tip follow cursor
 svg.on('mousemove', () => followCursor.attr('cx', d3.event.pageX).attr('cy', d3.event.pageY));
 
-const getVolcanoDesc = d => `
+const getCityDesc = d => `
   <div><b>${d.name}</b>, ${d.country}</div>
   <div>(${d.type})</div>
   <div>Elevation: <em>${d.elevation}</em>m</div>
@@ -52,7 +52,7 @@ d3.geoZoom()
 Promise.all([
   fetch('https://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
-]).then(([world, volcanoes]) => {
+]).then(([world, cities]) => {
   // water
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
@@ -69,27 +69,27 @@ Promise.all([
     const voronoi = d3.geoVoronoi()
     .x(d => d.longitude)
     .y(d => d.latitude)
-    (volcanoes);
+    (cities);
 
   // voronoi polygons
   svg.append('g').selectAll('.voronoi')
     .data(voronoi.polygons().features)
     .enter().append('path')
       .attr('class', 'geo voronoi')
-      .on('mousemove', ({properties: { site: d }}) => tip.show(getVolcanoDesc(d), followCursor.node()))
+      .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d), followCursor.node()))
       .on('mouseout', tip.hide);
 
-  // volcano points
-  svg.append('g').selectAll('.volcano')
-    .data(volcanoes)
+  // city points
+  svg.append('g').selectAll('.city')
+    .data(cities)
     .enter().append('path')
-      .attr('class', 'geo volcano')
+      .attr('class', 'geo city')
       .datum(d => ({
         type: 'Point',
         coordinates: [d.longitude, d.latitude],
         properties: d
       }))
-      .on('mousemove', ({properties: d}) => tip.show(getVolcanoDesc(d), followCursor.node()))
+      .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d), followCursor.node()))
       .on('mouseout', tip.hide);
 
   render();
