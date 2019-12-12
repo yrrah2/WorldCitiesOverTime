@@ -31,7 +31,7 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
 
-var dataTime = d3.range(0, 10).map(function(d) {
+var dataTime = d3.range(0, 100).map(function(d) {
     return new Date(1995 + d, 10, 3);
 });
 
