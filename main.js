@@ -43,13 +43,12 @@ var sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
-    .step(1000 * 60 * 60 * 24 * 365 * 25)
+    .step(25)
     .width(300)
-    .tickFormat(d3.timeFormat('%Y'))
     .tickValues(dataTime)
-    .default(new Date(1998, 10, 3))
+    .default(1998)
     .on('onchange', val => {
-      d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
+      d3.select('p#value-time').text(val);
     });
 
 var gTime = d3
@@ -61,7 +60,7 @@ var gTime = d3
     .attr('transform', 'translate(30,30)');
 
 gTime.call(sliderTime);
-d3.select('p#value-time').text(d3.timeFormat('%Y')(sliderTime.value()));
+d3.select('p#value-time').text( sliderTime.value() );
 
 const width = window.innerWidth;
 const height = window.innerHeight;
