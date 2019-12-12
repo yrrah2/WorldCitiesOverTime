@@ -63,13 +63,11 @@ Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/topo.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, cities]) => {
-  // water
+  // sphere (land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
 
-  // land
-  svg.append('path').attr('class', 'geo land')
-    .datum(topojson.feature(world, world.objects.ocean));
+  
 
   // graticules
   svg.append('path').attr('class', 'geo graticule')
@@ -89,6 +87,10 @@ Promise.all([
       .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
 
+    // ocean
+  svg.append('path').attr('class', 'geo ocean')
+    .datum(topojson.feature(world, world.objects.ocean));
+    
   // city points
   svg.append('g').selectAll('.city')
     .data(cities)
