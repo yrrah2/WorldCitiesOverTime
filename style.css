@@ -3,11 +3,6 @@ body {
   background: #0d0d0d;
 }
 
-#slider-time {
-  position: absolute;
-  text-align: center;
-}
-
 #world {
   cursor: grab;
   cursor: -webkit-grab;
@@ -78,6 +73,11 @@ body {
 .volcano:hover {
   stroke-width: 6px;
   transition: stroke-width 0.07s;
+}
+
+.sliderwrapper {
+  position: absolute;
+  text-align: center;
 }
 
 .tooltip {
