@@ -10,6 +10,12 @@ function getRandomColor() {
     return color;
 }
 
+// Find recent event date
+const recentEvent(dates, year) {
+    datesBefore = dates.filter(date => date.year < year);
+    return datesBefore[datesBefore.length-1];
+}
+
 // Controls
 const gui = new dat.GUI();
 const controls = {
@@ -45,7 +51,7 @@ const getCityDesc = d => `
   <div><b>${d.city}</b></div>
   <div>Longitude: ${d.longitude}</div>
   <div>Latitude: ${d.latitude}</div>
-  <div><b>${d.dates[0]}</b></div>
+  <div><b>${recentEvents(d.dates, controls.Year)}</b></div>
 `;
 
 const projection = d3.geoOrthographic()
