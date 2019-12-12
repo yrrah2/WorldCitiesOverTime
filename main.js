@@ -60,7 +60,7 @@ d3.geoZoom()
   (svg.node());
 
 Promise.all([
-  fetch('https://unpkg.com/world-atlas@1/world/110m.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/topo.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, cities]) => {
   // water
@@ -69,7 +69,7 @@ Promise.all([
 
   // land
   svg.append('path').attr('class', 'geo land')
-    .datum(topojson.feature(world, world.objects.land).features[0]);
+    .datum(topojson.feature(world, world.objects.ocean).features[0]);
 
   // graticules
   svg.append('path').attr('class', 'geo graticule')
