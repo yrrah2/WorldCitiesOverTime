@@ -2,8 +2,8 @@ const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 const getRandomColor = () => {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
+    const letters = '0123456789ABCDEF';
+    let color = '#';
     for (var i = 0; i < 6; i++ ) {
         color += letters[Math.floor(Math.random() * 16)];
     }
@@ -14,7 +14,7 @@ const getRandomColor = () => {
 const recentEvent = (dates, year) => {
     const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
     console.log(datesBefore[datesBefore.length-1]);
-    return datesBefore[datesBefore.length-1];
+    return datesBefore[datesBefore.length-1].event;
 }
 
 // Controls
