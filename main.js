@@ -16,10 +16,12 @@ const controls = {
   'Cities': true,
   'Graticule Grid': false,
   'Voronoi Layer': true,
+  'Year': 1800
 };
 gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Voronoi Layer').onChange(enabled => d3.selectAll('.voronoi').style('display', enabled ? null : 'none'));
+gui.add(controls, "Year").min(1500).max(2020).step(10);
 
 const width = window.innerWidth;
 const height = window.innerHeight;
