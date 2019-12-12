@@ -35,8 +35,8 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
 
-var dataTime = d3.range(0, 1000).map(function(d) {
-    return 1000 + d;
+var dataTime = d3.range(0, 80).map(function(d) {
+    return 25 * d;
 });
 
 var sliderTime = d3
@@ -46,7 +46,7 @@ var sliderTime = d3
     .step(25)
     .width(300)
     .tickValues(dataTime)
-    .default(1998)
+    .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(val);
     });
