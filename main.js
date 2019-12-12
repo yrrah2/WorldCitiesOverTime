@@ -142,11 +142,7 @@ Promise.all([
       .on('mouseout', tip.hide);
  
   // Colouring voronoi
-  const colourPolygon = (x) => {
-      console.log("Test");
-      x.style.fill = getRandomColor();
-  };
-  svg.selectAll('path.voronoi').each( colourPolygon(this) );
+  svg.selectAll('path.voronoi').each( this.style.fill = getRandomColor() );
  
   render();
 });
