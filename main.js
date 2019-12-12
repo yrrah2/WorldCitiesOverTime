@@ -69,7 +69,7 @@ Promise.all([
 
   // land
   svg.append('path').attr('class', 'geo land')
-    .datum(topojson.feature(world, world.objects.ocean).features[0]);
+    .datum(topojson.feature(world, world.objects.ocean));
 
   // graticules
   svg.append('path').attr('class', 'geo graticule')
