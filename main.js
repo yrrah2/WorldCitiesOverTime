@@ -12,7 +12,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => date.year < year);
+    const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
     console.log(datesBefore[datesBefore.length-1]);
     return datesBefore[datesBefore.length-1];
 }
