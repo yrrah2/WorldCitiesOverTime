@@ -214,7 +214,36 @@
     "city": "Kaliningrad",
     "longitude": 20.5112906,
     "latitude": 54.7064419,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1758/01/16",
+	"event": "Russian Empire"
+	    },	    
+	    {
+	"year": "1764/01/01",
+	"event": "Kingdom of Prussia"
+	    },	    
+	    {
+	"year": "1871/01/18",
+	"event": "German Empire"
+	    },	    
+	    {
+	"year": "1918/11/09",
+	"event": "Weimar Republic"
+	    },	    
+	    {
+	"year": "1933/01/30",
+	"event": "Nazi Germany"
+	    },	    
+	    {
+	"year": "1945/08/02",
+	"event": "Union of Soviet Socialist Republics"
+	    },	    
+	    {
+	"year": "1990/06/12",
+	"event": "Russian Federation"
+	    }
+    ]
   },
   {
     "city": "Istanbul",
