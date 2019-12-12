@@ -75,7 +75,7 @@ body {
   transition: stroke-width 0.07s;
 }
 
-.sliderwrapper {
+#sliderwrapper {
   position: absolute;
   text-align: center;
 }
