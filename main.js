@@ -35,9 +35,10 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
 
+// Year slider
 const dataTime = d3.range(0, 10).map( d => 200 * d );
 
-var sliderTime = d3
+const sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
@@ -49,7 +50,7 @@ var sliderTime = d3
       d3.select('p#value-time').text(val);
     });
 
-var gTime = d3
+const gTime = d3
     .select('div#slider-time')
     .append('svg')
     .attr('width', 500)
@@ -60,13 +61,16 @@ var gTime = d3
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
 
+// Get screen size
 const width = window.innerWidth;
 const height = window.innerHeight;
 
+// Add the world SVG
 const svg = d3.select('#world').append('svg')
   .attr('width', width)
   .attr('height', height);
 
+// At the tool tip
 const tip = d3.tip()
   .attr('class', 'tooltip')
   .direction('s')
@@ -76,12 +80,11 @@ const tip = d3.tip()
 svg.call(tip);
 
 const getCityDesc = d => `
-  <div><b>${d.city}</b></div>
-  <div>Longitude: ${d.longitude}</div>
-  <div>Latitude: ${d.latitude}</div>
-  <div><b>${recentEvent(d.dates, sliderTime.value() )}</b></div> //controls.Year
+  <div>City: <b>${d.city}</b></div>
+  <div>Regime: <b>${recentEvent(d.dates, sliderTime.value() )}</b></div>
 `;
 
+// Set the world projection
 const projection = d3.geoOrthographic()
   .scale((height - 10) / 2)
   .translate([width / 2, height / 2])
@@ -101,23 +104,23 @@ Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, cities]) => {
-  // sphere (land)
+    
+  // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
 
-  
-
-  // graticules
+  // Graticule lines
   svg.append('path').attr('class', 'geo graticule')
     .datum(d3.geoGraticule10())
     .style('display', 'none');
 
-    const voronoi = d3.geoVoronoi()
+  // Voronoi graph
+  const voronoi = d3.geoVoronoi()
     .x(d => d.longitude)
     .y(d => d.latitude)
     (cities);
 
-  // voronoi polygons
+  // Voronoi polygons
   svg.append('g').selectAll('.voronoi')
     .data(voronoi.polygons().features)
     .enter().append('path')
@@ -125,11 +128,11 @@ Promise.all([
       .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
 
-    // ocean
+  // Ocean overlay
   svg.append('path').attr('class', 'geo ocean')
     .datum(topojson.feature(world, world.objects.ocean));
     
-  // city points
+  // City points
   svg.append('g').selectAll('.city')
     .data(cities)
     .enter().append('path')
@@ -142,9 +145,8 @@ Promise.all([
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
  
-  svg.selectAll('path.voronoi').each(
-      function (d, i) { this.style.fill = getRandomColor(); }
-  );
+  // Colouring voronoi
+  svg.selectAll('path.voronoi').each( (d, i) => this.style.fill = getRandomColor() );
  
   render();
 });
