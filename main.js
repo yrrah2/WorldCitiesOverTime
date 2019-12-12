@@ -70,7 +70,7 @@ d3.geoZoom()
   (svg.node());
 
 Promise.all([
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/topo.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
 ]).then(([world, cities]) => {
   // sphere (land)
