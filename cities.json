@@ -159,12 +159,48 @@
     "latitude": 47.49641,
     "dates": [
 	    {
+	"year": "896/01/01",
+	"event": "Kingdom of Hungary"
+	    },
+	    {
+	"year": "1241/12/25",
+	"event": "Golden Horde"
+	    },
+	    {
+	"year": "1242/05/01",
+	"event": "Kingdom of Hungary"
+	    },
+	    {
 	"year": "1526/11/26",
 	"event": "Exalted Ottoman State"
+	    },
+	    {
+	"year": "1686/09/09",
+	"event": "Kingdom of Hungary"
 	    },	    
 	    {
 	"year": "1920/02/29",
 	"event": "Kingdom of Hungary"
+	    },	    
+	    {
+	"year": "1944/10/16",
+	"event": "Nazi Occupation"
+	    },	    
+	    {
+	"year": "1945/02/13",
+	"event": "Soviet Occupation"
+	    },	    
+	    {
+	"year": "1946/02/01",
+	"event": "Second Hungarian Republic"
+	    },	    
+	    {
+	"year": "1949/08/20",
+	"event": "People's Republic of Hungary"
+	    },	    
+	    {
+	"year": "1989/10/23",
+	"event": "Third Hungarian Republic"
 	    }
     ]
   },
