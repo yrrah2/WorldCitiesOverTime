@@ -31,15 +31,15 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
 
-var dataTime = d3.range(0, 100).map(function(d) {
-    return new Date(1995 + d, 10, 3);
+var dataTime = d3.range(0, 1000).map(function(d) {
+    return new Date(1000 + d, 10, 3);
 });
 
 var sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
-    .step(1000 * 60 * 60 * 24 * 365)
+    .step(1000 * 60 * 60 * 24 * 365 * 25)
     .width(300)
     .tickFormat(d3.timeFormat('%Y'))
     .tickValues(dataTime)
