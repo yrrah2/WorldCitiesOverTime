@@ -51,7 +51,7 @@ const getCityDesc = d => `
   <div><b>${d.city}</b></div>
   <div>Longitude: ${d.longitude}</div>
   <div>Latitude: ${d.latitude}</div>
-  <div><b>${recentEvents(d.dates, controls.Year)}</b></div>
+  <div><b>${recentEvent(d.dates, controls.Year)}</b></div>
 `;
 
 const projection = d3.geoOrthographic()
