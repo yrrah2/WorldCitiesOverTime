@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+functionfunctionconst MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 const getRandomColor = () => {
@@ -12,11 +12,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates, year) => {
-    
     const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
-    console.log(year);
-    console.log(dates);
-    console.log(datesBefore);
     return datesBefore[datesBefore.length-1].event;
 }
 
@@ -146,7 +142,11 @@ Promise.all([
       .on('mouseout', tip.hide);
  
   // Colouring voronoi
-  svg.selectAll('path.voronoi').each( (d, i) => this.style.fill = getRandomColor() );
+  const colourPolygon = (d, this, i) => {
+      console.log("Test");
+      this.style.fill = getRandomColor();
+  };
+  svg.selectAll('path.voronoi').each( colourPolygon(d, this, i) );
  
   render();
 });
