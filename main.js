@@ -37,13 +37,12 @@ const tip = d3.tip()
   .html(d => d);
 
 svg.call(tip);
-//const followCursor = svg.append('circle').style('pointer-events', 'none'); // helper to make tip follow cursor
-//svg.on('mousemove', () => followCursor.attr('cx', d3.event.pageX).attr('cy', d3.event.pageY));
 
 const getCityDesc = d => `
   <div><b>${d.city}</b></div>
   <div>Longitude: ${d.longitude}</div>
   <div>Latitude: ${d.latitude}</div>
+  <div><b>${d.dates[0]}</b></div>
 `;
 
 const projection = d3.geoOrthographic()
