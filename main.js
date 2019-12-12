@@ -3,11 +3,11 @@ const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 // Random Colour Generator
 const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
-    let color = '#';
+    let colour = '#';
     for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
+        colour += letters[Math.floor(Math.random() * 16)];
     }
-    return color;
+    return colour;
 }
 
 // Find recent event date
@@ -27,10 +27,37 @@ const controls = {
 gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
-    console.log(controls); 
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
+
+var dataTime = d3.range(0, 10).map(function(d) {
+    return new Date(1995 + d, 10, 3);
+});
+
+var sliderTime = d3
+    .sliderBottom()
+    .min(d3.min(dataTime))
+    .max(d3.max(dataTime))
+    .step(1000 * 60 * 60 * 24 * 365)
+    .width(300)
+    .tickFormat(d3.timeFormat('%Y'))
+    .tickValues(dataTime)
+    .default(new Date(1998, 10, 3))
+    .on('onchange', val => {
+      d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
+    });
+
+var gTime = d3
+    .select('div#slider-time')
+    .append('svg')
+    .attr('width', 500)
+    .attr('height', 100)
+    .append('g')
+    .attr('transform', 'translate(30,30)');
+
+gTime.call(sliderTime);
+d3.select('p#value-time').text(d3.timeFormat('%Y')(sliderTime.value()));
 
 const width = window.innerWidth;
 const height = window.innerHeight;
