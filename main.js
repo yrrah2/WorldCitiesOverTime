@@ -1,4 +1,4 @@
-1764const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 const getRandomColor = () => {
