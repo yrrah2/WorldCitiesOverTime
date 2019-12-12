@@ -3,13 +3,18 @@
     "city": "Valencia",
     "longitude": -0.3771437,
     "latitude": 39.4675146,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Barcelona",
     "longitude": 2.1743431,
     "latitude": 41.4037011,
-    "dates": {}
+    "dates": [
+	    {
+	"year": "1931/04/14",
+	"event": "Second Spanish Republic"
+	    }
+    ]
   },
   {
     "city": "Paris",
@@ -128,60 +133,69 @@
 	"year": "1958/10/04",
 	"event": "Fifth Republic"
 	    }
-	    ]
+    ]
   },
   {
     "city": "London",
     "longitude": -0.1245586,
     "latitude": 51.5007096,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Trier",
     "longitude": 6.635907,
     "latitude": 49.7540291,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Rome",
     "longitude": 12.4922896,
     "latitude": 41.8902861,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Budapest",
     "longitude": 19.0399215,
     "latitude": 47.49641,
-    "dates": {}
+    "dates": [
+	    {
+	"year": "1526/11/26",
+	"event": "Exalted Ottoman State"
+	    },	    
+	    {
+	"year": "1920/02/29",
+	"event": "Kingdom of Hungary"
+	    }
+    ]
   },
   {
     "city": "Athens",
     "longitude": 23.7279086,
     "latitude": 37.9818287,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Kaliningrad",
     "longitude": 20.5112906,
     "latitude": 54.7064419,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Istanbul",
     "longitude": 28.9800877,
     "latitude": 41.0085506,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Kiev",
     "longitude": 30.5267693,
     "latitude": 50.4531709,
-    "dates": {}
+    "dates": []
   },
   {
     "city": "Kirch",
     "longitude": 36.4883031,
     "latitude": 45.3664864,
-    "dates": {}
+    "dates": []
   }
 ]
