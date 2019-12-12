@@ -78,7 +78,7 @@ const getCityDesc = d => `
   <div><b>${d.city}</b></div>
   <div>Longitude: ${d.longitude}</div>
   <div>Latitude: ${d.latitude}</div>
-  <div><b>${recentEvent(d.dates, sliderTime.value()NobelsNobels)}</b></div> //controls.Year
+  <div><b>${recentEvent(d.dates, sliderTime.value() )}</b></div> //controls.Year
 `;
 
 const projection = d3.geoOrthographic()
