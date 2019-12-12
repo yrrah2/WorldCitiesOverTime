@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+Nobelsconst MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 const getRandomColor = () => {
@@ -78,7 +78,7 @@ const getCityDesc = d => `
   <div><b>${d.city}</b></div>
   <div>Longitude: ${d.longitude}</div>
   <div>Latitude: ${d.latitude}</div>
-  <div><b>${recentEvent(d.dates, controls.Year)}</b></div>
+  <div><b>${recentEvent(d.dates, sliderTime.value()NobelsNobels)}</b></div> //controls.Year
 `;
 
 const projection = d3.geoOrthographic()
