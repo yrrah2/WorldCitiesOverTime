@@ -1,92 +1,187 @@
-[
+﻿[
   {
     "city": "Valencia",
     "longitude": -0.3771437,
-    "latitude": 39.4675146
+    "latitude": 39.4675146,
+    "dates": {}
   },
   {
     "city": "Barcelona",
     "longitude": 2.1743431,
-    "latitude": 41.4037011
+    "latitude": 41.4037011,
+    "dates": {}
   },
   {
     "city": "Paris",
     "longitude": 2.352332,
     "latitude": 48.8565426,
-    "dates": {
-	"-0052/01/01":	"Roman Republic",
-	"-0049/01/10":	"Populares Faction",
-	"-0045/03/17":	"Roman Republic",
-	"-0027/01/16":	"Roman Empire",
-	"0260/09/01":	"Gallic Empire",
-	"0274/02/01":	"Roman Empire",
-	"0486/01/01":	"Francia",
-	"0800/12/25":	"Carolingian Empire",
-	"0843/08/01":	"West Francia",
-	"0987/07/03":	"Kingdom of France",
-	"1420/05/21":	"Kingdom of England",
-	"1436/04/13":	"Kingdom of France",
-	"1792/09/21":	"First Republic",
-	"1804/05/18":	"First French Empire",
-	"1814/03/31":	"Sixth Coalition Occupation",
-	"1814/04/06":	"Kingdom of France",
-	"1815/03/20":	"First French Empire",
-	"1815/07/06":	"Seventh Coalition Occupation",
-	"1815/07/08":	"Kingdom of France",
-	"1848/02/24":	"Second Republic",
-	"1852/01/14":	"Second French Empire",
-	"1870/09/04":	"Third Republic",
-	"1871/03/18":	"Paris Commune",
-	"1871/05/28":	"Third Republic",
-	"1940/06/14":	"Nazi Military Administration",
-	"1944/08/25":	"Provisional Government of the French Republic",
-	"1946/10/27":	"Fourth Republic",
-	"1958/10/04":	"Fifth Republic"
-	     }
+    "dates": [
+	    {
+	"year": "-0052/01/01",
+	"event": "Roman Republic"
+	    },	    
+	    {
+	"year": "-0049/01/10",
+	"event": "Populares Faction"
+	    },
+	    {
+	"year": "-0045/03/17",
+	"event": "Roman Republic"
+	    },	    
+	    {
+	"year": "-0027/01/16",
+	"event": "Roman Empire"
+	    },	    
+	    {
+	"year": "0260/09/01",
+	"event": "Gallic Empire"
+	    },	    
+	    {
+	"year": "0274/02/01",
+	"event": "Roman Empire"
+	    },	    
+	    {
+	"year": "0486/01/01",
+	"event": "Francia"
+	    },	    
+	    {
+	"year": "0800/12/25",
+	"event": "Carolingian Empire"
+	    },	    
+	    {
+	"year": "0843/08/01",
+	"event": "West Francia"
+	    },	    
+	    {
+	"year": "0987/07/03",
+	"event": "Kingdom of France"
+	    },	    
+	    {
+	"year": "1420/05/21",
+	"event": "Kingdom of England"
+	    },	    
+	    {
+	"year": "1436/04/13",
+	"event": "Kingdom of France"
+	    },	    
+	    {
+	"year": "1792/09/21",
+	"event": "First Republic"
+	    },	    
+	    {
+	"year": "1804/05/18",
+	"event": "First French Empire"
+	    },	    
+	    {
+	"year": "1814/03/31",
+	"event": "Sixth Coalition Occupation"
+	    },	    
+	    {
+	"year": "1814/04/06",
+	"event": "Kingdom of France"
+	    },	    
+	    {
+	"year": "1815/03/20",
+	"event": "First French Empire"
+	    },	    
+	    {
+	"year": "1815/07/06",
+	"event": "Seventh Coalition Occupation"
+	    },	    
+	    {
+	"year": "1815/07/08",
+	"event": "Kingdom of France"
+	    },	    
+	    {
+	"year": "1848/02/24",
+	"event": "Second Republic"
+	    },	    
+	    {
+	"year": "1852/01/14",
+	"event": "Second French Empire"
+	    },	    
+	    {
+	"year": "1870/09/04",
+	"event": "Third Republic"
+	    },	    
+	    {
+	"year": "1871/03/18",
+	"event": "Paris Commune"
+	    },	    
+	    {
+	"year": "1871/05/28",
+	"event": "Third Republic"
+	    },	    
+	    {
+	"year": "1940/06/14",
+	"event": "Nazi Military Administration"
+	    },	    
+	    {
+	"year": "1944/08/25",
+	"event": "Provisional Government of the French Republic"
+	    },	    
+	    {
+	"year": "1946/10/27",
+	"event": "Fourth Republic"
+	    },	    
+	    {
+	"year": "1958/10/04",
+	"event": "Fifth Republic"
+	    }
+	    ]
   },
   {
     "city": "London",
     "longitude": -0.1245586,
-    "latitude": 51.5007096
+    "latitude": 51.5007096,
+    "dates": {}
   },
   {
     "city": "Trier",
     "longitude": 6.635907,
-    "latitude": 49.7540291
+    "latitude": 49.7540291,
+    "dates": {}
   },
   {
     "city": "Rome",
     "longitude": 12.4922896,
-    "latitude": 41.8902861
+    "latitude": 41.8902861,
+    "dates": {}
   },
   {
     "city": "Budapest",
     "longitude": 19.0399215,
-    "latitude": 47.49641
+    "latitude": 47.49641,
+    "dates": {}
   },
   {
     "city": "Athens",
     "longitude": 23.7279086,
-    "latitude": 37.9818287
+    "latitude": 37.9818287,
+    "dates": {}
   },
   {
     "city": "Kaliningrad",
     "longitude": 20.5112906,
-    "latitude": 54.7064419
+    "latitude": 54.7064419,
+    "dates": {}
   },
   {
     "city": "Istanbul",
     "longitude": 28.9800877,
-    "latitude": 41.0085506
+    "latitude": 41.0085506,
+    "dates": {}
   },
   {
     "city": "Kiev",
     "longitude": 30.5267693,
-    "latitude": 50.4531709
+    "latitude": 50.4531709,
+    "dates": {}
   },
   {
     "city": "Kirch",
     "longitude": 36.4883031,
-    "latitude": 45.3664864
+    "latitude": 45.3664864,
+    "dates": {}
   }
 ]
