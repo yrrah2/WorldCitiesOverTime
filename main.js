@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+1764const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Random Colour Generator
 const getRandomColor = () => {
@@ -141,9 +141,10 @@ Promise.all([
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
  
-  // Colouring voronoi
-  svg.selectAll('path.voronoi').each( this.style.fill = getRandomColor() );
- 
+  svg.selectAll('path.voronoi').each(
+      function (d, i) { this.style.fill = getRandomColor(); }
+  );
+    
   render();
 });
 
