@@ -262,5 +262,155 @@
     "longitude": 36.4883031,
     "latitude": 45.3664864,
     "dates": []
+  },
+  {
+    "name": "Chengdu",
+    "longitude": 104.0633702,
+    "latitude": 30.6598555,
+    "dates": []
+  },
+  {
+    "name": "Xi'an",
+    "longitude": 108.9593612,
+    "latitude": 34.2846319,
+    "dates": []
+  },
+  {
+    "name": "Beijing",
+    "longitude": 116.3914548,
+    "latitude": 39.9031576,
+    "dates": []
+  },
+  {
+    "name": "Nanjing",
+    "longitude": 118.7901488,
+    "latitude": 32.0622951,
+    "dates": []
+  },
+  {
+    "name": "Damascus",
+    "longitude": 36.3066396,
+    "latitude": 33.5116617,
+    "dates": []
+  },
+  {
+    "name": "Al-Quds",
+    "longitude": 35.2353456,
+    "latitude": 31.7780275,
+    "dates": []
+  },
+  {
+    "name": "Havana",
+    "longitude": -82.3597175,
+    "latitude": 23.1351719,
+    "dates": []
+  },
+  {
+    "name": "Delhi",
+    "longitude": 77.2081548,
+    "latitude": 28.617198,
+    "dates": []
+  },
+  {
+    "name": "Timbuktu",
+    "longitude": -3.0081944,
+    "latitude": 16.7706622,
+    "dates": []
+  },
+  {
+    "name": "Phnom Penh",
+    "longitude": 104.9411733,
+    "latitude": 11.5508992,
+    "dates": []
+  },
+  {
+    "name": "Jakarta",
+    "longitude": 106.8271062,
+    "latitude": -6.1753966,
+    "dates": []
+  },
+  {
+    "name": "Osaka",
+    "longitude": 135.5259539,
+    "latitude": 34.6873247,
+    "dates": []
+  },
+  {
+    "name": "Seoul",
+    "longitude": 126.9771824,
+    "latitude": 37.5361295,
+    "dates": []
+  },
+  {
+    "name": "Pyongyang",
+    "longitude": 125.7495338,
+    "latitude": 39.0285613,
+    "dates": []
+  },
+  {
+    "name": "Marrakesh",
+    "longitude": -7.9888835,
+    "latitude": 31.6259785,
+    "dates": []
+  },
+  {
+    "name": "Cusco",
+    "longitude": -71.9787846,
+    "latitude": -13.5167484,
+    "dates": []
+  },
+  {
+    "name": "Moscow",
+    "longitude": 37.619899,
+    "latitude": 55.7536697,
+    "dates": []
+  },
+  {
+    "name": "Sydney",
+    "longitude": 151.2118054,
+    "latitude": -33.8709063,
+    "dates": []
+  },
+  {
+    "name": "Kerikeri",
+    "longitude": 173.9659323,
+    "latitude": -35.2181665,
+    "dates": []
+  },
+  {
+    "name": "Strasbourg",
+    "longitude": 7.7458381,
+    "latitude": 48.5834531,
+    "dates": []
+  },
+  {
+    "name": "Skopje",
+    "longitude": 21.43145,
+    "latitude": 41.9959442,
+    "dates": []
+  },
+  {
+    "name": "Zanzibar",
+    "longitude": 39.199725,
+    "latitude": -6.1658215,
+    "dates": []
+  },
+  {
+    "name": "Singapore",
+    "longitude": 103.8639086,
+    "latitude": 1.2819681,
+    "dates": []
+  },
+  {
+    "name": "Cairo",
+    "longitude": 31.2243187,
+    "latitude": 30.0459684,
+    "dates": []
+  },
+  {
+    "name": "Mexico",
+    "longitude": -99.1313738,
+    "latitude": 19.4349302,
+    "dates": []
   }
 ]
