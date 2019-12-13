@@ -121,6 +121,7 @@ Promise.all([
     .data(voronoi.polygons().features)
     .enter().append('path')
       .attr('class', 'geo voronoi')
+      .attr("id", d => d)
       .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
 
