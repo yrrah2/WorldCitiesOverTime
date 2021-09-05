@@ -153,19 +153,19 @@
     "latitude": 41.8902861,
     "dates": [
 	    {
-	"year": "-753/01/01",
+	"year": "-0753/01/01",
 	"event": "Roman Kingdom"
 	    },
 	    {
-	"year": "-509/01/01",
+	"year": "-0509/01/01",
 	"event": "Roman Republic"
 	    },
 	    {
-	"year": "-27/01/16", 
+	"year": "-0027/01/16", 
 	"event": "Roman Empire"
 	    },
 	    {
-	"year": "476/09/02",
+	"year": "0476/09/02",
 	"event": "Kingdom of Italy"
 	    },
 	    {
@@ -231,11 +231,11 @@
     "latitude": 37.9818287,
     "dates": [
     {
-	"year": "86/03/01",
+	"year": "-0086/03/01",
 	"event": "Roman Republic"
 	    },
 	    {
-	"year": "-27/01/16", 
+	"year": "-0027/01/16", 
 	"event": "Roman Empire"
 	    }
     ]
@@ -309,7 +309,12 @@
     "name": "Beijing",
     "longitude": 116.3914548,
     "latitude": 39.9031576,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1949/10/01",
+	"event": "People's Republic of China"
+	    }
+    ]
   },
   {
     "name": "Nanjing",
