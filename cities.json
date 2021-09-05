@@ -71,7 +71,7 @@
 	    },	    
 	    {
 	"year": "1792/09/21",
-	"event": "First Republic"
+	"event": "First French Republic"
 	    },	    
 	    {
 	"year": "1804/05/18",
@@ -99,7 +99,7 @@
 	    },	    
 	    {
 	"year": "1848/02/24",
-	"event": "Second Republic"
+	"event": "Second French Republic"
 	    },	    
 	    {
 	"year": "1852/01/14",
@@ -107,7 +107,7 @@
 	    },	    
 	    {
 	"year": "1870/09/04",
-	"event": "Third Republic"
+	"event": "Third French Republic"
 	    },	    
 	    {
 	"year": "1871/03/18",
@@ -115,7 +115,7 @@
 	    },	    
 	    {
 	"year": "1871/05/28",
-	"event": "Third Republic"
+	"event": "Third French Republic"
 	    },	    
 	    {
 	"year": "1940/06/14",
@@ -127,11 +127,11 @@
 	    },	    
 	    {
 	"year": "1946/10/27",
-	"event": "Fourth Republic"
+	"event": "Fourth French Republic"
 	    },	    
 	    {
 	"year": "1958/10/04",
-	"event": "Fifth Republic"
+	"event": "Fifth French Republic"
 	    }
     ]
   },
@@ -151,7 +151,12 @@
     "city": "Rome",
     "longitude": 12.4922896,
     "latitude": 41.8902861,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1946/06/02",
+	"event": "Republic of Italy"
+	    }
+    ]
   },
   {
     "city": "Budapest",
