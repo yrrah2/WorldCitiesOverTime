@@ -32,7 +32,7 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
 gui.add(controls, "Year").min(1500).max(2020).step(10);
 
 // Year slider
-const dataTime = d3.range(0, 10).map( d => 200 * d );
+const dataTime = d3.range(-1, 11).map( d => 200 * d );
 
 const sliderTime = d3
     .sliderBottom()
