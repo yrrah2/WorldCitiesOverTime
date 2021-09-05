@@ -43,7 +43,7 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-      d3.select('p#value-time').text(val);
+      d3.select('p#value-time').text(Math.ceil(val));
     });
 
 const gTime = d3
