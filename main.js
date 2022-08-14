@@ -21,8 +21,10 @@ function colorize(svg) {
 function colorize_regimes(regime_colors, svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) {
-            let regime = recentEvent(d.dates, sliderTime.value())
-            this.style.fill = regime_colors[regime];
+            if ( d.properties.site.dates != undefined ){
+                let regime = recentEvent(d.properties.site.dates, sliderTime.value())
+                this.style.fill = regime_colors[regime];
+            }
         }
     );
 }
