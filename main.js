@@ -22,8 +22,8 @@ function colorize_regimes(regime_colors, svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
-                let regime = recentEvent(d.properties.site.dates, sliderTime.value())
-                console.log(regime_colors[regime])
+                let regime = recentEvent(d.properties.site.dates, sliderTime.value());
+                console.log(regime_colors[regime]);
                 this.style.fill = regime_colors[regime];
             }
         }
@@ -177,6 +177,7 @@ Promise.all([
     
   var regime_colors = {};
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
+  console.log(regime_colors);
     
   controls.colorize_regimes = function() {
       colorize_regimes(regimes, svg)
