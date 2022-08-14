@@ -32,6 +32,7 @@ const controls = {
   'Voronoi Layer': true,
   'Year': 1800
 };
+
 gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
@@ -73,6 +74,11 @@ const height = window.innerHeight;
 const svg = d3.select('#world').append('svg')
   .attr('width', width)
   .attr('height', height);
+
+controls.colorize = function() {
+    colorize(svg)
+};
+gui.add(controls, "colorize").name("Randomize colours");
 
 // At the tool tip
 const tip = d3.tip()
