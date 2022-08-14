@@ -18,6 +18,15 @@ function colorize(svg) {
     );
 }
 
+function colorize_regimes(regime_colors, svg) {
+    svg.selectAll('path.voronoi').each(
+        function (d, i) {
+            let regime = ${recentEvent(d.dates, sliderTime.value() )}
+            this.style.fill = regime_colors[regime];
+        }
+    );
+}
+
 // Find recent event date
 const recentEvent = (dates, year) => {
     const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
@@ -161,8 +170,9 @@ Promise.all([
   var regime_colors = {};
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
     
-  colorize(svg);
-    
+  colorize(svg); //In case regime coloring doesn't work
+  colorize_regime(regimes, svg);
+  
   render();
 });
 
