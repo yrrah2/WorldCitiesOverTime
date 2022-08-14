@@ -32,7 +32,12 @@ function colorize_regimes(regime_colors, svg) {
 // Find recent event date
 const recentEvent = (dates, year) => {
     const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
-    return datesBefore[datesBefore.length-1].event;
+    let regime = datesBefore[datesBefore.length-1].event;
+    if ( regime == undefined ){
+        return "No one";
+    } else {
+        return regime;
+    };
 }
 
 // Controls
