@@ -90,6 +90,10 @@ controls.colorize = function() {
     colorize(svg)
 };
 gui.add(controls, "colorize").name("Randomize colours");
+controls.colorize_regimes = function() {
+    colorize_regimes(svg)
+};
+gui.add(controls, "colorize_regimes").name("Color according to regimes");
 
 // At the tool tip
 const tip = d3.tip()
