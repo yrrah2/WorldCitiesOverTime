@@ -171,7 +171,7 @@ Promise.all([
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
     
   colorize(svg); //In case regime coloring doesn't work
-  colorize_regime(regimes, svg);
+  colorize_regimes(regimes, svg);
   
   render();
 });
