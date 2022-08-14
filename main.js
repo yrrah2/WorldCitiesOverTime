@@ -173,7 +173,7 @@ Promise.all([
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
     
   controls.colorize_regimes = function() {
-      colorize_regimes(svg)
+      colorize_regimes(regimes, svg)
   };
   gui.add(controls, "colorize_regimes").name("Color according to regimes");
     
