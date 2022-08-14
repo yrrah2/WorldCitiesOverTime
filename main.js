@@ -96,7 +96,7 @@ d3.geoZoom()
   .onMove(render)
   (svg.node());
 
-const colourize = () => {
+const colorize = () => {
     svg.selectAll('path.voronoi').each(
         function (d, i) { 
             this.style.fill = getRandomColor();
