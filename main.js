@@ -90,10 +90,6 @@ controls.colorize = function() {
     colorize(svg)
 };
 gui.add(controls, "colorize").name("Randomize colours");
-controls.colorize_regimes = function() {
-    colorize_regimes(svg)
-};
-gui.add(controls, "colorize_regimes").name("Color according to regimes");
 
 // At the tool tip
 const tip = d3.tip()
@@ -175,6 +171,11 @@ Promise.all([
     
   var regime_colors = {};
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
+    
+  controls.colorize_regimes = function() {
+      colorize_regimes(svg)
+  };
+  gui.add(controls, "colorize_regimes").name("Color according to regimes");
     
   colorize(svg); //In case regime coloring doesn't work
   colorize_regimes(regimes, svg);
