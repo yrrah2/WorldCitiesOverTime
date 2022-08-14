@@ -96,6 +96,14 @@ d3.geoZoom()
   .onMove(render)
   (svg.node());
 
+const colourize = () => {
+    svg.selectAll('path.voronoi').each(
+        function (d, i) { 
+            this.style.fill = getRandomColor();
+        }
+    );
+}
+
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
@@ -141,10 +149,8 @@ Promise.all([
       }))
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
- 
-  svg.selectAll('path.voronoi').each(
-      function (d, i) { this.style.fill = getRandomColor(); }
-  );
+    
+  colorize();
     
   render();
 });
