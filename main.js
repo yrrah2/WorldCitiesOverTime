@@ -34,7 +34,7 @@ const recentEvent = (dates, year) => {
     const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime.hasOwnProperty("event") ){
-        return regime.event.
+        return regime.event;
     } else {
         return "No one";
     };
