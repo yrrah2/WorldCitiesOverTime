@@ -21,7 +21,7 @@ function colorize(svg) {
 function colorize_regimes(regime_colors, svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) {
-            if ( d.properties.site.dates != undefined ){
+            if ( d.properties.site.dates.length > 0 ){
                 let regime = recentEvent(d.properties.site.dates, sliderTime.value())
                 this.style.fill = regime_colors[regime];
             }
