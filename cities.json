@@ -398,7 +398,12 @@
     "name": "Moscow",
     "longitude": 37.619899,
     "latitude": 55.7536697,
-    "dates": []
+    "dates": [
+    {
+	"year": "1990/06/12",
+	"event": "Russian Federation"
+    }
+    ]
   },
   {
     "name": "Sydney",
