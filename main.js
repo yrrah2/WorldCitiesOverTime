@@ -112,8 +112,9 @@ d3.geoZoom()
 
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json())
-]).then(([world, cities]) => {
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
+]).then(([world, cities, regimes]) => {
     
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
@@ -156,6 +157,9 @@ Promise.all([
       }))
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
+    
+  var regime_colors = {};
+  regimes.forEach(regime => regime_colors[regime] = getRandomColor())
     
   colorize(svg);
     
