@@ -122,7 +122,8 @@ Promise.all([
   // Graticule lines
   svg.append('path').attr('class', 'geo graticule')
     .datum(d3.geoGraticule10())
-    .style('display', 'none');
+    .style('display', 'none')
+    .style('z-index', 1000);
 
   // Voronoi graph
   const voronoi = d3.geoVoronoi()
