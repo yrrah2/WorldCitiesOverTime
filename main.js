@@ -183,12 +183,12 @@ Promise.all([
   console.log(regime_colors);
     
   controls.colorize_regimes = function() {
-      colorize_regimes(regimes, svg)
+      colorize_regimes(regime_colors, svg)
   };
   gui.add(controls, "colorize_regimes").name("Color according to regimes");
     
   colorize(svg); //In case regime coloring doesn't work
-  colorize_regimes(regimes, svg);
+  colorize_regimes(regime_colors, svg);
   
   render();
 });
