@@ -3,7 +3,16 @@
     "city": "Valencia",
     "longitude": -0.3771437,
     "latitude": 39.4675146,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0138/01/01",
+	"event": "Roman Republic"
+	    },	    
+	    {
+	"year": "-0027/01/16",
+	"event": "Roman Empire"
+	    }
+    ]
   },
   {
     "city": "Barcelona",
@@ -139,13 +148,69 @@
     "city": "London",
     "longitude": -0.1245586,
     "latitude": 51.5007096,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0047/01/01",
+	"event": "Roman Republic"
+	    },
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    }]
   },
   {
     "city": "Trier",
     "longitude": 6.635907,
     "latitude": 49.7540291,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0016/01/01", 
+	"event": "Roman Empire"
+	    },
+	    {
+	"year": "0870/01/01", 
+	"event": "East Francia"
+	    },
+	    {
+	"year": "0962/02/02", 
+	"event": "Holy Roman Empire"
+	    },
+	    {
+	"year": "1794/08/01", 
+	"event": "First French Republic"
+	    },
+	    {
+	"year": "1814/01/01", 
+	"event": "Kingdom of Prussia"
+	    },
+	    {
+	"year": "1871/01/08", 
+	"event": "German Empire"
+	    },
+	    {
+	"year": "1918/11/09", 
+	"event": "Weimar Republic"
+	    },
+	    {
+	"year": "1933/01/30", 
+	"event": "Nazi Germany"
+	    },
+	    {
+	"year": "1945/05/02", 
+	"event": "United States of America"
+	    },
+	    {
+	"year": "1945/06/26", 
+	"event": "Fourth French Republic"
+	    },
+	    {
+	"year": "1949/03/23", 
+	"event": "West Germany"
+	    },
+	    {
+	"year": "1990/10/03", 
+	"event": "Federal Republic of Germany"
+	    }]
   },
   {
     "city": "Rome",
@@ -421,7 +486,12 @@
     "name": "Strasbourg",
     "longitude": 7.7458381,
     "latitude": 48.5834531,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1990/10/03", 
+	"event": "Federal Republic of Germany"
+	    }
+    ]
   },
   {
     "name": "Skopje",
