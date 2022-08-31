@@ -23,8 +23,8 @@ function colorize_regimes(regime_colors, svg) {
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
                 let regime = recentEvent(d.properties.site.dates, sliderTime.value());
-                console.log(regime);
-                console.log(regime_colors[regime]);
+                console.log(regime.toString());
+                console.log(regime_colors[regime.toString()]);
                 this.style.fill = regime_colors[regime.toString()];
             }
         }
