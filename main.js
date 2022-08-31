@@ -18,6 +18,14 @@ function colorize(svg) {
     );
 }
 
+function color_gray(svg) {
+    svg.selectAll('path.voronoi').each(
+        function (d, i) { 
+            this.style.fill = "#353535";
+        }
+    );
+}
+
 function colorize_regimes(regime_colors, svg) {
     console.log(regime_colors);
     svg.selectAll('path.voronoi').each(
@@ -187,7 +195,8 @@ Promise.all([
   };
   gui.add(controls, "colorize_regimes").name("Color according to regimes");
     
-  colorize(svg); //In case regime coloring doesn't work
+  // colorize(svg); //In case regime coloring doesn't work
+  color_gray(svg); //In case regime coloring doesn't work
   colorize_regimes(regime_colors, svg);
   
   render();
