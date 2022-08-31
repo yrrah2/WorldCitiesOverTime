@@ -10,7 +10,7 @@ const getRandomColor = () => {
     return colour;
 }
 
-var colorize_after = () => {console.log("test")}
+function colorize_after() {console.log("test")}
 
 function colorize(svg) {
     svg.selectAll('path.voronoi').each(
