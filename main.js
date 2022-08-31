@@ -18,6 +18,13 @@ function colorize(svg) {
     );
 }
 
+function start_history(svg) {
+    let time = sliderTime.value();
+    setInterval(function(){
+    time += 1;
+    },1000);
+}
+
 function color_gray(svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) { 
@@ -32,9 +39,6 @@ function colorize_regimes(regime_colors, svg) {
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
                 let regime = recentEvent(d.properties.site.dates, sliderTime.value());
-                console.log(regime.toString());
-                console.log(regime_colors[regime.toString()]);
-                console.log(regime_colors["Francia"]);
                 this.style.fill = regime_colors[regime.toString()];
             }
         }
@@ -81,6 +85,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
+      colorize_regimes(regime_colors, svg);
     });
 
 const gTime = d3
@@ -103,10 +108,11 @@ const svg = d3.select('#world').append('svg')
   .attr('width', width)
   .attr('height', height);
 
-controls.colorize = function() {
-    colorize(svg)
+controls.start_history = function() {
+    //colorize(svg)
+    start_history(svg);
 };
-gui.add(controls, "colorize").name("Randomize colours");
+gui.add(controls, "start_history").name("Start");
 
 // At the tool tip
 const tip = d3.tip()
@@ -188,14 +194,13 @@ Promise.all([
     
   var regime_colors = {"No one": "#353535"};
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
-  console.log(regime_colors);
     
   controls.colorize_regimes = function() {
       colorize_regimes(regime_colors, svg)
   };
   gui.add(controls, "colorize_regimes").name("Color according to regimes");
     
-  // colorize(svg); //In case regime coloring doesn't work
+  // colorize(svg);
   color_gray(svg); //In case regime coloring doesn't work
   colorize_regimes(regime_colors, svg);
   
