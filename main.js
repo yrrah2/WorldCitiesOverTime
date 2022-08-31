@@ -178,7 +178,7 @@ Promise.all([
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
     
-  var regime_colors = {};
+  var regime_colors = {"No one": "#353535"};
   regimes.forEach(regime => regime_colors[regime] = getRandomColor())
   console.log(regime_colors);
     
