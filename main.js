@@ -19,6 +19,7 @@ function colorize(svg) {
 }
 
 function colorize_regimes(regime_colors, svg) {
+    console.log(regime_colors);
     svg.selectAll('path.voronoi').each(
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
