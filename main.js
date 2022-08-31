@@ -10,6 +10,8 @@ const getRandomColor = () => {
     return colour;
 }
 
+var colorize_after = () => {console.log("test")}
+
 function colorize(svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) { 
@@ -85,7 +87,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
-      colorize_regimes(regime_colors, svg);
+      colorize_after();
     });
 
 const gTime = d3
@@ -199,7 +201,8 @@ Promise.all([
       colorize_regimes(regime_colors, svg)
   };
   gui.add(controls, "colorize_regimes").name("Color according to regimes");
-    
+  
+  colorize_after = colorize_regimes(regime_colors, svg);
   // colorize(svg);
   color_gray(svg); //In case regime coloring doesn't work
   colorize_regimes(regime_colors, svg);
