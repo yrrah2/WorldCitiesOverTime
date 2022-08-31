@@ -38,7 +38,7 @@ const recentEvent = (dates, year) => {
     if ( regime == undefined ){
         return "No one";
     } else {
-        return regime.event;
+        return regime.event.toString();
     };
 }
 
