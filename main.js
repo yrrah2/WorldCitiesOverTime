@@ -25,6 +25,7 @@ function colorize_regimes(regime_colors, svg) {
                 let regime = recentEvent(d.properties.site.dates, sliderTime.value());
                 console.log(regime.toString());
                 console.log(regime_colors[regime.toString()]);
+                console.log(regime_colors["Francia"]);
                 this.style.fill = regime_colors[regime.toString()];
             }
         }
