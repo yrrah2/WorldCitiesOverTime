@@ -25,7 +25,7 @@ function colorize_regimes(regime_colors, svg) {
                 let regime = recentEvent(d.properties.site.dates, sliderTime.value());
                 console.log(regime);
                 console.log(regime_colors[regime]);
-                this.style.fill = regime_colors[regime];
+                this.style.fill = regime_colors[regime.toString()];
             }
         }
     );
