@@ -147,7 +147,7 @@ d3.geoZoom()
     .datum({ type: 'Sphere' });
 
 var cities_now = []
-cities.forEach(city => cities_now.push(city))
+cities.forEach(city => if(city.founded == undefined or city.founded.slice(0, 4) >= sliderTime.value()){cities_now.push(city)})
     console.log(cities_now)
 
   // Voronoi graph
