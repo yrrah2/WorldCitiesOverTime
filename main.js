@@ -47,6 +47,10 @@ function colorize_regimes(regime_colors, svg) {
     );
 }
 
+// Get screen size
+const width = window.innerWidth;
+const height = window.innerHeight;
+
 // Add the world SVG
 const svg = d3.select('#world').append('svg')
   .attr('width', width)
@@ -117,12 +121,6 @@ const gTime = d3
 
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
-
-// Get screen size
-const width = window.innerWidth;
-const height = window.innerHeight;
-
-
 
 controls.start_history = function() {
     //colorize(svg)
