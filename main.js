@@ -115,7 +115,8 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
-      colorize_regimes(regime_colors, svg);
+      //colorize_regimes(regime_colors, svg);
+        filter_cities(cities, sliderTime.value())
     });
 
 const gTime = d3
