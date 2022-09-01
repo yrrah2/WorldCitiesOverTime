@@ -398,7 +398,11 @@
     "name": "Al-Quds",
     "longitude": 35.2353456,
     "latitude": 31.7780275,
-    "dates": []
+    "dates": [
+	    {
+	"year": "0636/10/20",
+	"event": "Rashidun Caliphate"
+	    }]
   },
   {
     "name": "Havana",
@@ -452,7 +456,11 @@
     "name": "Marrakesh",
     "longitude": -7.9888835,
     "latitude": 31.6259785,
-    "dates": []
+    "dates": [
+    {
+	"year": "1070/01/01",
+	"event": "Kingdom of Morocco"
+    }]
   },
   {
     "name": "Cusco",
