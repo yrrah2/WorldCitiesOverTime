@@ -582,7 +582,52 @@
     "city": "Cairo",
     "longitude": 31.2243187,
     "latitude": 30.0459684,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0030/01/01", 
+	"event": "Roman Republic"
+	    },
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    },
+	    {
+	"year": "0642/01/01", 
+	"event": "Rashidun Caliphate"
+	    },
+	    {
+	"year": "1517/01/30", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1798/07/21", 
+	"event": "First French Republic"
+	    },
+	    {
+	"year": "1801/06/22", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1914/12/19", 
+	"event": "Sultanate of Egypt"
+	    },
+	    {
+	"year": "1922/02/28", 
+	"event": "Kingdom of Egypt"
+	    },
+	    {
+	"year": "1952/07/23", 
+	"event": "Republic of Egypt"
+	    },
+	    {
+	"year": "1958/02/22", 
+	"event": "United Arab Republic"
+	    },
+	    {
+	"year": "1971/09/11", 
+	"event": "Arab Republic of Egypt"
+	    }
+ ]
   },
   {
     "city": "Mexico",
