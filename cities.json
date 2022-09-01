@@ -466,6 +466,14 @@
 	    {
 	"year": "1516/08/24",
 	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1703/05/01",
+	"event": "Naqib al-Ashraf"
+	    },
+	    {
+	"year": "1705/10/01",
+	"event": "Ottoman Empire"
 	    }
     ]
   },
@@ -646,5 +654,28 @@
     "longitude": -99.1313738,
     "latitude": 19.4349302,
     "dates": []
+  },
+  {
+    "city": "Baghdad",
+    "longitude": 33.333333,
+    "latitude": 44.383333,
+    "founded": "0762/07/30",
+    "dates": [
+	    {
+	"year": "0762/07/30", 
+	"event": "Abbasid Caliphate"
+	    },
+	    {
+	"year": "1252/02/10", 
+	"event": "Mongol Empire"
+	    },
+	    {
+	"year": "1534/12/01", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1932/10/03", 
+	"event": "Hashemite Kingdom of Iraq"
+	    }]
   }
 ]
