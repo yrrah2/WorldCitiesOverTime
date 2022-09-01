@@ -395,19 +395,19 @@
     "dates": []
   },
   {
-    "name": "Chengdu",
+    "city": "Chengdu",
     "longitude": 104.0633702,
     "latitude": 30.6598555,
     "dates": []
   },
   {
-    "name": "Xi'an",
+    "city": "Xi'an",
     "longitude": 108.9593612,
     "latitude": 34.2846319,
     "dates": []
   },
   {
-    "name": "Beijing",
+    "city": "Beijing",
     "longitude": 116.3914548,
     "latitude": 39.9031576,
     "dates": [
@@ -418,13 +418,13 @@
     ]
   },
   {
-    "name": "Nanjing",
+    "city": "Nanjing",
     "longitude": 118.7901488,
     "latitude": 32.0622951,
     "dates": []
   },
   {
-    "name": "Damascus",
+    "city": "Damascus",
     "longitude": 36.3066396,
     "latitude": 33.5116617,
     "dates": [
@@ -439,7 +439,7 @@
     ]
   },
   {
-    "name": "Al-Quds",
+    "city": "Al-Quds",
     "longitude": 35.2353456,
     "latitude": 31.7780275,
     "dates": [
@@ -458,55 +458,55 @@
     ]
   },
   {
-    "name": "Havana",
+    "city": "Havana",
     "longitude": -82.3597175,
     "latitude": 23.1351719,
     "dates": []
   },
   {
-    "name": "Delhi",
+    "city": "Delhi",
     "longitude": 77.2081548,
     "latitude": 28.617198,
     "dates": []
   },
   {
-    "name": "Timbuktu",
+    "city": "Timbuktu",
     "longitude": -3.0081944,
     "latitude": 16.7706622,
     "dates": []
   },
   {
-    "name": "Phnom Penh",
+    "city": "Phnom Penh",
     "longitude": 104.9411733,
     "latitude": 11.5508992,
     "dates": []
   },
   {
-    "name": "Jakarta",
+    "city": "Jakarta",
     "longitude": 106.8271062,
     "latitude": -6.1753966,
     "dates": []
   },
   {
-    "name": "Osaka",
+    "city": "Osaka",
     "longitude": 135.5259539,
     "latitude": 34.6873247,
     "dates": []
   },
   {
-    "name": "Seoul",
+    "city": "Seoul",
     "longitude": 126.9771824,
     "latitude": 37.5361295,
     "dates": []
   },
   {
-    "name": "Pyongyang",
+    "city": "Pyongyang",
     "longitude": 125.7495338,
     "latitude": 39.0285613,
     "dates": []
   },
   {
-    "name": "Marrakesh",
+    "city": "Marrakesh",
     "longitude": -7.9888835,
     "latitude": 31.6259785,
     "dates": [
@@ -517,13 +517,13 @@
     ]
   },
   {
-    "name": "Cusco",
+    "city": "Cusco",
     "longitude": -71.9787846,
     "latitude": -13.5167484,
     "dates": []
   },
   {
-    "name": "Moscow",
+    "city": "Moscow",
     "longitude": 37.619899,
     "latitude": 55.7536697,
     "dates": [
@@ -534,19 +534,19 @@
     ]
   },
   {
-    "name": "Sydney",
+    "city": "Sydney",
     "longitude": 151.2118054,
     "latitude": -33.8709063,
     "dates": []
   },
   {
-    "name": "Kerikeri",
+    "city": "Kerikeri",
     "longitude": 173.9659323,
     "latitude": -35.2181665,
     "dates": []
   },
   {
-    "name": "Strasbourg",
+    "city": "Strasbourg",
     "longitude": 7.7458381,
     "latitude": 48.5834531,
     "dates": [
@@ -561,31 +561,31 @@
     ]
   },
   {
-    "name": "Skopje",
+    "city": "Skopje",
     "longitude": 21.43145,
     "latitude": 41.9959442,
     "dates": []
   },
   {
-    "name": "Zanzibar",
+    "city": "Zanzibar",
     "longitude": 39.199725,
     "latitude": -6.1658215,
     "dates": []
   },
   {
-    "name": "Singapore",
+    "city": "Singapore",
     "longitude": 103.8639086,
     "latitude": 1.2819681,
     "dates": []
   },
   {
-    "name": "Cairo",
+    "city": "Cairo",
     "longitude": 31.2243187,
     "latitude": 30.0459684,
     "dates": []
   },
   {
-    "name": "Mexico",
+    "city": "Mexico",
     "longitude": -99.1313738,
     "latitude": 19.4349302,
     "dates": []
