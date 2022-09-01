@@ -1,5 +1,18 @@
 const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
+// Convert year to decimal
+function convert_date(date){
+    if (date.charAt(0) === '-'){
+        date = date.substring(1);
+        var year = -date.slice(0, 4);
+    } else {
+        var year = date.slice(0, 4);
+    }
+    let month = date.slice(5, 7);
+    let day = date.slice(8, 10);
+    return {"year": year, "month": month, "day": day};
+}
+
 // Random Colour Generator
 const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
@@ -29,7 +42,7 @@ function color_gray(svg) {
 
 // Find recent event date
 const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
+    const datesBefore = dates.filter(date => convert_date(date.year).year < year);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
@@ -149,7 +162,7 @@ d3.geoZoom()
     function filter_cities(cities, year){
         let cities_now = []
         cities.forEach(function (d) {
-            if ( d.founded == undefined || d.founded.slice(0, 4) <= year ){
+            if ( d.founded == undefined || convert_date(d.founded).year < year ){
                 cities_now.push(d);
             }
         })
