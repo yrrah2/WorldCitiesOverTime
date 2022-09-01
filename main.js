@@ -1,5 +1,9 @@
 const MAX_URQUHART_DISTANCE = 0.15; // geo radians
-
+Promise.all([
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
+]).then(([world, cities, regimes]) => {
 var regime_colors = {"No one": "#353535"};
 regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 
@@ -151,11 +155,7 @@ d3.geoZoom()
   .onMove(render)
   (svg.node());
 
-Promise.all([
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
-]).then(([world, cities, regimes]) => {
+
     
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
