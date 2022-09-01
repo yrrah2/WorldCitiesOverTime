@@ -182,7 +182,7 @@ d3.geoZoom()
             .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
             .on('mouseout', tip.hide);
         
-        render();
+        
     }
 
   filter_cities(cities);
@@ -198,6 +198,8 @@ controls.rerender_voronois = function() {
     
     color_gray(svg); // Color every area gray by default
     colorize_regimes(regime_colors, svg);
+    
+    render();
 };
 gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
