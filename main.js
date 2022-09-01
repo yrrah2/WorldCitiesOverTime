@@ -147,7 +147,8 @@ d3.geoZoom()
     .datum({ type: 'Sphere' });
 
 var cities_now = []
-cities.forEach(city => console.log(city.city))
+cities.forEach(city => cities_now.push(city))
+    console.log(cities_now)
 
   // Voronoi graph
   const voronoi = d3.geoVoronoi()
