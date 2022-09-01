@@ -1,11 +1,4 @@
 const MAX_URQUHART_DISTANCE = 0.15; // geo radians
-Promise.all([
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
-]).then(([world, cities, regimes]) => {
-var regime_colors = {"No one": "#353535"};
-regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 
 // Random Colour Generator
 const getRandomColor = () => {
@@ -53,6 +46,16 @@ function colorize_regimes(regime_colors, svg) {
         }
     );
 }
+
+Promise.all([
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
+]).then(([world, cities, regimes]) => {
+var regime_colors = {"No one": "#353535"};
+regimes.forEach(regime => regime_colors[regime] = getRandomColor());
+
+
 
 // Find recent event date
 const recentEvent = (dates, year) => {
