@@ -145,13 +145,13 @@ d3.geoZoom()
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
-
-var cities_now = []
-cities.forEach(function (d) {
-            if ( d.founded == undefined || d.founded.slice(0, 4) >= sliderTime.value() ){
-                cities_now.push(d);
-            }
-}
+    
+    var cities_now = []
+    cities.forEach(function (d) {
+        if ( d.founded == undefined || d.founded.slice(0, 4) >= sliderTime.value() ){
+            cities_now.push(d);
+        }
+    })
     
     console.log(cities_now)
 
