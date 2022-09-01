@@ -145,7 +145,7 @@
 	    {
 	"year": "1946/10/27",
 	"event": "Fourth French Republic"
-	    },	    
+	    },
 	    {
 	"year": "1958/10/04",
 	"event": "Fifth French Republic"
@@ -447,7 +447,11 @@
     "city": "Nanjing",
     "longitude": 118.7901488,
     "latitude": 32.0622951,
-    "dates": [
+    "dates": [,
+	    {
+	"year": "1368/01/23", 
+	"event": "Ming Dynasty"
+	    },
 	    {
 	"year": "1853/03/01", 
 	"event": "Taiping Heavenly Kingdom"
@@ -463,7 +467,7 @@
 	    {
 	"year": "1949/10/01",
 	"event": "People's Republic of China"
-	    }
+	    } 
     ]
   },
   {
@@ -632,8 +636,12 @@
 	"event": "Roman Empire"
 	    },
 	    {
-	"year": "1990/10/03", 
-	"event": "Federal Republic of Germany"
+	"year": "1870/09/28",
+	"event": "North German Confederation"
+	    },
+            {
+	"year": "1958/10/04",
+	"event": "Fifth French Republic"
 	    }
     ]
   },
@@ -733,5 +741,36 @@
 	"year": "1932/10/03", 
 	"event": "Hashemite Kingdom of Iraq"
 	    }]
+  },
+  {
+    "city": "Ankara",
+    "longitude": 32.838700,
+    "latitude": 39.935800,
+    "dates": [
+	    {
+	"year": "-0546/01/01", 
+	"event": "Achaemenid Empire"
+	    },
+	    {
+	"year": "-0334/01/01", 
+	"event": "Macedonia"
+	    },
+	    {
+	"year": "-0278/01/01", 
+	"event": "Galatia"
+	    },
+	    {
+	"year": "-0025/01/01", 
+	"event": "Roman Empire"
+	    },
+	    {
+	"year": "1073/01/01", 
+	"event": "Seljuk Empire"
+	    },
+	    {
+	"year": "1356/01/01", 
+	"event": "Ottoman Empire"
+	    }
+]
   }
 ]
