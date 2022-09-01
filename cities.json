@@ -157,6 +157,7 @@
     "city": "London",
     "longitude": -0.1245586,
     "latitude": 51.5007096,
+    "founded": "-0043/01/01",
     "dates": [
 	    {
 	"year": "-0047/01/01",
@@ -175,6 +176,7 @@
     "city": "Trier",
     "longitude": 6.635907,
     "latitude": 49.7540291,
+    "founded": "-0016/01/01",
     "dates": [
 	    {
 	"year": "-0016/01/01", 
