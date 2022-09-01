@@ -174,6 +174,7 @@ d3.geoZoom()
     
   // Button to start history
 controls.rerender_voronois = function() {
+    svg.selectAll(".voronoi").remove();
     filter_cities(cities, sliderTime.value());
     render();
 };
