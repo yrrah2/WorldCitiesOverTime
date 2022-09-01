@@ -56,6 +56,21 @@ const svg = d3.select('#world').append('svg')
   .attr('width', width)
   .attr('height', height);
 
+// Set the world projection
+const projection = d3.geoOrthographic()
+  .scale((height - 10) / 2)
+  .translate([width / 2, height / 2])
+  .rotate([0, -35, 0])
+  .precision(0.1);
+
+const path = d3.geoPath()
+  .projection(projection)
+  .pointRadius(1.7);
+
+function render() {
+  svg.selectAll('path.geo').attr('d', path);
+}
+
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
@@ -129,20 +144,11 @@ const getCityDesc = d => `
   <div>Regime: <b>${recentEvent(d.dates, sliderTime.value() )}</b></div>
 `;
 
-// Set the world projection
-const projection = d3.geoOrthographic()
-  .scale((height - 10) / 2)
-  .translate([width / 2, height / 2])
-  .rotate([0, -35, 0])
-  .precision(0.1);
-
 d3.geoZoom()
   .projection(projection)
   .onMove(render)
   (svg.node());
 
-
-    
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
@@ -209,13 +215,3 @@ function colorize_regimes(regime_colors, svg) {
   
   render();
 });
-
-//
-
-const path = d3.geoPath()
-  .projection(projection)
-  .pointRadius(1.7);
-
-function render() {
-  svg.selectAll('path.geo').attr('d', path);
-}
