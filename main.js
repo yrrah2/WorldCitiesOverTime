@@ -136,10 +136,6 @@ const projection = d3.geoOrthographic()
   .rotate([0, -35, 0])
   .precision(0.1);
 
-const path = d3.geoPath()
-  .projection(projection)
-  .pointRadius(1.7);
-
 d3.geoZoom()
   .projection(projection)
   .onMove(render)
@@ -215,6 +211,10 @@ function colorize_regimes(regime_colors, svg) {
 });
 
 //
+
+const path = d3.geoPath()
+  .projection(projection)
+  .pointRadius(1.7);
 
 function render() {
   svg.selectAll('path.geo').attr('d', path);
