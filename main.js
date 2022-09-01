@@ -175,8 +175,14 @@ d3.geoZoom()
   // Button to start history
 controls.rerender_voronois = function() {
     svg.selectAll("g").remove();
+    svg.selectAll(".ocean").remove();
+    
     filter_cities(cities, sliderTime.value());
-    //render();
+    svg.append('path').attr('class', 'geo ocean')
+        .datum(topojson.feature(world, world.objects.ocean));
+    
+    color_gray(svg); // Color every area gray by default
+    colorize_regimes(regime_colors, svg);
 };
 gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
