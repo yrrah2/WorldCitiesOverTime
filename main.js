@@ -47,6 +47,11 @@ function colorize_regimes(regime_colors, svg) {
     );
 }
 
+// Add the world SVG
+const svg = d3.select('#world').append('svg')
+  .attr('width', width)
+  .attr('height', height);
+
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
@@ -87,10 +92,7 @@ gui.add(controls, "Year").min(1500).max(2020).step(10);
 // Year slider
 const dataTime = d3.range(-1, 11).map( d => 200 * d );
 
-// Add the world SVG
-const svg = d3.select('#world').append('svg')
-  .attr('width', width)
-  .attr('height', height);
+
 
 const sliderTime = d3
     .sliderBottom()
