@@ -146,10 +146,10 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
     
-    function filter_cities(cities){
+    function filter_cities(cities, year){
         let cities_now = []
         cities.forEach(function (d) {
-            if ( d.founded == undefined || d.founded.slice(0, 4) <= sliderTime.value() ){
+            if ( d.founded == undefined || d.founded.slice(0, 4) <= year ){
                 cities_now.push(d);
             }
         })
@@ -171,6 +171,13 @@ d3.geoZoom()
     }
 
   filter_cities(cities);
+    
+  // Button to start history
+controls.rerender_voronois = function() {
+    filter_cities(cities, sliderTime.value());
+    render();
+};
+gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
   // Ocean overlay
   svg.append('path').attr('class', 'geo ocean')
