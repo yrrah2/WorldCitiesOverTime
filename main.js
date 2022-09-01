@@ -1,5 +1,8 @@
 const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
+var regime_colors = {"No one": "#353535"};
+regimes.forEach(regime => regime_colors[regime] = getRandomColor());
+
 // Random Colour Generator
 const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
@@ -77,6 +80,11 @@ gui.add(controls, "Year").min(1500).max(2020).step(10);
 // Year slider
 const dataTime = d3.range(-1, 11).map( d => 200 * d );
 
+// Add the world SVG
+const svg = d3.select('#world').append('svg')
+  .attr('width', width)
+  .attr('height', height);
+
 const sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
@@ -87,7 +95,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
-      colorize_after();
+      colorize_regimes(regime_colors, svg);
     });
 
 const gTime = d3
@@ -105,10 +113,7 @@ d3.select('p#value-time').text( sliderTime.value() );
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-// Add the world SVG
-const svg = d3.select('#world').append('svg')
-  .attr('width', width)
-  .attr('height', height);
+
 
 controls.start_history = function() {
     //colorize(svg)
@@ -193,9 +198,6 @@ Promise.all([
       }))
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
-    
-  var regime_colors = {"No one": "#353535"};
-  regimes.forEach(regime => regime_colors[regime] = getRandomColor())
     
   controls.colorize_regimes = function() {
       colorize_regimes(regime_colors, svg)
