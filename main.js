@@ -10,16 +10,7 @@ const getRandomColor = () => {
     return colour;
 }
 
-function colorize_after() {console.log("test")}
-
-function colorize(svg) {
-    svg.selectAll('path.voronoi').each(
-        function (d, i) { 
-            this.style.fill = getRandomColor();
-        }
-    );
-}
-
+// Start changing year every second
 function start_history(svg) {
     let time = sliderTime.value();
     setInterval(function(){
@@ -27,6 +18,7 @@ function start_history(svg) {
     },1000);
 }
 
+// Color every area gray
 function color_gray(svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) { 
@@ -67,15 +59,19 @@ const path = d3.geoPath()
   .projection(projection)
   .pointRadius(1.7);
 
+// Render everything
 function render() {
   svg.selectAll('path.geo').attr('d', path);
 }
 
+// --------     Load all the json files     --------
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
 ]).then(([world, cities, regimes]) => {
+
+// Set colors for each area
 var regime_colors = {"No one": "#353535"};
 regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 
@@ -83,13 +79,11 @@ regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 const gui = new dat.GUI();
 const controls = {
   'Cities': true,
-  'Graticule Grid': false,
   'Voronoi Layer': true,
   'Year': 1800
 };
 
 gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
-gui.add(controls, 'Graticule Grid').onChange(enabled => d3.selectAll('.graticule').style('display', enabled ? null : 'none'));
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
@@ -97,8 +91,6 @@ gui.add(controls, "Year").min(1500).max(2020).step(10);
 
 // Year slider
 const dataTime = d3.range(-1, 11).map( d => 200 * d );
-
-
 
 const sliderTime = d3
     .sliderBottom()
@@ -124,13 +116,13 @@ const gTime = d3
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
 
+// Button to start history
 controls.start_history = function() {
-    //colorize(svg)
     start_history(svg);
 };
 gui.add(controls, "start_history").name("Start");
 
-// At the tool tip
+// Tool tips for each area
 const tip = d3.tip()
   .attr('class', 'tooltip')
   .direction('s')
@@ -141,9 +133,10 @@ svg.call(tip);
 
 const getCityDesc = d => `
   <div>City: <b>${d.city}</b></div>
-  <div>Regime: <b>${recentEvent(d.dates, sliderTime.value() )}</b></div>
+  <div>Regime: <b>${recentEvent(d.dates, sliderTime.value())}</b></div>
 `;
 
+// ---   Earth projection   ---
 d3.geoZoom()
   .projection(projection)
   .onMove(render)
@@ -152,12 +145,6 @@ d3.geoZoom()
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
-
-  // Graticule lines
-  svg.append('path').attr('class', 'geo graticule')
-    .datum(d3.geoGraticule10())
-    .style('display', 'none')
-    .style('z-index', 1000);
 
   // Voronoi graph
   const voronoi = d3.geoVoronoi()
@@ -192,7 +179,6 @@ d3.geoZoom()
       .on('mouseout', tip.hide);
   
 function colorize_regimes(regime_colors, svg) {
-    console.log(regime_colors);
     svg.selectAll('path.voronoi').each(
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
@@ -202,15 +188,8 @@ function colorize_regimes(regime_colors, svg) {
         }
     );
 }
-    
-  controls.colorize_regimes = function() {
-      colorize_regimes(regime_colors, svg)
-  };
-  gui.add(controls, "colorize_regimes").name("Color according to regimes");
   
-  colorize_after = colorize_regimes(regime_colors, svg);
-  // colorize(svg);
-  color_gray(svg); //In case regime coloring doesn't work
+  color_gray(svg); // Color every area gray by default
   colorize_regimes(regime_colors, svg);
   
   render();
