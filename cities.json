@@ -21,6 +21,14 @@
     "latitude": 41.4037011,
     "dates": [
 	    {
+	"year": "-0133/01/01", 
+	"event": "Roman Republic"
+	    },	    
+	    {
+	"year": "-0027/01/16",
+	"event": "Roman Empire"
+	    },
+	    {
 	"year": "1931/04/14",
 	"event": "Second Spanish Republic"
 	    }
@@ -345,16 +353,40 @@
     "city": "Istanbul",
     "longitude": 28.9800877,
     "latitude": 41.0085506,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    },
+	    {
+	"year": "1453/05/29", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1923/09/23", 
+	"event": "Republic of Turkey"
+	    }]
   },
   {
     "city": "Kiev",
     "longitude": 30.5267693,
     "latitude": 50.4531709,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1240/12/06", 
+	"event": "Mongol Empire"
+	    },
+	    {
+	"year": "1242/01/01", 
+	"event": "Golden Horde"
+	    },
+	    {
+	"year": "1362/01/01" 
+	"event": "Grand Duchy of Lithuania"
+	    }]
   },
   {
-    "city": "Kirch",
+    "city": "Kerch",
     "longitude": 36.4883031,
     "latitude": 45.3664864,
     "dates": []
@@ -392,13 +424,29 @@
     "name": "Damascus",
     "longitude": 36.3066396,
     "latitude": 33.5116617,
-    "dates": []
+    "dates": [
+	    {
+	"year": "-0064/01/01", 
+	"event": "Roman Republic"
+	    },
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    }]
   },
   {
     "name": "Al-Quds",
     "longitude": 35.2353456,
     "latitude": 31.7780275,
     "dates": [
+	    {
+	"year": "-0063/01/01", 
+	"event": "Roman Republic"
+	    },
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    },
 	    {
 	"year": "0636/10/20",
 	"event": "Rashidun Caliphate"
@@ -496,6 +544,10 @@
     "longitude": 7.7458381,
     "latitude": 48.5834531,
     "dates": [
+	    {
+	"year": "-0012/01/01", 
+	"event": "Roman Empire"
+	    },
 	    {
 	"year": "1990/10/03", 
 	"event": "Federal Republic of Germany"
