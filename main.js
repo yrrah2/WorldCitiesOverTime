@@ -158,7 +158,7 @@ d3.geoZoom()
         let voronoi = d3.geoVoronoi()
             .x(d => d.longitude)
             .y(d => d.latitude)
-            (cities);
+            (cities_now);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
@@ -172,7 +172,7 @@ d3.geoZoom()
 
   filter_cities(cities);
     
-  // Button to start history
+  // Remove voronois and rerender them
 controls.rerender_voronois = function() {
     svg.selectAll("g").remove();
     svg.selectAll(".ocean").remove();
