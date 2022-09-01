@@ -3,7 +3,6 @@
     "city": "Valencia",
     "longitude": -0.3771437,
     "latitude": 39.4675146,
-    "founded": "-0138/01/01",
     "dates": [
 	    {
 	"year": "-0138/01/01",
@@ -157,7 +156,6 @@
     "city": "London",
     "longitude": -0.1245586,
     "latitude": 51.5007096,
-    "founded": "-0043/01/01",
     "dates": [
 	    {
 	"year": "-0047/01/01",
@@ -176,7 +174,6 @@
     "city": "Trier",
     "longitude": 6.635907,
     "latitude": 49.7540291,
-    "founded": "-0016/01/01",
     "dates": [
 	    {
 	"year": "-0016/01/01", 
@@ -661,7 +658,6 @@
     "city": "Baghdad",
     "longitude": 44.383333,
     "latitude": 33.333333,
-    "founded": "0762/07/30",
     "dates": [
 	    {
 	"year": "0762/07/30", 
