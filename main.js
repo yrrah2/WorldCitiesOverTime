@@ -146,6 +146,9 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
 
+cities_now = []
+cities.forEach(city -> console.log(city.city))
+
   // Voronoi graph
   const voronoi = d3.geoVoronoi()
     .x(d => d.longitude)
