@@ -116,7 +116,7 @@ const sliderTime = d3
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
       //colorize_regimes(regime_colors, svg);
-        filter_cities(cities, sliderTime.value())
+        voronoi_rerender()
     });
 
 const gTime = d3
@@ -189,9 +189,9 @@ d3.geoZoom()
 
   filter_cities(cities);
     
-  // Remove voronois and rerender them
-controls.rerender_voronois = function() {
-    svg.selectAll("g").remove();
+    
+  function voronoi_rerender() {
+  svg.selectAll("g").remove();
     svg.selectAll(".ocean").remove();
     
     filter_cities(cities, sliderTime.value());
@@ -202,6 +202,10 @@ controls.rerender_voronois = function() {
     colorize_regimes(regime_colors, svg);
     
     render();
+  }
+  // Remove voronois and rerender them
+controls.rerender_voronois = function() {
+    voronoi_rerender()
 };
 gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
