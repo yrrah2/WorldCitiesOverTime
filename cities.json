@@ -168,7 +168,8 @@
 	    {
 	"year": "0927/07/12", 
 	"event": "Kingdom of England"
-	    }]
+	    }
+    ]
   },
   {
     "city": "Trier",
@@ -388,6 +389,10 @@
 	    {
 	"year": "1362/01/01",
 	"event": "Grand Duchy of Lithuania"
+	    },
+	    {
+	"year": "1943/11/13",
+	"event": "Union of Soviet Socialist Republics"
 	    }
     ]
   },
@@ -395,7 +400,12 @@
     "city": "Kerch",
     "longitude": 36.4883031,
     "latitude": 45.3664864,
-    "dates": []
+    "dates": [
+	    {
+	"year": "2014/03/18",
+	"event": "Russian Federation"
+	    }
+    ]
   },
   {
     "city": "Chengdu",
@@ -407,13 +417,26 @@
     "city": "Xi'an",
     "longitude": 108.9593612,
     "latitude": 34.2846319,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1949/05/20",
+	"event": "Chinese Communist Control"
+	    },
+	    {
+	"year": "1949/10/01",
+	"event": "People's Republic of China"
+	    }
+    ]
   },
   {
     "city": "Beijing",
     "longitude": 116.3914548,
     "latitude": 39.9031576,
     "dates": [
+	    {
+	"year": "1271/11/05",
+	"event": "Yuan Dynasty"
+	    },
 	    {
 	"year": "1949/10/01",
 	"event": "People's Republic of China"
@@ -424,7 +447,24 @@
     "city": "Nanjing",
     "longitude": 118.7901488,
     "latitude": 32.0622951,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1853/03/01", 
+	"event": "Taiping Heavenly Kingdom"
+	    },
+	    {
+	"year": "1864/07/19", 
+	"event": "Qing Dynasty"
+	    },
+	    {
+	"year": "1949/04/23", 
+	"event": "Chinese Communist Control"
+	    },
+	    {
+	"year": "1949/10/01",
+	"event": "People's Republic of China"
+	    }
+    ]
   },
   {
     "city": "Damascus",
@@ -486,7 +526,20 @@
     "city": "Delhi",
     "longitude": 77.2081548,
     "latitude": 28.617198,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1858/11/01",
+	"event": "British Raj"
+	    },
+	    {
+	"year": "1947/08/15",
+	"event": "Dominion of India"
+	    },
+	    {
+	"year": "1950/01/26",
+	"event": "Republic of India"
+	    }
+    ]
   },
   {
     "city": "Timbuktu",
@@ -562,7 +615,12 @@
     "city": "Kerikeri",
     "longitude": 173.9659323,
     "latitude": -35.2181665,
-    "dates": []
+    "dates": [
+	    {
+	"year": "1947/11/25",
+	"event": "New Zealand"
+	    }
+    ]
   },
   {
     "city": "Strasbourg",
