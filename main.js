@@ -162,7 +162,8 @@ d3.geoZoom()
     function filter_cities(cities, year){
         let cities_now = []
         cities.forEach(function (d) {
-            if ( d.founded == undefined || convert_date(d.founded).year < year ){
+            let regime = recentEvent(d.properties.site.dates, sliderTime.value());
+            if ( regime != "No one" ){
                 cities_now.push(d);
             }
         })
