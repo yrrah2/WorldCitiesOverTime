@@ -657,8 +657,8 @@
   },
   {
     "city": "Baghdad",
-    "longitude": 33.333333,
-    "latitude": 44.383333,
+    "longitude": 44.383333,
+    "latitude": 33.333333,
     "founded": "0762/07/30",
     "dates": [
 	    {
