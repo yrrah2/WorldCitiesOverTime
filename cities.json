@@ -8,7 +8,7 @@
 	    {
 	"year": "-0138/01/01",
 	"event": "Roman Republic"
-	    },	    
+	    },
 	    {
 	"year": "-0027/01/16",
 	"event": "Roman Empire"
@@ -23,7 +23,7 @@
 	    {
 	"year": "-0133/01/01", 
 	"event": "Roman Republic"
-	    },	    
+	    },
 	    {
 	"year": "-0027/01/16",
 	"event": "Roman Empire"
@@ -42,7 +42,7 @@
 	    {
 	"year": "-0052/01/01",
 	"event": "Roman Republic"
-	    },	    
+	    },
 	    {
 	"year": "-0049/01/10",
 	"event": "Populares Faction"
@@ -50,19 +50,19 @@
 	    {
 	"year": "-0045/03/17",
 	"event": "Roman Republic"
-	    },	    
+	    },
 	    {
 	"year": "-0027/01/16",
 	"event": "Roman Empire"
-	    },	    
+	    },
 	    {
 	"year": "0260/09/01",
 	"event": "Gallic Empire"
-	    },	    
+	    },
 	    {
 	"year": "0274/02/01",
 	"event": "Roman Empire"
-	    },	    
+	    },
 	    {
 	"year": "0486/01/01",
 	"event": "Francia"
@@ -219,7 +219,8 @@
 	    {
 	"year": "1990/10/03", 
 	"event": "Federal Republic of Germany"
-	    }]
+	    }
+    ]
   },
   {
     "city": "Rome",
@@ -365,7 +366,8 @@
 	    {
 	"year": "1923/09/23", 
 	"event": "Republic of Turkey"
-	    }]
+	    }
+    ]
   },
   {
     "city": "Kiev",
@@ -381,9 +383,10 @@
 	"event": "Golden Horde"
 	    },
 	    {
-	"year": "1362/01/01" 
+	"year": "1362/01/01",
 	"event": "Grand Duchy of Lithuania"
-	    }]
+	    }
+    ]
   },
   {
     "city": "Kerch",
@@ -432,7 +435,8 @@
 	    {
 	"year": "-0027/01/16", 
 	"event": "Roman Empire"
-	    }]
+	    }
+    ]
   },
   {
     "name": "Al-Quds",
@@ -450,7 +454,8 @@
 	    {
 	"year": "0636/10/20",
 	"event": "Rashidun Caliphate"
-	    }]
+	    }
+    ]
   },
   {
     "name": "Havana",
@@ -505,10 +510,11 @@
     "longitude": -7.9888835,
     "latitude": 31.6259785,
     "dates": [
-    {
+	    {
 	"year": "1070/01/01",
 	"event": "Kingdom of Morocco"
-    }]
+	    }
+    ]
   },
   {
     "name": "Cusco",
@@ -521,10 +527,10 @@
     "longitude": 37.619899,
     "latitude": 55.7536697,
     "dates": [
-    {
+	    {
 	"year": "1990/06/12",
 	"event": "Russian Federation"
-    }
+	    }
     ]
   },
   {
