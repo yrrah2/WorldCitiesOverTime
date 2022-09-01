@@ -47,6 +47,17 @@ function colorize_regimes(regime_colors, svg) {
     );
 }
 
+// Find recent event date
+const recentEvent = (dates, year) => {
+    const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
+    let regime = datesBefore[datesBefore.length-1];
+    if ( regime == undefined ){
+        return "No one";
+    } else {
+        return regime.event.toString();
+    };
+}
+
 // Get screen size
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -63,19 +74,6 @@ Promise.all([
 ]).then(([world, cities, regimes]) => {
 var regime_colors = {"No one": "#353535"};
 regimes.forEach(regime => regime_colors[regime] = getRandomColor());
-
-
-
-// Find recent event date
-const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => date.year.slice(0, 4) < year);
-    let regime = datesBefore[datesBefore.length-1];
-    if ( regime == undefined ){
-        return "No one";
-    } else {
-        return regime.event.toString();
-    };
-}
 
 // Controls
 const gui = new dat.GUI();
