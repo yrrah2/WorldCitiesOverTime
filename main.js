@@ -155,7 +155,7 @@ d3.geoZoom()
         })
         
         // Voronoi graph
-        const voronoi = d3.geoVoronoi()
+        let voronoi = d3.geoVoronoi()
             .x(d => d.longitude)
             .y(d => d.latitude)
             (cities);
