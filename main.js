@@ -46,17 +46,6 @@ const recentEvent = (dates, year) => {
     };
 }
 
-function colorize_regimes(regime_colors, svg) {
-    console.log(regime_colors);
-    svg.selectAll('path.voronoi').each(
-        function (d, i) {
-            if ( d.properties.site.dates.length > 0 ){
-                let regime = recentEvent(d.properties.site.dates, sliderTime.value());
-                this.style.fill = regime_colors[regime.toString()];
-            }
-        }
-    );
-}
 
 // Get screen size
 const width = window.innerWidth;
@@ -199,6 +188,18 @@ d3.geoZoom()
       }))
       .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
       .on('mouseout', tip.hide);
+  
+function colorize_regimes(regime_colors, svg) {
+    console.log(regime_colors);
+    svg.selectAll('path.voronoi').each(
+        function (d, i) {
+            if ( d.properties.site.dates.length > 0 ){
+                let regime = recentEvent(d.properties.site.dates, sliderTime.value());
+                this.style.fill = regime_colors[regime.toString()];
+            }
+        }
+    );
+}
     
   controls.colorize_regimes = function() {
       colorize_regimes(regime_colors, svg)
