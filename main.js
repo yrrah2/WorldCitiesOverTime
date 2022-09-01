@@ -181,6 +181,8 @@ d3.geoZoom()
             .attr("id", d => d)
             .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
             .on('mouseout', tip.hide);
+        
+        render();
     }
 
   filter_cities(cities);
