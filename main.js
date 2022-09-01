@@ -146,29 +146,31 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
     
-    var cities_now = []
-    cities.forEach(function (d) {
-        if ( d.founded == undefined || d.founded.slice(0, 4) >= sliderTime.value() ){
-            cities_now.push(d);
-        }
-    })
-    
-    console.log(cities_now)
+    function filter_cities(cities){
+        let cities_now = []
+        cities.forEach(function (d) {
+            if ( d.founded == undefined || d.founded.slice(0, 4) <= sliderTime.value() ){
+                cities_now.push(d);
+            }
+        })
+        
+        // Voronoi graph
+        const voronoi = d3.geoVoronoi()
+            .x(d => d.longitude)
+            .y(d => d.latitude)
+            (cities);
 
-  // Voronoi graph
-  const voronoi = d3.geoVoronoi()
-    .x(d => d.longitude)
-    .y(d => d.latitude)
-    (cities);
+        // Voronoi polygons
+        svg.append('g').selectAll('.voronoi')
+            .data(voronoi.polygons().features)
+            .enter().append('path')
+            .attr('class', 'geo voronoi')
+            .attr("id", d => d)
+            .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
+            .on('mouseout', tip.hide);
+    }
 
-  // Voronoi polygons
-  svg.append('g').selectAll('.voronoi')
-    .data(voronoi.polygons().features)
-    .enter().append('path')
-      .attr('class', 'geo voronoi')
-      .attr("id", d => d)
-      .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
-      .on('mouseout', tip.hide);
+  filter_cities(cities);
 
   // Ocean overlay
   svg.append('path').attr('class', 'geo ocean')
