@@ -176,7 +176,7 @@ d3.geoZoom()
 controls.rerender_voronois = function() {
     svg.selectAll(".voronoi").remove();
     filter_cities(cities, sliderTime.value());
-    render();
+    //render();
 };
 gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
