@@ -145,16 +145,6 @@ function start_history(svg) {
 controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
-// Tool tips for each area
-const tip = d3.tip()
-.attr('class', 'tooltip')
-.offset([60, 10])
-.attr("postion", "absolute")
-.attr("top", 0)
-.html(d => d);
-
-svg.call(tip);
-
 const getCityDesc = d => `
   <div>City: <b>${d.city}</b></div>
   <div>Regime: <b>${recentEvent(d.dates, sliderTime.value())}</b></div>
@@ -171,8 +161,7 @@ d3.geoZoom()
     .datum({ type: 'Sphere' });
     
     function filter_cities(cities, year) {        
-        let cities_now = cities.filter(city => recentEvent(city.dates, year) != "No one");
-        return cities_now
+        return cities.filter(city => recentEvent(city.dates, year) != "No one");
     }
 
     function colorize_regimes(regime_colors, svg) {
@@ -205,7 +194,6 @@ d3.geoZoom()
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
             .on('mouseover', function({properties: { site: d }}) {
-                tip.show(getCityDesc(d), this);
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
             .on('mouseout', tip.hide);
