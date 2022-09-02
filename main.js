@@ -208,8 +208,8 @@ d3.geoZoom()
             coordinates: [d.longitude, d.latitude],
             properties: d
         }))
-            .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
-            .on('mouseout', tip.hide);
+            .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)));
+            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
         color_gray(svg); // Color every area gray by default
         colorize_regimes(regime_colors, svg);
