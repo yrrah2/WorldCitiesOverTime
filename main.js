@@ -112,8 +112,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
-      //colorize_regimes(regime_colors, svg);
-        voronoi_rerender()
+        voronoi_rerender();
     });
 
 const gTime = d3
@@ -134,7 +133,6 @@ function start_history(svg) {
         if(time <= controls.End) {
             time += controls.Step;
             sliderTime.value(time);
-            console.log(time);
      } else {
          clearInterval(time_interval);
      }
@@ -191,9 +189,10 @@ d3.geoZoom()
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
             .on('mouseover', function({properties: { site: d }}) {
+                document.getElementById("tooltip").style.display = "block"
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
-            .on('mouseout', tip.hide);
+            .on('mouseout', document.getElementById("tooltip").style.display = "none");
         
         // Ocean overlay
         svg.append('path').attr('class', 'geo ocean')
@@ -222,9 +221,6 @@ d3.geoZoom()
         voronoi_render();
         render();
     }
-    
-    controls.rerender_voronois = () => voronoi_rerender();
-    gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
     voronoi_render();
 
