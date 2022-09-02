@@ -486,6 +486,10 @@
 	    {
 	"year": "-0027/01/16", 
 	"event": "Roman Empire"
+	    },
+	    {
+	"year": "1516/10/02", 
+	"event": "Ottoman Empire"
 	    }
     ]
   },
@@ -685,6 +689,10 @@
 	"event": "Rashidun Caliphate"
 	    },
 	    {
+	"year": "0969/07/09",
+	"event": "Fatamid Caliphate"
+	    },
+	    {
 	"year": "1517/01/30", 
 	"event": "Ottoman Empire"
 	    },
@@ -832,6 +840,49 @@
 	    {
 	"year": "1990/10/03", 
 	"event": "Federal Republic of Germany"
+	    }
+]
+  },
+  {
+    "city": "Medina",
+    "longitude": 39.61,
+    "latitude": 24.47,
+    "dates": [
+	    {
+	"year": "0622/01/01",
+	"event": "Islamic rule in Medina"
+	    },
+	    {
+	"year": "0632/06/08",
+	"event": "Rashidun Caliphate"
+	    },
+	    {
+	"year": "0661/01/01", 
+	"event": "Umayyad Caliphate"
+	    },
+	    {
+	"year": "0750/01/25",
+	"event": "Abbasid Caliphate"
+	    },
+	    {
+	"year": "0978/01/01",
+	"event": "Fatamid Caliphate"
+	    },
+	    {
+	"year": "1525/01/01", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1919/01/10",
+	"event": "Hashemite Kingdom of Hejaz"
+	    },
+	    {
+	"year": "1925/12/19",
+	"event": "Kingdom of Hejaz and Nejd"
+	    },
+	    {
+	"year": "1932/09/23",
+	"event": "Kingdom of Saudi Arabia"
 	    }
 ]
   }
