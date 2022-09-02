@@ -180,53 +180,12 @@ d3.geoZoom()
             .data(voronoi.polygons().features)
             .enter().append('path')
             .attr('class', 'geo voronoi')
-            .attr("id", d => d)
+            .attr("id", d => d.city)
             .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
             .on('mouseout', tip.hide);
-        
-        
     }
 
-  filter_cities(cities);
-    
-    
-  function voronoi_rerender() {
-  svg.selectAll("g").remove();
-    svg.selectAll(".ocean").remove();
-    
-    filter_cities(cities, sliderTime.value());
-    svg.append('path').attr('class', 'geo ocean')
-        .datum(topojson.feature(world, world.objects.ocean));
-    
-    color_gray(svg); // Color every area gray by default
-    colorize_regimes(regime_colors, svg);
-    
-    render();
-  }
-  // Remove voronois and rerender them
-controls.rerender_voronois = function() {
-    voronoi_rerender()
-};
-gui.add(controls, "rerender_voronois").name("Rerender voronois");
-
-  // Ocean overlay
-  svg.append('path').attr('class', 'geo ocean')
-    .datum(topojson.feature(world, world.objects.ocean));
-    
-  // City points
-  svg.append('g').selectAll('.city')
-    .data(cities)
-    .enter().append('path')
-      .attr('class', 'geo city')
-      .datum(d => ({
-        type: 'Point',
-        coordinates: [d.longitude, d.latitude],
-        properties: d
-      }))
-      .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
-      .on('mouseout', tip.hide);
-  
-function colorize_regimes(regime_colors, svg) {
+  function colorize_regimes(regime_colors, svg) {
     svg.selectAll('path.voronoi').each(
         function (d, i) {
             if ( d.properties.site.dates.length > 0 ){
@@ -236,9 +195,50 @@ function colorize_regimes(regime_colors, svg) {
         }
     );
 }
-  
-  color_gray(svg); // Color every area gray by default
-  colorize_regimes(regime_colors, svg);
+    
+    function remove_voronois(){
+        svg.selectAll("g").remove();
+        svg.selectAll(".ocean").remove();
+    }
+    
+    function voronoi_render(){
+        filter_cities(cities, sliderTime.value());
+        
+        // Ocean overlay
+        svg.append('path').attr('class', 'geo ocean')
+            .datum(topojson.feature(world, world.objects.ocean));
+        
+        // City points
+        svg.append('g').selectAll('.city')
+            .data(cities)
+            .enter().append('path')
+            .attr('class', 'geo city')
+            .datum(d => ({
+            type: 'Point',
+            coordinates: [d.longitude, d.latitude],
+            properties: d
+        }))
+            .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
+            .on('mouseout', tip.hide);
+        
+        color_gray(svg); // Color every area gray by default
+        colorize_regimes(regime_colors, svg);
+    }
+    
+    
+  function voronoi_rerender() {
+    remove_voronois();
+    voronoi_render();
+    render();
+  }
+    
+  // Remove voronois and rerender them
+controls.rerender_voronois = function() {
+    voronoi_rerender()
+};
+gui.add(controls, "rerender_voronois").name("Rerender voronois");
+    
+    voronoi_render();
   
   render();
 });
