@@ -885,5 +885,31 @@
 	"event": "Kingdom of Saudi Arabia"
 	    }
 ]
+  },
+  {
+    "city": "Montpellier",
+    "longitude": 3.8772,
+    "latitude": 43.6119,
+    "dates": [
+	    {
+	"year": "1958/10/04",
+	"event": "Fifth French Republic"
+	    }
+    ]
+  },
+  {
+    "city": "Vladivostok",
+    "longitude": 3.8772,
+    "latitude": 43.6119,
+    "dates": [
+	    {
+	"year": "1919/11/14",
+	"event": "Russian Soviet Federative Socialist Republic"
+	    },
+	    {
+	"year": "1922/12/30",
+	"event": "Union of Soviet Socialist Republics"
+	    }
+    ]
   }
 ]
