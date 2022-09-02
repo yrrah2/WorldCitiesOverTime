@@ -206,7 +206,7 @@ d3.geoZoom()
             .attr("id", d => d.city)
             .on('mouseover', function({properties: { site: d }}) {
                 tip.show(getCityDesc(d), this);
-                document.getElementById("content").innerHTML = getCityDesc(d);
+                document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
             .on('mouseout', tip.hide);
         
