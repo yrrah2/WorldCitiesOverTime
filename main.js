@@ -151,7 +151,6 @@ gui.add(controls, "start_history").name("Start");
 // Tool tips for each area
 const tip = d3.tip()
 .attr('class', 'tooltip')
-  //.direction('s')
 .offset([60, 10])
 .attr("postion", "absolute")
 .attr("top", 0)
@@ -174,19 +173,8 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
     
-    function filter_cities(cities, year) {
-        let cities_now = []
-        cities.forEach(function (d) {
-            let regime = recentEvent(d.dates, year);
-            if ( regime != "No one" ){
-                cities_now.push(d);
-            }
-        })
-        
-        let cities_now2 = cities.filter(city => recentEvent(city.dates, year) != "No one");
-        console.log(cities_now);
-        console.log(cities_now2);
-        
+    function filter_cities(cities, year) {        
+        let cities_now = cities.filter(city => recentEvent(city.dates, year) != "No one");
         return cities_now
     }
 
