@@ -94,10 +94,10 @@ gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('dis
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
-gui.add(controls, "Year").min(1500).max(2020).step(10);
-gui.add(controls, "Beginning").min(1500).max(2020).step(10);
-gui.add(controls, "End").min(1500).max(2020).step(10);
-gui.add(controls, "Step").min(1500).max(2020).step(10);
+gui.add(controls, "Year").min(1500).max(2030).step(1);
+gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
+gui.add(controls, "End").min(1000).max(2030).step(1);
+gui.add(controls, "Step").min(1).max(100).step(1);
 
 // Year slider
 const dataTime = d3.range(-1, 6).map( d => 338 * d );
@@ -159,10 +159,6 @@ d3.geoZoom()
   // Sphere (Land)
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
-    
-    function filter_cities(cities, year) {        
-        return cities.filter(city => recentEvent(city.dates, year) != "No one");
-    }
 
     function colorize_regimes(regime_colors, svg) {
         svg.selectAll('path.voronoi').each(function(d){
@@ -180,7 +176,8 @@ d3.geoZoom()
     }
     
     function voronoi_render(){
-        let cities_now = filter_cities(cities, sliderTime.value());
+        let cities_now = cities.filter(city => recentEvent(city.dates, sliderTime.value()) != "No one");
+        
         // Voronoi graph
         let voronoi = d3.geoVoronoi()
             .x(d => d.longitude)
