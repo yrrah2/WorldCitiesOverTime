@@ -176,7 +176,7 @@ d3.geoZoom()
     }
 
     function colorize_regimes(regime_colors, svg) {
-        svg.selectAll('path.voronoi').each(d => {
+        svg.selectAll('path.voronoi').each(function(d){
                 if ( d.properties.site.dates.length > 0 ) {
                     let regime = recentEvent(d.properties.site.dates, sliderTime.value());
                     this.style.fill = regime_colors[regime.toString()];
