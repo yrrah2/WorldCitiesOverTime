@@ -957,5 +957,24 @@
 	"event": "Fifth French Republic"
 	    }
     ]
+  },
+  {
+    "city": "Lhasa",
+    "longitude": 91.1174, 
+    "latitude": 29.6487, 
+    "dates": [
+	    {
+	"year": "1271/11/05",
+	"event": "Yuan Dynasty"
+	    },
+	    {
+	"year": "1912/02/12",
+	"event": "Tibetan Army of China"
+	    },
+	    {
+	"year": "1950/10/24",
+	"event": "People's Republic of China"
+	    }
+    ]
   }
 ]
