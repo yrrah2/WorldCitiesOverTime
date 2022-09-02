@@ -100,7 +100,7 @@ gui.add(controls, "End").min(1000).max(2030).step(1);
 gui.add(controls, "Step").min(1).max(100).step(1);
 
 // Year slider
-const dataTime = d3.range(-1, 6).map( d => 338 * d );
+const dataTime = d3.range(-1, 7).map( d => 338 * d );
 
 const sliderTime = d3
     .sliderBottom()
