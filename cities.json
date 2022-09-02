@@ -415,7 +415,11 @@
     "city": "Chengdu",
     "longitude": 104.0633702,
     "latitude": 30.6598555,
-    "dates": []
+    "dates": [
+            {
+	"year": "1271/11/05",
+	"event": "Yuan Dynasty"
+	    },]
   },
   {
     "city": "Xi'an",
@@ -425,6 +429,10 @@
 	    {
 	"year": "-0203/12/01",
 	"event": "Han Dynasty"
+	    },
+            {
+	"year": "1271/11/05",
+	"event": "Yuan Dynasty"
 	    },
 	    {
 	"year": "1949/05/20",
@@ -464,6 +472,10 @@
     "longitude": 118.7901488,
     "latitude": 32.0622951,
     "dates": [
+            {
+	"year": "1271/11/05",
+	"event": "Yuan Dynasty"
+	    },
 	    {
 	"year": "1368/01/23", 
 	"event": "Ming Dynasty"
