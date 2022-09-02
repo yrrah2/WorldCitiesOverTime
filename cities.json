@@ -934,5 +934,20 @@
 	"event": "Russian Federation"
 	    }
     ]
+  },
+  {
+    "city": "Lille",
+    "longitude": 131.9, 
+    "latitude": 43.133333,
+    "dates": [
+	    {
+	"year": "1792/10/08",
+	"event": "First French Republic"
+	    },
+	    {
+	"year": "1958/10/04",
+	"event": "Fifth French Republic"
+	    }
+    ]
   }
 ]
