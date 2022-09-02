@@ -203,7 +203,7 @@ d3.geoZoom()
         
         // Color every area gray by default, then give colors according to regime
         color_gray(svg);
-        svg.selectAll('path.voronoi').each((area, this) => {
+        svg.selectAll('path.voronoi').each((area) => {
                 if ( area.properties.site.dates.length > 0 ) {
                     let regime = recentEvent(area.properties.site.dates, sliderTime.value());
                     this.style.fill = regime_colors[regime.toString()];
