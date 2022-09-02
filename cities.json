@@ -999,6 +999,42 @@
     "latitude": 45.466944,
     "dates": [
 	    {
+	"year": "1515/09/14",
+	"event": "Kingdom of France"
+	    },
+	    {
+	"year": "1797/06/29",
+	"event": "Cisalpine Republic"
+	    },
+	    {
+	"year": "1802/01/26",
+	"event": "Italian Republic"
+	    },
+	    {
+	"year": "1805/03/17",
+	"event": "Kingdom of Italy (Napoleon)"
+	    },
+	    {
+	"year": "1815/06/09",
+	"event": "Kingdom of Lombardy–Venetia"
+	    },
+	    {
+	"year": "1848/03/18",
+	"event": "Five Days of Milan"
+	    },
+	    {
+	"year": "1848/03/22",
+	"event": "Kingdom of Lombardy–Venetia"
+	    },
+	    {
+	"year": "1859/11/10",
+	"event": "Second French Empire"
+	    },
+	    {
+	"year": "1861/03/17",
+	"event": "Kingdom of Italy"
+	    },
+            {
 	"year": "1946/06/02",
 	"event": "Republic of Italy"
 	    }
