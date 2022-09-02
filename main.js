@@ -174,7 +174,7 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
     
-    var filter_cities = (cities, year) => {
+    function filter_cities(cities, year) {
         let cities_now = []
         cities.forEach(function (d) {
             let regime = recentEvent(d.dates, year);
