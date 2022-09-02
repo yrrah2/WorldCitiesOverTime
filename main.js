@@ -150,10 +150,12 @@ gui.add(controls, "start_history").name("Start");
 
 // Tool tips for each area
 const tip = d3.tip()
-  .attr('class', 'tooltip')
+.attr('class', 'tooltip')
   //.direction('s')
-  .offset([60, 10])
-  .html(d => d);
+.offset([60, 10])
+.attr("postion", "absolute")
+.attr("top", 0)
+.html(d => d);
 
 svg.call(tip);
 
@@ -218,7 +220,7 @@ d3.geoZoom()
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
-            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), window); })
+            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), this); })
             .on('mouseout', tip.hide);
         
         // Ocean overlay
