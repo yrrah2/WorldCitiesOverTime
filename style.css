@@ -8,6 +8,20 @@ body {
   cursor: -webkit-grab;
 }
 
+#tooltip {
+  background: rgba(0,0,140,0.7);
+  color: white;
+  font: 11px sans-serif;
+  width: fit-content;
+  float: left;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
 #world:active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
