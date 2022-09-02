@@ -799,5 +799,36 @@
 	"event": "Republic of Tunisia"
 	    }
 ]
+  },
+  {
+    "city": "Stuttgart",
+    "longitude": 9.18,
+    "latitude": 48.7775,
+    "dates": [
+	    {
+	"year": "0843/08/10",
+	"event": "East Francia"
+	    },
+	    {
+	"year": "1918/11/09", 
+	"event": "Weimar Republic"
+	    },
+	    {
+	"year": "1933/01/30", 
+	"event": "Nazi Germany"
+	    },
+	    {
+	"year": "1945/06/05", 
+	"event": "United States of America"
+	    },
+	    {
+	"year": "1949/05/23", 
+	"event": "West Germany"
+	    },
+	    {
+	"year": "1990/10/03", 
+	"event": "Federal Republic of Germany"
+	    }
+]
   }
 ]
