@@ -909,6 +909,29 @@
 	    {
 	"year": "1922/12/30",
 	"event": "Union of Soviet Socialist Republics"
+	    },
+	    {
+	"year": "1990/06/12",
+	"event": "Russian Federation"
+	    }
+    ]
+  },
+  {
+    "city": "Vladivostok",
+    "longitude": 131.9, 
+    "latitude": 43.133333,
+    "dates": [
+	    {
+	"year": "1922/10/25",
+	"event": "Russian Soviet Federative Socialist Republic"
+	    },
+	    {
+	"year": "1922/12/30",
+	"event": "Union of Soviet Socialist Republics"
+	    },
+	    {
+	"year": "1990/06/12",
+	"event": "Russian Federation"
 	    }
     ]
   }
