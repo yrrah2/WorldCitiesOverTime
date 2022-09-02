@@ -23,15 +23,6 @@ const getRandomColor = () => {
     return colour;
 }
 
-// Color every area gray
-function color_gray(svg) {
-    svg.selectAll('path.voronoi').each(
-        function (d, i) { 
-            this.style.fill = "#353535";
-        }
-    );
-}
-
 // Find recent event date
 const recentEvent = (dates, year) => {
     const datesBefore = dates.filter(date => convert_date(date.year).year < year);
@@ -198,11 +189,13 @@ d3.geoZoom()
             coordinates: [d.longitude, d.latitude],
             properties: d
         }))
-            .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)))
+            .on('mousemove', function({properties: { site: d }}) {
+                document.getElementById("tooltip").style.display = "block"
+                document.getElementById("tooltip").innerHTML = getCityDesc(d);
+        })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
-        // Color every area gray by default, then give colors according to regime
-        color_gray(svg);
+        // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
                 if ( area.properties.site.dates.length > 0 ) {
                     let regime = recentEvent(area.properties.site.dates, sliderTime.value());
