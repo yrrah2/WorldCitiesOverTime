@@ -206,7 +206,7 @@ d3.geoZoom()
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
-            .on('mousemove', ({properties: { site: d }}) => tip.show(getCityDesc(d)))
+            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), this); })
             .on('mouseout', tip.hide);
         
         // Ocean overlay
