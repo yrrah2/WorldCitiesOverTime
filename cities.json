@@ -898,9 +898,9 @@
     ]
   },
   {
-    "city": "Vladivostok",
-    "longitude": 3.8772,
-    "latitude": 43.6119,
+    "city": "Omsk",
+    "longitude": 73.366667, 
+    "latitude": 54.983333,
     "dates": [
 	    {
 	"year": "1919/11/14",
