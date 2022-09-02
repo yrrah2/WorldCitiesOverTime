@@ -423,6 +423,10 @@
     "latitude": 34.2846319,
     "dates": [
 	    {
+	"year": "-0203/12/01",
+	"event": "Han Dynasty"
+	    },
+	    {
 	"year": "1949/05/20",
 	"event": "Chinese Communist Control"
 	    },
