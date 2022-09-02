@@ -23,8 +23,6 @@ const getRandomColor = () => {
     return colour;
 }
 
-
-
 // Color every area gray
 function color_gray(svg) {
     svg.selectAll('path.voronoi').each(
@@ -44,7 +42,6 @@ const recentEvent = (dates, year) => {
         return regime.event.toString();
     };
 }
-
 
 // Get screen size
 const width = window.innerWidth;
@@ -103,7 +100,7 @@ gui.add(controls, "End").min(1500).max(2020).step(10);
 gui.add(controls, "Step").min(1500).max(2020).step(10);
 
 // Year slider
-const dataTime = d3.range(-1, 11).map( d => 200 * d );
+const dataTime = d3.range(-1, 6).map( d => 338 * d );
 
 const sliderTime = d3
     .sliderBottom()
@@ -208,7 +205,7 @@ d3.geoZoom()
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
-            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), this); })
+            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), document.getElementById("body")); })
             .on('mouseout', tip.hide);
         
         // Ocean overlay
