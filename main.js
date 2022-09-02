@@ -23,14 +23,7 @@ const getRandomColor = () => {
     return colour;
 }
 
-// Start changing year every second
-function start_history(svg) {
-    let time = sliderTime.value();
-    setInterval(function(){
-    time += 1;
-        sliderTime.value(time);
-    },1000);
-}
+
 
 // Color every area gray
 function color_gray(svg) {
@@ -131,6 +124,15 @@ const gTime = d3
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
 
+// Start changing year every second
+function start_history(svg) {
+    let time = sliderTime.value();
+    setInterval(function(){
+    time += 1;
+        sliderTime.value(time);
+    },1000);
+}
+    
 // Button to start history
 controls.start_history = function() {
     start_history(svg);
