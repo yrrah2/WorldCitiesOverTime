@@ -87,7 +87,10 @@ const gui = new dat.GUI();
 const controls = {
   'Cities': true,
   'Voronoi Layer': true,
-  'Year': 1800
+  'Year': 1800,
+    'Beginning': 1900,
+    'End': 1950,
+    'Step': 1
 };
 
 gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
@@ -95,6 +98,9 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
 gui.add(controls, "Year").min(1500).max(2020).step(10);
+gui.add(controls, "Beginning").min(1500).max(2020).step(10);
+gui.add(controls, "End").min(1500).max(2020).step(10);
+gui.add(controls, "Step").min(1500).max(2020).step(10);
 
 // Year slider
 const dataTime = d3.range(-1, 11).map( d => 200 * d );
@@ -126,11 +132,15 @@ d3.select('p#value-time').text( sliderTime.value() );
 
 // Start changing year every second
 function start_history(svg) {
-    let time = sliderTime.value();
-    setInterval(function(){
-    time += 25;
-        sliderTime.value(time);
-        console.log(time);
+    let time = controls.Beginning;
+    var time_interval = setInterval(function(){
+        if(time <= controls.End) {
+            time += controls.Step;
+            sliderTime.value(time);
+            console.log(time);
+     } else {
+         clearInterval(time_interval);
+     }
     },1000);
 }
     
