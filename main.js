@@ -128,8 +128,9 @@ d3.select('p#value-time').text( sliderTime.value() );
 function start_history(svg) {
     let time = sliderTime.value();
     setInterval(function(){
-    time += 1;
+    time += 25;
         sliderTime.value(time);
+        console.log(time);
     },1000);
 }
     
