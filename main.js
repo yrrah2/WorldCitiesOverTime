@@ -192,7 +192,7 @@ d3.geoZoom()
                 document.getElementById("tooltip").style.display = "block"
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
-            .on('mouseout', document.getElementById("tooltip").style.display = "none");
+            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
         // Ocean overlay
         svg.append('path').attr('class', 'geo ocean')
