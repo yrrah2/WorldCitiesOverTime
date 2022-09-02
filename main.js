@@ -145,9 +145,7 @@ function start_history(svg) {
 }
     
 // Button to start history
-controls.start_history = function() {
-    start_history(svg);
-};
+controls.start_history = start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
 // Tool tips for each area
@@ -177,11 +175,15 @@ d3.geoZoom()
     var filter_cities = (cities, year) => {
         let cities_now = []
         cities.forEach(function (d) {
-            let regime = recentEvent(d.dates, sliderTime.value());
+            let regime = recentEvent(d.dates, year);
             if ( regime != "No one" ){
                 cities_now.push(d);
             }
         })
+        
+        let cities_now2 = cities.filter(city => recentEvent(city.dates, year) != "No one");
+        console.log(cities_now);
+        console.log(cities_now2);
         
         return cities_now
     }
