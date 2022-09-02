@@ -109,7 +109,7 @@ const sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
-    .step(25)
+    .step(1)
     .width(300)
     .tickValues(dataTime)
     .default(1500)
