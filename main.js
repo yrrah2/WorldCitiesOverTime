@@ -112,7 +112,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
-        voronoi_rerender();
+        voronoi_refresh();
     });
 
 const gTime = d3
