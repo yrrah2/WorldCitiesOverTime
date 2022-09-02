@@ -212,7 +212,7 @@ d3.geoZoom()
         
         // City points
         svg.append('g').selectAll('.city')
-            .data(cities)
+            .data(cities_now)
             .enter().append('path')
             .attr('class', 'geo city')
             .datum(d => ({
