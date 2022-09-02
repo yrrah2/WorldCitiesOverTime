@@ -175,16 +175,15 @@ d3.geoZoom()
         return cities_now
     }
 
-  function colorize_regimes(regime_colors, svg) {
-    svg.selectAll('path.voronoi').each(
-        function (d, i) {
-            if ( d.properties.site.dates.length > 0 ){
-                let regime = recentEvent(d.properties.site.dates, sliderTime.value());
-                this.style.fill = regime_colors[regime.toString()];
+    function colorize_regimes(regime_colors, svg) {
+        svg.selectAll('path.voronoi').each(d => {
+                if ( d.properties.site.dates.length > 0 ) {
+                    let regime = recentEvent(d.properties.site.dates, sliderTime.value());
+                    this.style.fill = regime_colors[regime.toString()];
+                }
             }
-        }
-    );
-}
+        );
+    }
     
     function remove_voronois(){
         svg.selectAll("g").remove();
@@ -205,7 +204,7 @@ d3.geoZoom()
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
-            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), document.getElementById("body")); })
+            .on('mouseover', ({properties: { site: d }}, i, n) => { tip.show(getCityDesc(d), n[i]})
             .on('mouseout', tip.hide);
         
         // Ocean overlay
