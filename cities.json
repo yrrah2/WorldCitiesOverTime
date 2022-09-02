@@ -992,5 +992,16 @@
 	"event": "People's Republic of China"
 	    }
     ]
+  },
+{
+    "city": "Milan",
+    "longitude": 9.19,
+    "latitude": 45.466944,
+    "dates": [
+	    {
+	"year": "1946/06/02",
+	"event": "Republic of Italy"
+	    }
+    ]
   }
 ]
