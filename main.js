@@ -145,7 +145,7 @@ function start_history(svg) {
 }
     
 // Button to start history
-controls.start_history = start_history(svg);
+controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
 // Tool tips for each area
@@ -239,7 +239,7 @@ d3.geoZoom()
         render();
     }
     
-    controls.rerender_voronois = voronoi_rerender();
+    controls.rerender_voronois = () => voronoi_rerender();
     gui.add(controls, "rerender_voronois").name("Rerender voronois");
 
     voronoi_render();
