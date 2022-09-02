@@ -158,16 +158,6 @@ d3.geoZoom()
   svg.append('path').attr('class', 'geo sphere')
     .datum({ type: 'Sphere' });
 
-    function colorize_regimes(regime_colors, svg) {
-        svg.selectAll('path.voronoi').each(function(d){
-                if ( d.properties.site.dates.length > 0 ) {
-                    let regime = recentEvent(d.properties.site.dates, sliderTime.value());
-                    this.style.fill = regime_colors[regime.toString()];
-                }
-            }
-        );
-    }
-    
     function remove_voronois(){
         svg.selectAll("g").remove();
         svg.selectAll(".ocean").remove();
@@ -211,18 +201,25 @@ d3.geoZoom()
             .on('mousemove', ({properties: d}) => tip.show(getCityDesc(d)));
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
-        color_gray(svg); // Color every area gray by default
-        colorize_regimes(regime_colors, svg);
+        // Color every area gray by default, then give colors according to regime
+        color_gray(svg);
+        svg.selectAll('path.voronoi').each((area, this) => {
+                if ( area.properties.site.dates.length > 0 ) {
+                    let regime = recentEvent(area.properties.site.dates, sliderTime.value());
+                    this.style.fill = regime_colors[regime.toString()];
+                }
+            }
+        );
     }
     
-    function voronoi_rerender() {
+    function voronoi_refresh() {
         // Remove voronois and rerender them
         remove_voronois();
         voronoi_render();
         render();
     }
 
-    voronoi_render();
+    voronoi_refresh();
 
     render();
 });
