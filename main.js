@@ -1,7 +1,7 @@
 const MAX_URQUHART_DISTANCE = 0.15; // geo radians
 
 // Convert year to decimal
-function convert_date(date){
+const convert_date = (date) => {
     if (date.charAt(0) === '-'){
         date = date.substring(1);
         var year = -date.slice(0, 4);
@@ -28,6 +28,7 @@ function start_history(svg) {
     let time = sliderTime.value();
     setInterval(function(){
     time += 1;
+        sliderTime.value(time);
     },1000);
 }
 
