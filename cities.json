@@ -773,4 +773,31 @@
 	    }
 ]
   }
+  {
+    "city": "Tunis",
+    "longitude": 10.181667,
+    "latitude": 36.806389,
+    "dates": [
+	    {
+	"year": "-0146/01/01", 
+	"event": "Roman Republic"
+	    },
+	    {
+	"year": "-0027/01/16", 
+	"event": "Roman Empire"
+	    },
+	    {
+	"year": "1574/09/13", 
+	"event": "Ottoman Empire"
+	    },
+	    {
+	"year": "1881/05/12", 
+	"event": "French Third Republic"
+	    },
+	    {
+	"year": "1957/07/25", 
+	"event": "Republic of Tunisia"
+	    }
+]
+  }
 ]
