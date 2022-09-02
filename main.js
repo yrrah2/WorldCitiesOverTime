@@ -153,7 +153,7 @@ gui.add(controls, "start_history").name("Start");
 // Tool tips for each area
 const tip = d3.tip()
   .attr('class', 'tooltip')
-  .direction('s')
+  //.direction('s')
   .offset([60, 10])
   .html(d => d);
 
@@ -216,7 +216,7 @@ d3.geoZoom()
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
-            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d), this); })
+            .on('mouseover', function({properties: { site: d }}) { tip.show(getCityDesc(d)); })
             .on('mouseout', tip.hide);
         
         // Ocean overlay
@@ -240,20 +240,17 @@ d3.geoZoom()
         colorize_regimes(regime_colors, svg);
     }
     
+    function voronoi_rerender() {
+        // Remove voronois and rerender them
+        remove_voronois();
+        voronoi_render();
+        render();
+    }
     
-  function voronoi_rerender() {
-    remove_voronois();
+    controls.rerender_voronois = voronoi_rerender();
+    gui.add(controls, "rerender_voronois").name("Rerender voronois");
+
     voronoi_render();
+
     render();
-  }
-    
-  // Remove voronois and rerender them
-controls.rerender_voronois = function() {
-    voronoi_rerender()
-};
-gui.add(controls, "rerender_voronois").name("Rerender voronois");
-    
-    voronoi_render();
-  
-  render();
 });
