@@ -5,12 +5,8 @@ import codecs
 import json
 contents = []
 
-try:
-    with open("cities.json", 'r') as f:
-        d = codecs.open('cities.json', 'r', 'utf-8-sig')
-        contents = json.load(d)
-except Exception as e:
-    print(e)
+d = codecs.open("cities.json", 'r', "utf-8-sig")
+contents = json.load(d)
 
 regimes = []
 
@@ -21,8 +17,7 @@ for date in dates:
         if event not in regimes:
             regimes.append(event)
 
-with open("regimes.json", 'w') as f:
-    s = json.dumps(regimes)
-    f.write(s)
+s = json.dumps(regimes, indent=4)
 
-print(regimes)
+with open("regimes.json", 'w') as f:
+    f.write(s)
