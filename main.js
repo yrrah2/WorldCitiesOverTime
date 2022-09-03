@@ -155,7 +155,10 @@ d3.geoZoom()
     }
     
     function voronoi_render(){
-        let cities_now = cities.filter(city => recentEvent(city.dates, sliderTime.value()) != "No one");
+        let cities_now = cities.filter(city => 
+            event = recentEvent(city.dates, sliderTime.value())
+            return not (event == "No one" or event == "Unknown" or event == "Abandoned")
+            );
         
         // Voronoi graph
         let voronoi = d3.geoVoronoi()
