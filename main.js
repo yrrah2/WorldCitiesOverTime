@@ -25,7 +25,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => convert_date(date.year).year < year);
+    const datesBefore = dates.filter(date => map_date.year < year);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
