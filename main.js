@@ -1,4 +1,4 @@
-const map_date = {"year": 1818, "month": 5, "day": 5};
+var map_date = {"year": 1818, "month": 5, "day": 5};
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -102,7 +102,8 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-      d3.select('p#value-time').text(Math.ceil(val));
+        d3.select('p#value-time').text(Math.ceil(val))
+        map_date.year = val;
         voronoi_refresh();
     });
 
@@ -124,6 +125,7 @@ function start_history(svg) {
         if(time <= controls.End) {
             time += controls.Step;
             sliderTime.value(time);
+            map_date.year = time;
      } else {
          clearInterval(time_interval);
      }
