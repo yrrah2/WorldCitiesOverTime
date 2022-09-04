@@ -157,7 +157,7 @@ d3.geoZoom()
     function voronoi_render(){
         let cities_now = cities.filter(city => {
             let event = recentEvent(city.dates, sliderTime.value());
-            return not (event == "No one" || event == "Unknown" || event == "Abandoned");
+            return !(event == "No one" || event == "Unknown" || event == "Abandoned");
             });
         
         // Voronoi graph
@@ -173,7 +173,7 @@ d3.geoZoom()
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
             .on('mouseover', function({properties: { site: d }}) {
-                document.getElementById("tooltip").style.display = "block"
+                document.getElementById("tooltip").style.display = "block";
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
@@ -193,7 +193,7 @@ d3.geoZoom()
             properties: d
         }))
             .on('mousemove', function({properties: { site: d }}) {
-                document.getElementById("tooltip").style.display = "block"
+                document.getElementById("tooltip").style.display = "block";
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         });
         
