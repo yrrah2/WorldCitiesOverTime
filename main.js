@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+const map_date = {"year": 1818, "month": 5, "day": 5};
 
 // Convert year to decimal
 const convert_date = (date) => {
