@@ -156,7 +156,7 @@ d3.geoZoom()
     
     function voronoi_render(){
         let cities_now = cities.filter(city => {
-            event = recentEvent(city.dates, sliderTime.value());
+            let event = recentEvent(city.dates, sliderTime.value());
             return not (event == "No one" || event == "Unknown" || event == "Abandoned");
             });
         
