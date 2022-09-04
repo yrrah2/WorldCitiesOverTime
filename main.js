@@ -195,8 +195,7 @@ d3.geoZoom()
             .on('mousemove', function({properties: { site: d }}) {
                 document.getElementById("tooltip").style.display = "block"
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
-        })
-            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
+        });
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
@@ -216,6 +215,4 @@ d3.geoZoom()
     }
 
     voronoi_refresh();
-
-    render();
 });
