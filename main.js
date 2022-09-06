@@ -1,4 +1,7 @@
 var map_date = {"year": 1818, "month": 5, "day": 5};
+var play_width = 50;
+var padding = 50;
+var w = window.innerWidth - padding;
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -110,7 +113,7 @@ const sliderTime = d3
 const gTime = d3
     .select('div#slider-time')
     .append('svg')
-    .attr('width', 556)
+    .attr('width', w - play_width)
     .attr('height', 100);
     
 const gTime_slider = gTime
