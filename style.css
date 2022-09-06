@@ -92,7 +92,11 @@ body {
 #sliderwrapper {
   position: absolute;
   text-align: center;
-  top: 50px;
+  top: 100px;
+  color: #eee;
+  background: #1a1a1a;
+  width: 570px;
+  left: 100px;
 }
 
 .tooltip {
