@@ -1,4 +1,4 @@
-const MAX_URQUHART_DISTANCE = 0.15; // geo radians
+var map_date = {"year": 1818, "month": 5, "day": 5};
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -98,11 +98,12 @@ const sliderTime = d3
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
     .step(1)
-    .width(300)
+    .width(500)
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
+        map_date.year = val;
         voronoi_refresh();
     });
 
@@ -113,6 +114,7 @@ const gTime = d3
     .attr('height', 100)
     .append('g')
     .attr('transform', 'translate(30,30)');
+
 
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
@@ -155,7 +157,10 @@ d3.geoZoom()
     }
     
     function voronoi_render(){
-        let cities_now = cities.filter(city => recentEvent(city.dates, sliderTime.value()) != "No one");
+        let cities_now = cities.filter(city => {
+            let event = recentEvent(city.dates, sliderTime.value());
+            return !(event == "No one" || event == "Unknown" || event == "Abandoned");
+            });
         
         // Voronoi graph
         let voronoi = d3.geoVoronoi()
@@ -170,7 +175,7 @@ d3.geoZoom()
             .attr('class', 'geo voronoi')
             .attr("id", d => d.city)
             .on('mouseover', function({properties: { site: d }}) {
-                document.getElementById("tooltip").style.display = "block"
+                document.getElementById("tooltip").style.display = "block";
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
@@ -188,12 +193,7 @@ d3.geoZoom()
             type: 'Point',
             coordinates: [d.longitude, d.latitude],
             properties: d
-        }))
-            .on('mousemove', function({properties: { site: d }}) {
-                document.getElementById("tooltip").style.display = "block"
-                document.getElementById("tooltip").innerHTML = getCityDesc(d);
-        })
-            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
+        }));
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
@@ -213,6 +213,4 @@ d3.geoZoom()
     }
 
     voronoi_refresh();
-
-    render();
 });
