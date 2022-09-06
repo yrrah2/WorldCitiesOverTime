@@ -98,7 +98,7 @@ const sliderTime = d3
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
     .step(1)
-    .width(300)
+    .width(500)
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
@@ -114,6 +114,7 @@ const gTime = d3
     .attr('height', 100)
     .append('g')
     .attr('transform', 'translate(30,30)');
+
 
 gTime.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
