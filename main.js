@@ -114,8 +114,8 @@ const gTime = d3
     .attr('height', 100);
     
 const gTime_slider = gTime
-    .append('g')
-    .attr('transform', 'translate(30,30)');
+    .append('g');
+    //.attr('transform', 'translate(30,30)');
 
 
 gTime_slider.call(sliderTime);
