@@ -1133,5 +1133,20 @@
                 "event": "Fifth French Republic"
             }
         ]
+    },
+    {
+        "city": "Fenghao",
+        "latitude": 34.21,
+        "longitude": 108.72,
+        "dates": [
+            {
+                "year": "-1051/01/01",
+                "event": "Western Zhou Dynasty"
+            },
+            {
+                "year": "-0771/01/01",
+                "event": "Abandoned"
+            }
+        ]
     }
 ]
