@@ -187,15 +187,15 @@ d3.geoZoom()
             .datum(topojson.feature(world, world.objects.ocean));
         
         // City points
-        svg.append('g').selectAll('.city')
-            .data(cities_now)
-            .enter().append('path')
-            .attr('class', 'geo city')
-            .datum(d => ({
-            type: 'Point',
-            coordinates: [d.longitude, d.latitude],
-            properties: d
-        }));
+        //svg.append('g').selectAll('.city')
+        //    .data(cities_now)
+        //    .enter().append('path')
+        //    .attr('class', 'geo city')
+        //    .datum(d => ({
+        //    type: 'Point',
+        //    coordinates: [d.longitude, d.latitude],
+        //    properties: d
+        //}));
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
