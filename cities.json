@@ -1164,5 +1164,36 @@
                 "event": "Abandoned"
             }
         ]
+    },
+    {
+        "city": "Kabul",
+        "latitude": 34.525278,
+        "longitude": 69.178333,
+        "dates": [
+            {
+                "year": "1504/01/01",
+                "event": "Timurid Empire"
+            },
+            {
+                "year": "1526/04/20",
+                "event": "Mughal Empire"
+            },
+            {
+                "year": "1926/06/09",
+                "event": "Kingdom of Afghanistan"
+            },
+            {
+                "year": "1978/04/28",
+                "event": "Democratic Republic of Afghanistan"
+            },
+            {
+                "year": "2001/11/14",
+                "event": "Islamic State of Afghanistan"
+            },
+            {
+                "year": "2021/08/15",
+                "event": "Islamic Emirate of Aghanistan"
+            }
+        ]
     }
 ]
