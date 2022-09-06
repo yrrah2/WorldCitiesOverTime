@@ -303,7 +303,7 @@ function brushed() {
 var brush, slider_x, handle;
 
 function updateSlider() {
-  slider_x = d3.time.scale()
+  slider_x = d3.scaleTime()
     .domain([date_values[0], date_values[date_values.length - 1]])
     .range([0, w - 4 * padding])
     .clamp(true);
@@ -328,7 +328,7 @@ function updateSlider() {
       .scale(slider_x)
       .tickValues(date_values)
       .orient("bottom")
-      .tickFormat(d3.time.format("%Y"))
+      .tickFormat(d3.timeFormat("%Y"))
       .tickPadding(12))
     .select(".domain")
     .select(function() {
