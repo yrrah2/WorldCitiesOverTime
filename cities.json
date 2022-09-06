@@ -168,6 +168,14 @@
             {
                 "year": "0927/07/12",
                 "event": "Kingdom of England"
+            },
+            {
+                "year": "1701/05/01",
+                "event": "Kingdom of Great Britain"
+            },
+            {
+                "year": "1801/01/01",
+                "event": "United Kingdom of Great Britain and Ireland"
             }
         ]
     },
@@ -430,6 +438,14 @@
             {
                 "year": "-0203/12/01",
                 "event": "Han Dynasty"
+            },
+            {
+                "year": "-0195/01/01",
+                "event": "Han Dynasty"
+            },
+            {
+                "year": "0557/01/01",
+                "event": "Northern Zhou"
             },
             {
                 "year": "1271/11/05",
