@@ -1,4 +1,4 @@
-const map_date = {"year": 1818, "month": 5, "day": 5};
+var map_date = {"year": 1818, "month": 5, "day": 5};
 
 // Convert year to decimal
 const convert_date = (date) => {
