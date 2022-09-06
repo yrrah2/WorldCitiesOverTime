@@ -98,7 +98,7 @@ const sliderTime = d3
     .min(d3.min(dataTime))
     .max(d3.max(dataTime))
     .step(1)
-    .width(500)
+    .width(556)
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
@@ -110,7 +110,7 @@ const sliderTime = d3
 const gTime = d3
     .select('div#slider-time')
     .append('svg')
-    .attr('width', 500)
+    .attr('width', 556)
     .attr('height', 100);
     
 const gTime_slider = gTime
