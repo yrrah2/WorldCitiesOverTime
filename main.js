@@ -308,7 +308,7 @@ function updateSlider() {
     .range([0, w - 4 * padding])
     .clamp(true);
 
-  brush = d3.svg.brush()
+  brush = d3.brushX()
     .x(slider_x)
     .on("brush", brushed);
 
