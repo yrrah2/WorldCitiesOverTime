@@ -105,6 +105,33 @@ gui.add(controls, "Step").min(1).max(100).step(1);
 // Year slider
 const dataTime = d3.range(-1, 7).map( d => 338 * d );
 
+function brushed() {
+  var value = brush.extent()[0];
+
+  if (d3.event.sourceEvent) {
+    value = slider_x.invert(d3.mouse(this)[0]);
+    document.getElementById("test").innerHTML = "<p>"+value.toString()+"</p>";
+    brush.extent([value, value]);
+  }
+
+  handle.attr("cx", slider_x(value));
+}
+
+var brush, slider_x, handle;
+
+function updateSlider() {
+    slider_x = d3.time.scale()
+        .domain([date_values[0], date_values[date_values.length - 1]])
+        .range([0, w - 4 * padding])
+        .clamp(true);
+
+    brush = d3.svg.brush()
+        .x(slider_x)
+        .on("brush", brushed);
+};
+    
+updateSlider();
+    
 const sliderTime = d3
     .sliderBottom()
     .min(d3.min(dataTime))
@@ -228,3 +255,113 @@ d3.geoZoom()
 
     voronoi_refresh();
 });
+
+
+
+// TESTING CODE::
+
+var date_values = [];
+date_values[0] = new Date(-2000, 9, 31);
+date_values[1] = new Date(-1500, 10, 30);
+date_values[2] = new Date(-1000, 11, 30);
+date_values[3] = new Date(1000, 0, 31);
+var current_nr_date_values = date_values.length - 1;
+
+var play_width = 50;
+var padding = 50;
+var w = window.innerWidth - padding;
+
+
+var margin = {
+    top: 0,
+    right: padding * 2,
+    bottom: 300,
+    left: padding * 2
+  },
+  height_slider = 100;
+
+var slider_plays = false;
+var slider_play_newstart = false;
+
+
+updateSlider()
+
+
+
+function brushed() {
+  var value = brush.extent()[0];
+
+  if (d3.event.sourceEvent) {
+    value = slider_x.invert(d3.mouse(this)[0]);
+    document.getElementById("test").innerHTML = "<p>"+value.toString()+"</p>";
+    brush.extent([value, value]);
+  }
+
+  handle.attr("cx", slider_x(value));
+}
+
+var brush, slider_x, handle;
+
+function updateSlider() {
+  slider_x = d3.time.scale()
+    .domain([date_values[0], date_values[date_values.length - 1]])
+    .range([0, w - 4 * padding])
+    .clamp(true);
+
+  brush = d3.svg.brush()
+    .x(slider_x)
+    .on("brush", brushed);
+
+  d3.select("#scatterchart_slider").html("")
+  var svg = d3.select("#scatterchart_slider").append("svg")
+    .attr("width", w - play_width)
+    .attr("height", height_slider)
+  var svg_slider = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+  svg_slider.append("g")
+    .attr("class", "x axis_slider")
+    .attr("transform", "translate(0," + height_slider / 2 + ")")
+    .call(d3.svg.axis()
+      .scale(slider_x)
+      .tickValues(date_values)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"))
+      .tickPadding(12))
+    .select(".domain")
+    .select(function() {
+      return this.parentNode.appendChild(this.cloneNode(true));
+    })
+    .attr("class", "halo");
+
+  var slider = svg_slider.append("g")
+    .attr("class", "slider")
+    .call(brush);
+
+  slider.selectAll(".extent,.resize")
+    .remove();
+
+  slider.select(".background")
+    .attr("height", height_slider);
+
+  handle = slider.append("circle")
+    .attr("class", "handle")
+    .attr("transform", "translate(0," + height_slider / 2 + ")")
+    .attr("r", 9);
+
+  slider
+    .call(brush.extent([date_values[current_nr_date_values], date_values[current_nr_date_values]]))
+    .call(brush.event);
+}
+
+function resize_slider() {
+  w = window.innerWidth - padding;
+  updateSlider()
+}
+
+d3.select(window).on('resize', resize_slider);
+
+
+
