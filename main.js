@@ -103,6 +103,7 @@ const sliderTime = d3
     .default(1500)
     .on('onchange', val => {
       d3.select('p#value-time').text(Math.ceil(val));
+        map_date.year = val;
         voronoi_refresh();
     });
 
@@ -191,11 +192,7 @@ d3.geoZoom()
             type: 'Point',
             coordinates: [d.longitude, d.latitude],
             properties: d
-        }))
-            .on('mousemove', function({properties: { site: d }}) {
-                document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDesc(d);
-        });
+        }));
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
