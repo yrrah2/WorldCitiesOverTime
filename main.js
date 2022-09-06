@@ -1,4 +1,4 @@
-var map_date = {"year": 1818, "month": 5, "day": 5};
+const map_date = {"year": 1818, "month": 5, "day": 5};
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -25,7 +25,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => map_date.year < year);
+    const datesBefore = dates.filter(date => convert_date(date.year).year < year);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
@@ -102,8 +102,7 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-        d3.select('p#value-time').text(Math.ceil(val))
-        map_date.year = val;
+      d3.select('p#value-time').text(Math.ceil(val));
         voronoi_refresh();
     });
 
@@ -125,7 +124,6 @@ function start_history(svg) {
         if(time <= controls.End) {
             time += controls.Step;
             sliderTime.value(time);
-            map_date.year = time;
      } else {
          clearInterval(time_interval);
      }
