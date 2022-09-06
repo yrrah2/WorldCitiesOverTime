@@ -111,12 +111,14 @@ const gTime = d3
     .select('div#slider-time')
     .append('svg')
     .attr('width', 500)
-    .attr('height', 100)
+    .attr('height', 100);
+    
+const gTime_slider = gTime
     .append('g')
     .attr('transform', 'translate(30,30)');
 
 
-gTime.call(sliderTime);
+gTime_slider.call(sliderTime);
 d3.select('p#value-time').text( sliderTime.value() );
 
 // Start changing year every second
