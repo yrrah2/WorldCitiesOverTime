@@ -131,7 +131,7 @@ function start_history(svg) {
     var time_interval = setInterval(function(){
         if(time <= controls.End) {
             time += controls.Step;
-            map_time.year = time;
+            map_date.year = time;
             sliderTime.value(time);
      } else {
          clearInterval(time_interval);
