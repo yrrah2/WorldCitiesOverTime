@@ -65,7 +65,7 @@ function render() {
     let regime_obj = {};
     
     paths._groups[0].forEach(path => {
-        let regime = recentEvent(path.id, map_date.year)
+        let regime = recentEvent(path.id)
         if (regime_obj[regime] != undefined){
             regime_obj[regime] = path
         } else {
