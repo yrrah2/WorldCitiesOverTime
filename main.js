@@ -59,8 +59,13 @@ const path = d3.geoPath()
 
 // Render everything
 function render() {
-  svg.selectAll('path.geo').attr('d', path);
-    console.log(svg.selectAll("path.geo"));
+    let paths = svg.selectAll('path.geo')
+    
+    Line1 = paths._groups[0][1];
+    Line2 = paths._groups[0][2];
+    
+    Line1.setAttribute('d', Line1.getAttribute('d') + ' ' + Line2.getAttribute('d'));
+    paths.attr('d', path);
 }
 
 // --------     Load all the json files     --------
