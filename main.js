@@ -64,14 +64,18 @@ function render() {
     
     let regime_obj = {};
     console.log(paths);
-    paths._groups[0].slice[1].forEach(path => {
-        console.log(path);
-        let regime = recentEvent(path.dates);
-        if (regime_obj[regime] != undefined){
-            regime_obj[regime] = path;
-        } else {
-            regime_obj[regime].setAttribute('d', regime_obj[regime].getAttribute('d') + ' ' + path.getAttribute('d'));
-        }});
+    paths._groups[0].forEach(path => {
+        if(path.classList[1] == "voronoi"){
+            console.log(path);
+            let regime = recentEvent(path.dates);
+            if (regime_obj[regime] != undefined){
+                regime_obj[regime] = path;
+            } else {
+                regime_obj[regime].setAttribute('d', regime_obj[regime].getAttribute('d') + ' ' + path.getAttribute('d'));
+            }
+        }
+    }
+                            );
 }
 
 // --------     Load all the json files     --------
