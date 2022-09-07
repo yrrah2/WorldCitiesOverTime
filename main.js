@@ -105,7 +105,8 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-      d3.select('p#value-time').text(Math.ceil(val));
+        console.log(map_date);
+      d3.select('p#value-time').text(Math.ceil(map_date.year).toString());
         map_date.year = val;
         voronoi_refresh();
     });
@@ -130,6 +131,7 @@ function start_history(svg) {
     var time_interval = setInterval(function(){
         if(time <= controls.End) {
             time += controls.Step;
+            map_time.year = time;
             sliderTime.value(time);
      } else {
          clearInterval(time_interval);
@@ -172,6 +174,8 @@ d3.geoZoom()
             .x(d => d.longitude)
             .y(d => d.latitude)
             (cities_now);
+        
+        console.log(voronoi);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
