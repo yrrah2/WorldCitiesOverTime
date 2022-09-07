@@ -27,8 +27,8 @@ const getRandomColor = () => {
 }
 
 // Find recent event date
-const recentEvent = (dates, year) => {
-    const datesBefore = dates.filter(date => convert_date(date.year).year < year);
+const recentEvent = (dates) => {
+    const datesBefore = dates.filter(date => convert_date(date.year).year < map_date.year);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
@@ -143,7 +143,7 @@ gui.add(controls, "start_history").name("Start");
 
 const getCityDesc = d => `
   <div>City: <b>${d.city}</b></div>
-  <div>Regime: <b>${recentEvent(d.dates, sliderTime.value())}</b></div>
+  <div>Regime: <b>${recentEvent(d.dates)}</b></div>
 `;
 
 // ---   Earth projection   ---
@@ -163,7 +163,7 @@ d3.geoZoom()
     
     function voronoi_render(){
         let cities_now = cities.filter(city => {
-            let event = recentEvent(city.dates, sliderTime.value());
+            let event = recentEvent(city.dates);
             return !(event == "No one" || event == "Unknown" || event == "Abandoned");
             });
         
@@ -203,7 +203,7 @@ d3.geoZoom()
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
                 if ( area.properties.site.dates.length > 0 ) {
-                    let regime = recentEvent(area.properties.site.dates, sliderTime.value());
+                    let regime = recentEvent(area.properties.site.dates);
                     this.style.fill = regime_colors[regime.toString()];
                 }
             }
