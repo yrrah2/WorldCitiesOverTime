@@ -61,8 +61,8 @@ const path = d3.geoPath()
 function render() {
     let paths = svg.selectAll('path.geo');
     
-    Line1 = paths._groups[0][1];
-    Line2 = paths._groups[0][2];
+    let Line1 = paths._groups[0][1];
+    let Line2 = paths._groups[0][2];
     
     Line1.setAttribute('d', Line1.getAttribute('d') + ' ' + Line2.getAttribute('d'));
     paths.attr('d', path);
