@@ -192,11 +192,11 @@ d3.geoZoom()
             (cities_now);
         
         console.log(voronoi);
-        voronoi.polygons().features[0].geometry = voronoi.polygons().features[0].geometry.coordinates.concat(voronoi.polygons().features[1].geometry.coordinates);
+        voronoi.delaunay.polygons[0] = voronoi.delaunay.polygons[0].concat(voronoi.delaunay.polygons[1]);
         console.log(voronoi.polygons().features[0].properties.site);
-        console.log(voronoi.polygons().features[0].geometry.coordinates);
+        console.log(voronoi.delaunay.polygons[0]);
         console.log(voronoi.polygons().features[1].properties.site);
-        console.log(voronoi.polygons().features[1].geometry.coordinates);
+        console.log(voronoi.delaunay.polygons[1]);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
