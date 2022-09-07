@@ -60,6 +60,7 @@ const path = d3.geoPath()
 // Render everything
 function render() {
   svg.selectAll('path.geo').attr('d', path);
+    console.log(svg.selectAll("path.geo"));
 }
 
 // --------     Load all the json files     --------
@@ -105,7 +106,6 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-        console.log(map_date);
       d3.select('p#value-time').text(Math.ceil(map_date.year).toString());
         map_date.year = val;
         voronoi_refresh();
@@ -123,7 +123,7 @@ const gTime_slider = gTime
 
 
 gTime_slider.call(sliderTime);
-d3.select('p#value-time').text( sliderTime.value() );
+d3.select('p#value-time').text( Math.ceil(map_date.year).toString() );
 
 // Start changing year every second
 function start_history(svg) {
