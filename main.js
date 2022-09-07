@@ -62,12 +62,15 @@ function render() {
     let paths = svg.selectAll('path.geo');
     paths.attr('d', path);
     
-    let Line1 = paths._groups[0][1];
-    let Line2 = paths._groups[0][2];
+    let regime_obj = {};
     
-    console.log(Line1);
-    
-    Line1.setAttribute('d', Line1.getAttribute('d') + ' ' + Line2.getAttribute('d'));
+    paths._groups[0].forEach(path => {
+        let regime = recentEvent(path.id, map_date.year)
+        if (regime_obj[regime]) != undefined){
+            regime_obj[regime] = path
+        } else {
+            regime_obj[regime].setAttribute('d', regime_obj[regime].getAttribute('d') + ' ' + path.getAttribute('d'));
+        }});
 }
 
 // --------     Load all the json files     --------
