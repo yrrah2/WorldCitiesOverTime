@@ -99,6 +99,12 @@ body {
   left: 100px;
 }
 
+.col-sm-2 {
+  position: absolute;
+  bottom: 200px;
+  left: 49%;
+}
+
 .tooltip {
   color: #eee;
   background: rgba(0,0,140,0.7);
