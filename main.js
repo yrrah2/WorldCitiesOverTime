@@ -163,7 +163,6 @@ controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
 const getCityDesc = d => `
-  <div>City: <b>${d.city}</b></div>
   <div>Regime: <b>${recentEvent(d.dates)}</b></div>
 `;
 
