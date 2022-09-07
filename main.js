@@ -182,10 +182,10 @@ d3.geoZoom()
             .data(voronoi.polygons().features)
             .enter().append('path')
             .attr('class', 'geo voronoi')
-            .attr("id", d => {console.log(d); d.city;})
-            .on('mouseover', function({properties: { site: d }}) {
+            .attr("id", d => d.properties.site.city;)
+            .on('mouseover', function(d) {
                 document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDesc(d);
+                document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
