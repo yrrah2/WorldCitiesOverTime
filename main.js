@@ -194,22 +194,6 @@ d3.geoZoom()
 
 
         console.log(voronoi);
-        let regime_obj = {};
-        let mark_for_delete = [];
-        for (var i = 0; i < cities_now.length; i++) {
-            let regime = recentEvent(cities_now[i].dates);
-            if (regime_obj[regime] == undefined){
-                regime_obj[regime] = i;
-            } else {
-                voronoi.delaunay.polygons[regime_obj[regime]] = voronoi.delaunay.polygons[regime_obj[regime]].concat(voronoi.delaunay.polygons[i]);
-                mark_for_delete.push(i)
-            }
-        }
-        
-        let remove = (list, index) => list.slice(0,index).concat(list.slice(index+1, list.length))
-        mark_for_delete.forEach( item => {
-            remove(voronoi.delaunay.polygons, item);
-                                         } );
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
