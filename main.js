@@ -65,6 +65,8 @@ function render() {
     let Line1 = paths._groups[0][1];
     let Line2 = paths._groups[0][2];
     
+    console.log(Line1);
+    
     Line1.setAttribute('d', Line1.getAttribute('d') + ' ' + Line2.getAttribute('d'));
 }
 
@@ -94,7 +96,10 @@ gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('dis
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
-gui.add(controls, "Year").min(1500).max(2030).step(1);
+gui.add(controls, "Year").min(1500).max(2030).step(1).onChange(function(){
+    map_date.year = controls.Year;
+    sliderTime.value(controls.Year);
+});
 gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
 gui.add(controls, "End").min(1000).max(2030).step(1);
 gui.add(controls, "Step").min(1).max(100).step(1);
@@ -128,7 +133,7 @@ const gTime_slider = gTime
 
 
 gTime_slider.call(sliderTime);
-d3.select('p#value-time').text( Math.ceil(map_date.year).toString() );
+d3.select('p#value-time').text( Math.ceil(map_date.year).toString());
 
 // Start changing year every second
 function start_history(svg) {
