@@ -63,7 +63,6 @@ function render() {
     paths.attr('d', path);
     
     let regime_obj = {};
-    console.log(paths);
     paths._groups[0].forEach(path => {
         if(path.classList[1] == "voronoi"){
             let regime = path.classList[2].replace("_",/ /g);
@@ -76,7 +75,6 @@ function render() {
         }
     }
                             );
-    paths.attr('d', path);
 }
 
 // --------     Load all the json files     --------
@@ -192,6 +190,8 @@ d3.geoZoom()
             .x(d => d.longitude)
             .y(d => d.latitude)
             (cities_now);
+        
+        console.log(voronoi);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
