@@ -194,7 +194,9 @@ d3.geoZoom()
         console.log(voronoi);
         voronoi.polygons().features[0].geometry = voronoi.polygons().features[0].geometry.coordinates.concat(voronoi.polygons().features[1].geometry.coordinates);
         console.log(voronoi.polygons().features[0].properties.site);
+        console.log(voronoi.polygons().features[0].geometry.coordinates);
         console.log(voronoi.polygons().features[1].properties.site);
+        console.log(voronoi.polygons().features[1].geometry.coordinates);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
