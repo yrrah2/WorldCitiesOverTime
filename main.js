@@ -67,7 +67,7 @@ function render() {
     paths._groups[0].forEach(path => {
         if(path.classList[1] == "voronoi"){
             console.log(path);
-            let regime = recentEvent(path.dates);
+            let regime = path.classList[2].replace("_",/ /g);;
             if (regime_obj[regime] != undefined){
                 regime_obj[regime] = path;
             } else {
@@ -225,8 +225,7 @@ d3.geoZoom()
                 if ( area.properties.site.dates.length > 0 ) {
                     let regime = recentEvent(area.properties.site.dates);
                     this.style.fill = regime_colors[regime.toString()];
-                    console.log(this.className);
-                    this.setAttribute("class", this.className.baseVal + ' ' + regime.toString());
+                    this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"););
                 }
             }
         );
