@@ -103,7 +103,7 @@ gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('dis
 gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
-gui.add(controls, "Year").min(1500).max(2030).step(1).onChange(function(){
+gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
     map_date.year = controls.Year;
     sliderTime.value(controls.Year);
 });
@@ -131,7 +131,7 @@ const sliderTime = d3
 const gTime = d3
     .select('div#slider-time')
     .append('svg')
-    .attr('width', w - play_width)
+    .attr('width', 600)
     .attr('height', 100);
     
 const gTime_slider = gTime
