@@ -167,7 +167,7 @@ const getCityDesc = d => `
 // ---   Earth projection   ---
 d3.geoZoom()
   .projection(projection)
-  .onMove(render)
+  .onMove(voronoi_refresh)
   (svg.node());
 
   // Sphere (Land)
