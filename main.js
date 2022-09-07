@@ -222,6 +222,17 @@ d3.geoZoom()
         //    properties: d
         //}));
         
+        // Geometry coords
+        svg.append('g').selectAll('.city')
+            .data(voronoi.polygons().features[0].geometry.coordinates[0])
+            .enter().append('path')
+            .attr('class', 'geo city')
+            .datum(d => ({
+            type: 'Point',
+            coordinates: [d[0], d[1]],
+            properties: d
+        }));
+        
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
                 if ( area.properties.site.dates.length > 0 ) {
