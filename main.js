@@ -63,8 +63,8 @@ function render() {
     paths.attr('d', path);
     
     let regime_obj = {};
-    
-    paths._groups[0].forEach(path => {
+    console.log(paths);
+    paths._groups[0].slice[1].forEach(path => {
         console.log(path);
         let regime = recentEvent(path.dates);
         if (regime_obj[regime] != undefined){
