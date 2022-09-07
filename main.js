@@ -226,7 +226,7 @@ d3.geoZoom()
                     let regime = recentEvent(area.properties.site.dates);
                     this.style.fill = regime_colors[regime.toString()];
                     console.log(this.className);
-                    this.setAttribute("class", this.className + ' ' + regime.toString());
+                    this.setAttribute("class", this.className.baseVal + ' ' + regime.toString());
                 }
             }
         );
