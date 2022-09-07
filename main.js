@@ -224,7 +224,7 @@ d3.geoZoom()
         
         let coord_test = [];
         voronoi.polygons().features.forEach(item => {
-            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test.concat(item.geometry.coordinates[0])} });
+            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
         
         // Geometry coords
         svg.append('g').selectAll('.city')
