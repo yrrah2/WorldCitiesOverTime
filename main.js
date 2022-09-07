@@ -201,6 +201,7 @@ d3.geoZoom()
                 regime_obj[regime] = i;
             } else {
                 voronoi.delaunay.polygons[regime_obj[regime]] = voronoi.delaunay.polygons[regime_obj[regime]].concat(voronoi.delaunay.polygons[i]);
+                voronoi.delaunay.polygons[i] = [];
             }
         }
 
