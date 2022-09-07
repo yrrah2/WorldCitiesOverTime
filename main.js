@@ -59,7 +59,7 @@ const path = d3.geoPath()
 
 // Render everything
 function render() {
-    let paths = svg.selectAll('path.geo')
+    let paths = svg.selectAll('path.geo');
     
     Line1 = paths._groups[0][1];
     Line2 = paths._groups[0][2];
