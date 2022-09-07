@@ -182,7 +182,7 @@ d3.geoZoom()
             .data(voronoi.polygons().features)
             .enter().append('path')
             .attr('class', 'geo voronoi')
-            .attr("id", d => d.city)
+            .attr("id", d => {console.log(d); d.city;})
             .on('mouseover', function({properties: { site: d }}) {
                 document.getElementById("tooltip").style.display = "block";
                 document.getElementById("tooltip").innerHTML = getCityDesc(d);
