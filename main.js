@@ -72,6 +72,7 @@ function render() {
                 regime_obj[regime] = path;
             } else {
                 regime_obj[regime].setAttribute('d', regime_obj[regime].getAttribute('d') + ' ' + path.getAttribute('d'));
+                path.parentNode.removeChild(path);
             }
         }
     }
