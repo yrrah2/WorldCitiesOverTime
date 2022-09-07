@@ -193,7 +193,7 @@ d3.geoZoom()
         
 
 
-
+        console.log(voronoi);
         let regime_obj = {};
         for (var i = 0; i < cities_now.length; i++) {
             let regime = recentEvent(cities_now[i].dates);
