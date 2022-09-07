@@ -191,12 +191,18 @@ d3.geoZoom()
             .y(d => d.latitude)
             (cities_now);
         
-        console.log(voronoi);
-        voronoi.delaunay.polygons[0] = voronoi.delaunay.polygons[0].concat(voronoi.delaunay.polygons[1]);
-        console.log(voronoi.polygons().features[0].properties.site);
-        console.log(voronoi.delaunay.polygons[0]);
-        console.log(voronoi.polygons().features[1].properties.site);
-        console.log(voronoi.delaunay.polygons[1]);
+
+
+
+        let regime_obj = {};
+        for (var i = 0; i < cities_now.length; i++) {
+            let regime = recentEvent(cities_now[i].dates);
+            if (regime_obj[regime] == undefined){
+                regime_obj[regime] = voronoi.delaunay.polygons[i];
+            } else {
+                regime_obj[regime] = regime_obj[regime].concat(voronoi.delaunay.polygons[i]);
+            }
+        }
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
