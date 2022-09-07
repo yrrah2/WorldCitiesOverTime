@@ -66,7 +66,6 @@ function render() {
     console.log(paths);
     paths._groups[0].forEach(path => {
         if(path.classList[1] == "voronoi"){
-            console.log(path);
             let regime = path.classList[2].replace("_",/ /g);
             if (regime_obj[regime] == undefined){
                 regime_obj[regime] = path;
@@ -77,6 +76,7 @@ function render() {
         }
     }
                             );
+    paths.attr('d', path);
 }
 
 // --------     Load all the json files     --------
