@@ -222,9 +222,13 @@ d3.geoZoom()
         //    properties: d
         //}));
         
+        let coord_test = [];
+        voronoi.polygons().features.forEach(item => {
+            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test.concat(item.geometry.coordinates[0])} });
+        
         // Geometry coords
         svg.append('g').selectAll('.city')
-            .data(voronoi.polygons().features[0].geometry.coordinates[0])
+            .data(coord_test)
             .enter().append('path')
             .attr('class', 'geo city')
             .datum(d => ({
