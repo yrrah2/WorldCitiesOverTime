@@ -1,4 +1,4 @@
-var map_date = {"year": 1818, "month": 5, "day": 5};
+var map_date = {year: 1818, month: 5, day: 5};
 var play_width = 50;
 var padding = 50;
 var w = window.innerWidth - padding;
@@ -60,12 +60,12 @@ const path = d3.geoPath()
 // Render everything
 function render() {
     let paths = svg.selectAll('path.geo');
+    paths.attr('d', path);
     
     let Line1 = paths._groups[0][1];
     let Line2 = paths._groups[0][2];
     
     Line1.setAttribute('d', Line1.getAttribute('d') + ' ' + Line2.getAttribute('d'));
-    paths.attr('d', path);
 }
 
 // --------     Load all the json files     --------
@@ -179,8 +179,6 @@ d3.geoZoom()
             .x(d => d.longitude)
             .y(d => d.latitude)
             (cities_now);
-        
-        console.log(voronoi);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
