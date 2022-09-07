@@ -198,9 +198,9 @@ d3.geoZoom()
         for (var i = 0; i < cities_now.length; i++) {
             let regime = recentEvent(cities_now[i].dates);
             if (regime_obj[regime] == undefined){
-                regime_obj[regime] = voronoi.delaunay.polygons[i];
+                regime_obj[regime] = i;
             } else {
-                regime_obj[regime] = regime_obj[regime].concat(voronoi.delaunay.polygons[i]);
+                voronoi.delaunay.polygons[regime_obj[regime]] = voronoi.delaunay.polygons[regime_obj[regime]].concat(voronoi.delaunay.polygons[i]);
             }
         }
 
