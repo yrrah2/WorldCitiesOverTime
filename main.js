@@ -205,18 +205,22 @@ d3.geoZoom()
         
         var end = 0;
         
-        var first = voronoi.polygons().features[1].geometry.coordinates[0][0];
-        var second = voronoi.polygons().features[1].geometry.coordinates[0][1];
+        console.log(voronoi.polygons().features[re_index]);
+        
+        var first = voronoi.polygons().features[re_index].geometry.coordinates[0][0];
+        var second = voronoi.polygons().features[re_index].geometry.coordinates[0][1];
         
         for (var i = 0; i < first.length || end == 1; i++ ) {
              for (var j = 0; j < second.length || end == 1; j++ ) {
                  if (first[i] == second[j]){
                      end = 1;
                      let combined_object = [first.slice(0,i+1), second.slice(j+1,-1), second.slice(0,j-1), first.slice(i+1, -1).concat(first[0])];
-                     voronoi.polygons().features[1].geometry.coordinates[0][0] = combined_object;
+                     voronoi.polygons().features[re_index].geometry.coordinates[0][0] = combined_object;
                  }
              }
         }
+        
+        console.log(voronoi.polygons().features[re_index]);
         
         // Geometry coords
         svg.append('g').selectAll('.voronoi')
