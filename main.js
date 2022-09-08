@@ -222,22 +222,22 @@ d3.geoZoom()
         console.log(voronoi.polygons().features);
 
         // Voronoi polygons
-        svg.append('g').selectAll('.voronoi')
-            .data(voronoi.polygons().features)
-            .enter().append('path')
-            .attr('class', 'geo voronoi')
-            .attr("id", d => d.properties.site.city)
-            .on('mouseover', function(d) {
-                document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
-        })
-            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
+        //svg.append('g').selectAll('.voronoi')
+        //    .data(voronoi.polygons().features)
+        //    .enter().append('path')
+        //    .attr('class', 'geo voronoi')
+        //    .attr("id", d => d.properties.site.city)
+        //    .on('mouseover', function(d) {
+        //        document.getElementById("tooltip").style.display = "block";
+        //        document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
+        //})
+        //    .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
         // Geometry coords
-        svg.append('g').selectAll('.city')
+        svg.append('g').selectAll('.voronoi')
             .data(coll.features)
             .enter().append('path')
-            .attr('class', 'geo city')
+            .attr('class', 'geo voronoi')
             .on('mouseover', function(d) {
                 document.getElementById("tooltip").style.display = "block";
                 document.getElementById("tooltip").innerHTML = getCityDescBig(d.properties.site);
@@ -262,16 +262,16 @@ d3.geoZoom()
         
         
         // Give colors according to regime
-        svg.selectAll('path.voronoi').each(function(area) {
-            if ( area.properties.site.dates.length > 0 ) {
-                let regime = recentEvent(area.properties.site.dates);
-                this.style.fill = regime_colors[regime.toString()];
-                this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
-            }
-        });
+        //svg.selectAll('path.voronoi').each(function(area) {
+        //    if ( area.properties.site.dates.length > 0 ) {
+        //        let regime = recentEvent(area.properties.site.dates);
+        //        this.style.fill = regime_colors[regime.toString()];
+        //        this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
+        //    }
+        // });
         
         // Give colors according to regime
-        svg.selectAll('path.city').each(function(area) {
+        svg.selectAll('path.voronoi').each(function(area) {
             if ( area.properties.site.dates.length > 0 ) {
                 let regime = area.properties.site.city;
                 this.style.fill = regime_colors[regime.toString()];
