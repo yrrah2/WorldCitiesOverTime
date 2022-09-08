@@ -216,6 +216,14 @@ d3.geoZoom()
         svg.append('path').attr('class', 'geo ocean')
             .datum(topojson.feature(world, world.objects.ocean));
         
+        var hull = d3.geoVoronoi().hull(coll[indexes["Roman Empire"]].geometry.coordinates);
+        
+        var poly = svg.append('g').selectAll('.polygons')
+        .append("path")
+        .datum(hull);
+        
+        poly.attr('d', path);
+        
         // City points
         //svg.append('g').selectAll('.city')
         //    .data(cities_now)
