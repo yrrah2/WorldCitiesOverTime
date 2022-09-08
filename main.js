@@ -216,7 +216,7 @@ d3.geoZoom()
             item.geometry.coordinates.forEach(coord => {
                 if (coll.features[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll.features[regime_index].geometry.coordinates.push(coord);
-                })
+                }
             }
         });
         
