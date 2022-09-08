@@ -144,7 +144,7 @@ controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
 const getCityDesc = d => `
-  <div>Regime: <b>${d.regime}</b></div>
+  <div>Regime: <b>${d}</b></div>
 `;
 
 // ---   Earth projection   ---
