@@ -163,6 +163,10 @@ gui.add(controls, "start_history").name("Start");
 const getCityDesc = d => `
   <div>Regime: <b>${recentEvent(d.dates)}</b></div>
 `;
+    
+const getCityDescBig = d => `
+  <div>Regime: <b>${d.city}</b></div>
+`;
 
 // ---   Earth projection   ---
 d3.geoZoom()
@@ -244,7 +248,7 @@ d3.geoZoom()
             .attr('class', 'geo city')
             .on('mouseover', function(d) {
                 document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
+                document.getElementById("tooltip").innerHTML = getCityDescBig(d.properties.site);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");;
         
@@ -278,7 +282,7 @@ d3.geoZoom()
         svg.selectAll('path.city').each(function(area) {
             console.log(area);
             if ( area.properties.site.dates.length > 0 ) {
-                let regime = recentEvent(area.properties.site.dates);
+                let regime = area.properties.site.city;
                 this.style.fill = regime_colors[regime.toString()];
                 this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
             }
