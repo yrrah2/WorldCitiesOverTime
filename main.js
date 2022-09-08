@@ -236,7 +236,7 @@ d3.geoZoom()
               coordinates: item.geometry.coordinates
             },
         properties: {}
-            });
+            })}};
         
         // Geometry coords
         svg.append('g').selectAll('.city')
@@ -251,9 +251,10 @@ d3.geoZoom()
                     this.style.fill = regime_colors[regime.toString()];
                     this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
                 }
-            }
-        );
+        }
+                                          )
     }
+
     
     function voronoi_refresh() {
         // Remove voronois and rerender them
