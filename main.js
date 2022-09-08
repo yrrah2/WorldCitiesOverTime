@@ -212,10 +212,7 @@ d3.geoZoom()
         console.log(indexes);
         
         voronoi.polygons().features.forEach(item => {
-            //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
-            if (recentEvent(item.properties.site.dates) == "Roman Empire"){
-                item.geometry.coordinates.forEach(coord => {coll.features[indexes["Roman Empire"]].geometry.coordinates.indexOf(coord) === -1 ? coll.features[indexes["Roman Empire"]].geometry.coordinates.push(coord) : console.log("This item already exists")});
-            }
+            item.geometry.coordinates.forEach(coord => {coll.features[indexes[recentEvent(item.properties.site.dates)]].geometry.coordinates.indexOf(coord) === -1 ? coll.features[indexes[recentEvent(item.properties.site.dates)]].geometry.coordinates.push(coord) : console.log("This item already exists")});
         });
         
         console.log(coll.features);
