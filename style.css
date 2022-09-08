@@ -11,7 +11,7 @@ body {
 #tooltip {
   background: rgba(0,0,140,0.7);
   color: white;
-  font: 11px sans-serif;
+  font: 25px sans-serif;
   width: fit-content;
   float: left;
   position: absolute;
@@ -98,6 +98,7 @@ body {
 
 .col-sm-2 {
   position: absolute;
+  font: 40px sans-serif;
   bottom: 200px;
   left: 49%;
 }
