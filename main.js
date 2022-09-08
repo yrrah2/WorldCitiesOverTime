@@ -199,7 +199,8 @@ d3.geoZoom()
                 if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll[regime_index].geometry.coordinates.push(coord);
                 }
-            })
+            });
+            coll[regime_index].geometry.coordinates.push(coll[regime_index].geometry.coordinates[0]);
         });
         
         // Geometry coords
