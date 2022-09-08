@@ -194,7 +194,6 @@ d3.geoZoom()
         
         voronoi.polygons().features.forEach(item => {
             let regime_index = indexes[recentEvent(item.properties.site.dates)];
-            if(regime_index==1){console.log(item.geometry.coordinates)};
             item.geometry.coordinates.forEach(coord => {
                 if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll[regime_index].geometry.coordinates.push(coord);
@@ -222,14 +221,12 @@ d3.geoZoom()
         coll[indexes["Roman Empire"]].geometry.coordinates.forEach(coord_array => coord_array.forEach(coord => REcoords.push(coord)));
         console.log(REcoords);
         
-        var hull = d3.geoVoronoi().hull(coll[indexes["Roman Empire"]].geometry.coordinates);
+        var hull = d3.geoVoronoi().hull(REcoords);
         
-        var poly = svg.append('g').selectAll('.polygons')
-        .enter().append('path')
-        .attr('class', 'geo voronoi')
-        .datum(hull);
-        
-        poly.attr('d', path);
+        svg.append('g').selectAll('.voronoi')
+            .data(hull)
+            .enter().append('path')
+            .attr('class', 'geo voronoi')
         
         // City points
         //svg.append('g').selectAll('.city')
