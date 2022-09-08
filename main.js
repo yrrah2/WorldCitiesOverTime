@@ -223,10 +223,12 @@ d3.geoZoom()
         
         var hull = d3.geoVoronoi().hull(REcoords);
         
-        svg.append('g').selectAll('.voronoi')
-            .data(hull)
-            .enter().append('path')
+        console.log(hull);
+        
+        svg..append('path')
+            .datum(hull)
             .attr('class', 'geo voronoi')
+            .attr("id", "hull_test");
         
         // City points
         //svg.append('g').selectAll('.city')
