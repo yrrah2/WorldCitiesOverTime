@@ -217,7 +217,10 @@ d3.geoZoom()
         svg.append('path').attr('class', 'geo ocean')
             .datum(topojson.feature(world, world.objects.ocean));
         
-        console.log(coll[indexes["Roman Empire"]].geometry.coordinates)
+        
+        var REcoords = [];
+        coll[indexes["Roman Empire"]].geometry.coordinates.forEach(coord_array => coord_array.forEach(coord => REcoords.push(coord)));
+        console.log(REcoords);
         
         var hull = d3.geoVoronoi().hull(coll[indexes["Roman Empire"]].geometry.coordinates);
         
