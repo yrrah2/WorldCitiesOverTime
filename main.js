@@ -217,7 +217,7 @@ d3.geoZoom()
              for (var j = 0; j < second.length && end != 1; j++ ) {
                  if (first[i] == second[j]){
                      end = 1;
-                     let combined_object = first.slice(0,i+1).concat(second.slice(j+1,-1)).concat(second.slice(0,j-1)).concat(first.slice(i+1, -1).concat(first[0]));
+                     let combined_object = first.slice(0,i+1).concat(second.slice(j+1,-1)).concat(second.slice(0,j-1)).concat(first.slice(i+1, -1).concat([first[0]]));
                      console.log(combined_object);
                      coll[re_index].geometry.coordinates[0] = combined_object;
                  }
