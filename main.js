@@ -201,7 +201,10 @@ d3.geoZoom()
                         type: "Polygon",
                         coordinates: []
                     },
-                    properties: {site: {city: "Roman Empire"}}
+                    properties: {
+                        site: {city: "Roman Empire"}, 
+                        dates: []
+                    }
                 }
             ]
         };
