@@ -208,7 +208,7 @@ d3.geoZoom()
             .attr('class', 'geo voronoi')
             .on('mouseover', function(d) {
                 document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDescBig(d.properties.regime);
+                document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.regime);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");;
         
