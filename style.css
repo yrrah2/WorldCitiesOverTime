@@ -58,9 +58,6 @@ body {
 
 .voronoi {
   fill-opacity: 0.45;
-  stroke: black;
-  stroke-width: 0.2;
-  stroke-opacity: 0.3;
 }
 
 .voronoi:hover {
