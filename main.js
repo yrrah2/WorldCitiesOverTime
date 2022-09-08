@@ -213,8 +213,8 @@ d3.geoZoom()
         console.log(first);
         console.log(first.length);
         
-        for (var i = 0; i < first.length || end == 1; i++ ) {
-             for (var j = 0; j < second.length || end == 1; j++ ) {
+        for (var i = 0; i < first.length && end != 1; i++ ) {
+             for (var j = 0; j < second.length && end != 1; j++ ) {
                  if (first[i] == second[j]){
                      end = 1;
                      let combined_object = [first.slice(0,i+1), second.slice(j+1,-1), second.slice(0,j-1), first.slice(i+1, -1).concat(first[0])];
