@@ -144,11 +144,7 @@ controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
 const getCityDesc = d => `
-  <div>Regime: <b>${recentEvent(d.dates)}</b></div>
-`;
-    
-const getCityDescBig = d => `
-  <div>Regime: <b>${d.city}</b></div>
+  <div>Regime: <b>${d.regime}</b></div>
 `;
 
 // ---   Earth projection   ---
@@ -180,59 +176,39 @@ d3.geoZoom()
         
         //let coord_test = [];
         
-        const coll = {
-            type: "FeatureCollection",
-            features: []
-        };
+        const coll = [];
         
         var indexes = {};
         
         regimes.forEach(regime => {
-            coll.features.push({
+            coll.push({
                     type: "Feature",
                     geometry: {
                         type: "Polygon",
                         coordinates: []
                     },
-                    properties: {
-                        site: {city: regime, dates: [{
-                "year": "-1000/01/01",
-                "event": regime
-            }]}
-                    }
+                    properties: {"regime": regime}
                 });
-            indexes[regime] = coll.features.length-1;
+            indexes[regime] = coll.length-1;
         });
         
         voronoi.polygons().features.forEach(item => {
             let regime_index = indexes[recentEvent(item.properties.site.dates)];
             item.geometry.coordinates.forEach(coord => {
-                if (coll.features[regime_index].geometry.coordinates.indexOf(coord) === -1){
-                    coll.features[regime_index].geometry.coordinates.push(coord);
+                if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
+                    coll[regime_index].geometry.coordinates.push(coord);
                 }
             })
         });
-
-        // Voronoi polygons
-        //svg.append('g').selectAll('.voronoi')
-        //    .data(voronoi.polygons().features)
-        //    .enter().append('path')
-        //    .attr('class', 'geo voronoi')
-        //    .attr("id", d => d.properties.site.city)
-        //    .on('mouseover', function(d) {
-        //        document.getElementById("tooltip").style.display = "block";
-        //        document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
-        //})
-        //    .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
         
         // Geometry coords
         svg.append('g').selectAll('.voronoi')
-            .data(coll.features)
+            .data(coll)
             .enter().append('path')
             .attr('class', 'geo voronoi')
             .on('mouseover', function(d) {
                 document.getElementById("tooltip").style.display = "block";
-                document.getElementById("tooltip").innerHTML = getCityDescBig(d.properties.site);
+                document.getElementById("tooltip").innerHTML = getCityDescBig(d.properties.regime);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");;
         
@@ -251,22 +227,10 @@ d3.geoZoom()
         //    properties: d
         //}));
         
-        
-        
-        // Give colors according to regime
-        //svg.selectAll('path.voronoi').each(function(area) {
-        //    if ( area.properties.site.dates.length > 0 ) {
-        //        let regime = recentEvent(area.properties.site.dates);
-        //        this.style.fill = regime_colors[regime.toString()];
-        //        this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
-        //    }
-        // });
-        
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
-            let regime = area.properties.site.city;
+            let regime = area.properties.regime;
             this.style.fill = regime_colors[regime.toString()];
-            this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
         });
     }
 
