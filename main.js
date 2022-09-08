@@ -191,9 +191,31 @@ d3.geoZoom()
             .y(d => d.latitude)
             (cities_now);
         
+        //let coord_test = [];
+        const coll = {
+            type: "FeatureCollection",
+            features: [],
+        };
+        voronoi.polygons().features.forEach(item => {
+            //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
+            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coll.features.push({
+        type: "Feature",
+        geometry: {
+              type: "Polygon",
+              coordinates: item.geometry.coordinates
+            },
+        properties: {}
+            })}});
+        
+        console.log(coll.features);
+        
+        // Geometry coords
+        svg.append('g').selectAll('.city')
+            .data(coll.features)
+            .enter().append('path')
+            .attr('class', 'geo city');
 
-
-        console.log(voronoi);
+        console.log(voronoi.polygons().features);
 
         // Voronoi polygons
         svg.append('g').selectAll('.voronoi')
@@ -222,27 +244,7 @@ d3.geoZoom()
         //    properties: d
         //}));
         
-        //let coord_test = [];
-        const coll = {
-            type: "FeatureCollection",
-            features: [],
-        };
-        voronoi.polygons().features.forEach(item => {
-            //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
-            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coll.features.push({
-        type: "Feature",
-        geometry: {
-              type: "Polygon",
-              coordinates: item.geometry.coordinates
-            },
-        properties: {}
-            })}});
         
-        // Geometry coords
-        svg.append('g').selectAll('.city')
-            .data(coll.features)
-            .enter().append('path')
-            .attr('class', 'geo city');
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
