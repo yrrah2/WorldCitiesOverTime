@@ -212,7 +212,9 @@ d3.geoZoom()
         console.log(indexes);
         
         voronoi.polygons().features.forEach(item => {
-            item.geometry.coordinates.forEach(coord => {coll.features[indexes[recentEvent(item.properties.site.dates)]].geometry.coordinates.indexOf(coord) === -1 ? coll.features[indexes[recentEvent(item.properties.site.dates)]].geometry.coordinates.push(coord) : console.log("This item already exists")});
+            let regime_index = indexes[recentEvent(item.properties.site.dates)];
+            item.geometry.coordinates.forEach(coord => coll.features[regime_index].geometry.coordinates.indexOf(coord) === -1
+                    ? coll.features[regime_index].geometry.coordinates.push(coord));
         });
         
         console.log(coll.features);
