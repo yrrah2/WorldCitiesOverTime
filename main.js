@@ -45,8 +45,8 @@ const svg = d3.select('#world').append('svg')
 
 // Set the world projection
 const projection = d3.geoOrthographic()
-  .scale((height - 10) / 2)
-  .translate([width / 2, height / 2])
+  .scale((height - 10) / 1)
+  .translate([width / 1, height / 1])
   .rotate([0, -35, 0])
   .precision(0.1);
 
