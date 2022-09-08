@@ -1,7 +1,4 @@
 var map_date = {year: 1818, month: 5, day: 5};
-var play_width = 50;
-var padding = 50;
-var w = window.innerWidth - padding;
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -185,9 +182,7 @@ d3.geoZoom()
         
         const coll = {
             type: "FeatureCollection",
-            features: [
-                
-            ]
+            features: []
         };
         
         var indexes = {};
@@ -209,20 +204,14 @@ d3.geoZoom()
             indexes[regime] = coll.features.length-1;
         });
         
-        console.log(indexes);
-        
         voronoi.polygons().features.forEach(item => {
             let regime_index = indexes[recentEvent(item.properties.site.dates)];
             item.geometry.coordinates.forEach(coord => {
                 if (coll.features[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll.features[regime_index].geometry.coordinates.push(coord);
                 }
-            }
+            })
         });
-        
-        console.log(coll.features);
-
-        console.log(voronoi.polygons().features);
 
         // Voronoi polygons
         //svg.append('g').selectAll('.voronoi')
@@ -275,11 +264,9 @@ d3.geoZoom()
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
-            if ( area.properties.site.dates.length > 0 ) {
-                let regime = area.properties.site.city;
-                this.style.fill = regime_colors[regime.toString()];
-                this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
-            }
+            let regime = area.properties.site.city;
+            this.style.fill = regime_colors[regime.toString()];
+            this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
         });
     }
 
