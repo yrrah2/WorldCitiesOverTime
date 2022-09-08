@@ -190,7 +190,10 @@ d3.geoZoom()
             ]
         };
         
-        regimes.forEach(regime => coll.features.push({
+        var indexes = {};
+        
+        regimes.forEach(regime => {
+            coll.features.push({
                     type: "Feature",
                     geometry: {
                         type: "Polygon",
@@ -202,12 +205,16 @@ d3.geoZoom()
                 "event": regime
             }]}
                     }
-                }))
+                });
+            indexes[regime] = coll.features.length;
+        });
+        
+        console.log(indexes);
         
         voronoi.polygons().features.forEach(item => {
             //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
             if (recentEvent(item.properties.site.dates) == "Roman Empire"){
-                item.geometry.coordinates.forEach(coord => {coll.features[0].geometry.coordinates.indexOf(coord) === -1 ? coll.features[0].geometry.coordinates.push(coord) : console.log("This item already exists")});
+                item.geometry.coordinates.forEach(coord => {coll.features[indexes["Roman Empire"]].geometry.coordinates.indexOf(coord) === -1 ? coll.features[indexes["Roman Empire"]].geometry.coordinates.push(coord) : console.log("This item already exists")});
             }
         });
         
@@ -266,7 +273,6 @@ d3.geoZoom()
         
         // Give colors according to regime
         svg.selectAll('path.city').each(function(area) {
-            console.log(area);
             if ( area.properties.site.dates.length > 0 ) {
                 let regime = area.properties.site.city;
                 this.style.fill = regime_colors[regime.toString()];
