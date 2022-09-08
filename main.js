@@ -265,20 +265,21 @@ d3.geoZoom()
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
-                if ( area.properties.site.dates.length > 0 ) {
-                    let regime = recentEvent(area.properties.site.dates);
-                    this.style.fill = regime_colors[regime.toString()];
-                    this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
-                }
+            if ( area.properties.site.dates.length > 0 ) {
+                let regime = recentEvent(area.properties.site.dates);
+                this.style.fill = regime_colors[regime.toString()];
+                this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
+            }
         });
         
         // Give colors according to regime
         svg.selectAll('path.city').each(function(area) {
-                if ( area.properties.site.dates.length > 0 ) {
-                    let regime = recentEvent(area.properties.site.dates);
-                    this.style.fill = regime_colors[regime.toString()];
-                    this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
-                }
+            console.log(area);
+            if ( area.properties.site.dates.length > 0 ) {
+                let regime = recentEvent(area.properties.site.dates);
+                this.style.fill = regime_colors[regime.toString()];
+                this.setAttribute("class", this.className.baseVal + ' ' + regime.replace(/ /g,"_"));
+            }
         });
     }
 
