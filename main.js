@@ -215,16 +215,8 @@ d3.geoZoom()
                      let combined_object = [first.slice(0,i+1), second.slice(j+1,-1), second.slice(0,j-1), first.slice(i+1, -1).concat(first[0])];
                      voronoi.polygons().features[1].geometry.coordinates[0] = combined_object;
                  }
+             }
         }
-        }
-        
-        .forEach(coord_0 => {
-            voronoi.polygons().features[1].geometry.coordinates[1].forEach(coord_1 => {
-                if (coord_0 == coord_1){
-                    [a.slice(0,ia+1), b.slice(ib+1,-1), b.slice(0,ib-1), a.slice(ia+1, -1).concat(a[0])]
-                }
-            })
-        });
         
         // Geometry coords
         svg.append('g').selectAll('.voronoi')
