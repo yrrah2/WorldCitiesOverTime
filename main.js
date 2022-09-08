@@ -206,7 +206,7 @@ d3.geoZoom()
             }]}
                     }
                 });
-            indexes[regime] = coll.features.length;
+            indexes[regime] = coll.features.length-1;
         });
         
         console.log(indexes);
