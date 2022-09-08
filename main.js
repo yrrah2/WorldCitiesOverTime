@@ -160,6 +160,7 @@ d3.geoZoom()
     function remove_voronois(){
         svg.selectAll("g").remove();
         svg.selectAll(".ocean").remove();
+        svg.selectAll(".hull_test").remove();
     }
     
     function voronoi_render(){
@@ -227,8 +228,7 @@ d3.geoZoom()
         
         svg.append('path')
             .datum(hull)
-            .attr('class', 'geo')
-            .attr("id", "hull_test");
+            .attr('class', 'geo hull_test');
         
         // City points
         //svg.append('g').selectAll('.city')
