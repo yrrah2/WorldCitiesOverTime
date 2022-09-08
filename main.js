@@ -217,7 +217,7 @@ d3.geoZoom()
                     properties: item.properties
                 });
                 
-                item.geometry.coordinates.forEach(coord => {coll.features[0].indexOf(coord) === -1 ? coll.features[0].push(coord) : console.log("This item already exists")});
+                item.geometry.coordinates.forEach(coord => {coll.features[0].geometry.coordinates.indexOf(coord) === -1 ? coll.features[0].geometry.coordinates.push(coord) : console.log("This item already exists")});
             }
         });
         
