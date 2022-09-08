@@ -236,7 +236,7 @@ d3.geoZoom()
               coordinates: item.geometry.coordinates
             },
         properties: {}
-            })}};
+            })}});
         
         // Geometry coords
         svg.append('g').selectAll('.city')
