@@ -160,7 +160,6 @@ d3.geoZoom()
     function remove_voronois(){
         svg.selectAll("g").remove();
         svg.selectAll(".ocean").remove();
-        svg.selectAll(".hull_test").remove();
     }
     
     function voronoi_render(){
@@ -202,6 +201,31 @@ d3.geoZoom()
             });
         });
         
+        let re_index = indexes["Roman Empire"];
+        
+        var end = 0;
+        
+        var first = voronoi.polygons().features[1].geometry.coordinates[0];
+        var second = voronoi.polygons().features[1].geometry.coordinates[1];
+        
+        for (var i = 0; i < first.length || end == 1; i++ ) {
+             for (var j = 0; j < second.length || end == 1; j++ ) {
+                 if (first[i] == second[j]){
+                     end = 1;
+                     let combined_object = [first.slice(0,i+1), second.slice(j+1,-1), second.slice(0,j-1), first.slice(i+1, -1).concat(first[0])];
+                     voronoi.polygons().features[1].geometry.coordinates[0] = combined_object;
+                 }
+        }
+        }
+        
+        .forEach(coord_0 => {
+            voronoi.polygons().features[1].geometry.coordinates[1].forEach(coord_1 => {
+                if (coord_0 == coord_1){
+                    [a.slice(0,ia+1), b.slice(ib+1,-1), b.slice(0,ib-1), a.slice(ia+1, -1).concat(a[0])]
+                }
+            })
+        });
+        
         // Geometry coords
         svg.append('g').selectAll('.voronoi')
             .data(coll)
@@ -216,19 +240,6 @@ d3.geoZoom()
         // Ocean overlay
         svg.append('path').attr('class', 'geo ocean')
             .datum(topojson.feature(world, world.objects.ocean));
-        
-        
-        var REcoords = [];
-        coll[indexes["Roman Empire"]].geometry.coordinates.forEach(coord_array => coord_array.forEach(coord => REcoords.push(coord)));
-        console.log(REcoords);
-        
-        var hull = d3.geoVoronoi().hull(REcoords);
-        
-        console.log(hull);
-        
-        svg.append('path')
-            .datum(hull)
-            .attr('class', 'geo hull_test');
         
         // City points
         //svg.append('g').selectAll('.city')
