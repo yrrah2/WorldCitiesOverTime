@@ -225,7 +225,7 @@ d3.geoZoom()
         
         console.log(hull);
         
-        svg..append('path')
+        svg.append('path')
             .datum(hull)
             .attr('class', 'geo voronoi')
             .attr("id", "hull_test");
