@@ -204,16 +204,10 @@ d3.geoZoom()
               type: "Polygon",
               coordinates: item.geometry.coordinates
             },
-        properties: {}
+        properties: item.properties
             })}});
         
         console.log(coll.features);
-        
-        // Geometry coords
-        svg.append('g').selectAll('.city')
-            .data(coll.features)
-            .enter().append('path')
-            .attr('class', 'geo city');
 
         console.log(voronoi.polygons().features);
 
@@ -228,6 +222,12 @@ d3.geoZoom()
                 document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
         })
             .on('mouseout', () => document.getElementById("tooltip").style.display = "none");
+        
+        // Geometry coords
+        svg.append('g').selectAll('.city')
+            .data(coll.features)
+            .enter().append('path')
+            .attr('class', 'geo city');
         
         // Ocean overlay
         svg.append('path').attr('class', 'geo ocean')
