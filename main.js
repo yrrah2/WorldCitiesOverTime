@@ -240,7 +240,7 @@ d3.geoZoom()
         
         // Geometry coords
         svg.append('g').selectAll('.city')
-            .data(coll)
+            .data(coll.features)
             .enter().append('path')
             .attr('class', 'geo city');
         
