@@ -61,20 +61,6 @@ const path = d3.geoPath()
 function render() {
     let paths = svg.selectAll('path.geo');
     paths.attr('d', path);
-    
-    let regime_obj = {};
-    paths._groups[0].forEach(path => {
-        if(path.classList[1] == "voronoi"){
-            let regime = path.classList[2].replace("_",/ /g);
-            if (regime_obj[regime] == undefined){
-                regime_obj[regime] = path;
-            } else {
-                regime_obj[regime].setAttribute('d', regime_obj[regime].getAttribute('d') + ' ' + path.getAttribute('d'));
-                path.parentNode.removeChild(path);
-            }
-        }
-    }
-                            );
 }
 
 // --------     Load all the json files     --------
