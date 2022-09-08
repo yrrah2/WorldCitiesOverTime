@@ -185,7 +185,7 @@ d3.geoZoom()
                     type: "Feature",
                     geometry: {
                         type: "Polygon",
-                        coordinates: []
+                        coordinates: [[]]
                     },
                     properties: {"regime": regime}
                 });
@@ -196,11 +196,11 @@ d3.geoZoom()
             let regime_index = indexes[recentEvent(item.properties.site.dates)];
             if(regime_index==1){console.log(item.geometry.coordinates)};
             item.geometry.coordinates[0].forEach(coord => {
-                if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
-                    coll[regime_index].geometry.coordinates.push(coord);
+                if (coll[regime_index].geometry.coordinates[0].indexOf(coord) === -1){
+                    coll[regime_index].geometry.coordinates[0].push(coord);
                 }
             });
-            coll[regime_index].geometry.coordinates.push(coll[regime_index].geometry.coordinates[0]);
+            coll[regime_index].geometry.coordinates[0].push(coll[regime_index].geometry.coordinates[0][0]);
         });
         
         // Geometry coords
