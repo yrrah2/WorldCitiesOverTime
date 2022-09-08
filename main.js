@@ -227,7 +227,7 @@ d3.geoZoom()
         
         svg.append('path')
             .datum(hull)
-            .attr('class', 'geo voronoi')
+            .attr('class', 'geo')
             .attr("id", "hull_test");
         
         // City points
