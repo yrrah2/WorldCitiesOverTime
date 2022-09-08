@@ -222,20 +222,27 @@ d3.geoZoom()
         //    properties: d
         //}));
         
-        let coord_test = [];
+        //let coord_test = [];
+        const coll = {
+            type: "FeatureCollection",
+            features: [],
+        };
         voronoi.polygons().features.forEach(item => {
-            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
+            //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
+            if (recentEvent(item.properties.site.dates) == "Roman Empire"){coll.features.push({
+        type: "Feature",
+        geometry: {
+              type: "Polygon",
+              coordinates: item.geometry.coordinates
+            },
+        properties: {}
+            });
         
         // Geometry coords
         svg.append('g').selectAll('.city')
-            .data(coord_test)
+            .data(coll)
             .enter().append('path')
-            .attr('class', 'geo city')
-            .datum(d => ({
-            type: 'Point',
-            coordinates: [d[0], d[1]],
-            properties: d
-        }));
+            .attr('class', 'geo city');
         
         // Give colors according to regime
         svg.selectAll('path.voronoi').each(function(area) {
