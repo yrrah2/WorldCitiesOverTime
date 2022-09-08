@@ -192,36 +192,31 @@ d3.geoZoom()
             (cities_now);
         
         //let coord_test = [];
+        
         const coll = {
             type: "FeatureCollection",
             features: [
-                {
+                
+            ]
+        };
+        
+        regimes.forEach(regime => coll.features.push({
                     type: "Feature",
                     geometry: {
                         type: "Polygon",
                         coordinates: []
                     },
                     properties: {
-                        site: {city: "Roman Empire", dates: [{
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                        site: {city: regime, dates: [{
+                "year": "-1000/01/01",
+                "event": regime
             }]}
                     }
-                }
-            ]
-        };
+                }))
+        
         voronoi.polygons().features.forEach(item => {
             //if (recentEvent(item.properties.site.dates) == "Roman Empire"){coord_test = coord_test.concat(item.geometry.coordinates[0])} });
             if (recentEvent(item.properties.site.dates) == "Roman Empire"){
-                coll.features.push({
-                    type: "Feature",
-                    geometry: {
-                        type: "Polygon",
-                        coordinates: item.geometry.coordinates
-                    },
-                    properties: item.properties
-                });
-                
                 item.geometry.coordinates.forEach(coord => {coll.features[0].geometry.coordinates.indexOf(coord) === -1 ? coll.features[0].geometry.coordinates.push(coord) : console.log("This item already exists")});
             }
         });
