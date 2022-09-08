@@ -241,7 +241,12 @@ d3.geoZoom()
         svg.append('g').selectAll('.city')
             .data(coll.features)
             .enter().append('path')
-            .attr('class', 'geo city');
+            .attr('class', 'geo city')
+            .on('mouseover', function(d) {
+                document.getElementById("tooltip").style.display = "block";
+                document.getElementById("tooltip").innerHTML = getCityDesc(d.properties.site);
+        })
+            .on('mouseout', () => document.getElementById("tooltip").style.display = "none");;
         
         // Ocean overlay
         svg.append('path').attr('class', 'geo ocean')
