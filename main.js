@@ -194,8 +194,8 @@ d3.geoZoom()
         
         voronoi.polygons().features.forEach(item => {
             let regime_index = indexes[recentEvent(item.properties.site.dates)];
-            if(regime_index==1){console.log(item.geometry.coordinates)}
-            item.geometry.coordinates.forEach(coord => {
+            if(regime_index==1){console.log(item.geometry.coordinates)};
+            item.geometry.coordinates[0].forEach(coord => {
                 if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll[regime_index].geometry.coordinates.push(coord);
                 }
