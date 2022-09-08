@@ -202,8 +202,7 @@ d3.geoZoom()
                         coordinates: []
                     },
                     properties: {
-                        site: {city: "Roman Empire"}, 
-                        dates: []
+                        site: {city: "Roman Empire", dates: []}
                     }
                 }
             ]
