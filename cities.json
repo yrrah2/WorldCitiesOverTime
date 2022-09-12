@@ -11,6 +11,10 @@
             {
                 "year": "-0027/01/16",
                 "event": "Roman Empire"
+            },
+            {
+                "year": "0714/01/01",
+                "event": "Umayyad Caliphate"
             }
         ]
     },
@@ -328,6 +332,38 @@
             {
                 "year": "1458/01/01",
                 "event": "Ottoman Empire"
+            },
+            {
+                "year": "1832/08/30",
+                "event": "Kingdom of Greece"
+            },
+            {
+                "year": "1924/03/25",
+                "event": "Second Hellenic Republic"
+            },
+            {
+                "year": "1935/10/10",
+                "event": "Kingdom of Greece"
+            },
+            {
+                "year": "1941/04/27",
+                "event": "Nazi Germany"
+            },
+            {
+                "year": "1941/04/30",
+                "event": "Hellenic State"
+            },
+            {
+                "year": "1944/10/13",
+                "event": "Kingdom of Greece"
+            },
+            {
+                "year": "1967/04/21",
+                "event": "Greek Military Junta"
+            },
+            {
+                "year": "1973/06/01",
+                "event": "Third Hellenic Republic"
             }
         ]
     },
@@ -403,8 +439,20 @@
                 "event": "Grand Duchy of Lithuania"
             },
             {
+                "year": "1941/09/19",
+                "event": "Reichskommissariat Ukraine"
+            },
+            {
                 "year": "1943/11/13",
                 "event": "Union of Soviet Socialist Republics"
+            },
+            {
+                "year": "1991/08/24",
+                "event": "Ukrainian Soviet Socialist Republic"
+            },
+            {
+                "year": "1996/06/28",
+                "event": "Ukraine"
             }
         ]
     },
@@ -1193,6 +1241,63 @@
             {
                 "year": "2021/08/15",
                 "event": "Islamic Emirate of Aghanistan"
+            }
+        ]
+    },
+    {
+        "city": "Metz",
+        "latitude": 49.120278,
+        "longitude": 6.177778,
+        "dates": [
+            {
+                "year": "0843/01/01",
+                "event": "Middle Francia"
+            },
+            {
+                "year": "0855/09/19",
+                "event": "Kingdom of Lotharingia"
+            },
+            {
+                "year": "0959/01/01",
+                "event": "East Francia"
+            },
+            {
+                "year": "0962/02/02",
+                "event": "Holy Roman Empire"
+            },
+            {
+                "year": "1553/01/02",
+                "event": "R\u00e9publique messine"
+            },
+            {
+                "year": "1648/10/24",
+                "event": "Kingdom of France"
+            },
+            {
+                "year": "1792/09/21",
+                "event": "First French Republic"
+            }
+        ]
+    },
+    {
+        "city": "Mariupol",
+        "latitude": 47.095833,
+        "longitude": 37.549444,
+        "dates": [
+            {
+                "year": "2022/05/20",
+                "event": "Donetsk People's Republic"
+            }
+        ]
+    },
+    {
+        "city": "Donetsk",
+        "latitude": 48.002778,
+        "longitude": 37.805278,
+        "dates": [
+            {
+                "year": "2014/04/07",
+                "event": "Donetsk People's Republic"
             }
         ]
     }
