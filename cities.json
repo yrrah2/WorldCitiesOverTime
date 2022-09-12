@@ -15,6 +15,14 @@
             {
                 "year": "0714/01/01",
                 "event": "Umayyad Caliphate"
+            },
+            {
+                "year": "1238/09/28",
+                "event": "Kingdom of Aragon"
+            },
+            {
+                "year": "1707/01/01",
+                "event": "Kingdom of Spain"
             }
         ]
     },
@@ -733,6 +741,34 @@
                 "event": "Roman Empire"
             },
             {
+                "year": "0451/01/01",
+                "event": "Hunnic Empire"
+            },
+            {
+                "year": "0843/01/01",
+                "event": "Middle Francia"
+            },
+            {
+                "year": "0855/09/19",
+                "event": "Kingdom of Lotharingia"
+            },
+            {
+                "year": "0870/08/08",
+                "event": "East Francia"
+            },
+            {
+                "year": "0962/02/02",
+                "event": "Holy Roman Empire"
+            },
+            {
+                "year": "1681/09/30",
+                "event": "French Occupation"
+            },
+            {
+                "year": "1697/10/30",
+                "event": "Kingdom of France"
+            },
+            {
                 "year": "1870/09/28",
                 "event": "North German Confederation"
             },
@@ -1276,6 +1312,14 @@
             {
                 "year": "1792/09/21",
                 "event": "First French Republic"
+            },
+            {
+                "year": "1944/12/13",
+                "event": "United States of America"
+            },
+            {
+                "year": "1958/10/04",
+                "event": "Fifth French Republic"
             }
         ]
     },
@@ -1298,6 +1342,40 @@
             {
                 "year": "2014/04/07",
                 "event": "Donetsk People's Republic"
+            }
+        ]
+    },
+    {
+        "city": "Rostov-on-Don",
+        "latitude": 47.233333,
+        "longitude": 39.7,
+        "dates": [
+            {
+                "year": "1990/06/12",
+                "event": "Russian Federation"
+            }
+        ]
+    },
+    {
+        "city": "Manila",
+        "latitude": 14.5958,
+        "longitude": 120.9772,
+        "dates": [
+            {
+                "year": "0900/01/01",
+                "event": "Tondo"
+            },
+            {
+                "year": "1570/05/24",
+                "event": "Spanish East Indies"
+            },
+            {
+                "year": "1935/11/15",
+                "event": "Commonwealth of the Phillipines"
+            },
+            {
+                "year": "1946/06/04",
+                "event": "Republic of the Phillipines"
             }
         ]
     }
