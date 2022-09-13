@@ -94,18 +94,15 @@ regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 // Controls
 const gui = new dat.GUI();
 const controls = {
-  'Cities': true,
-  'Voronoi Layer': true,
+  'Cities': false,
   'Year': 1800,
     'Beginning': 1900,
     'End': 1950,
-    'Step': 1
+    'Step': 1,
+    'Unit': "Years"
 };
 
-gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.city').style('display', enabled ? null : 'none'));
-gui.add(controls, 'Voronoi Layer').onChange( enabled => {
-    d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
-});
+gui.add(controls, 'Cities');
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
     map_date.setYear(controls.Year);
     sliderTime.value(controls.Year);
@@ -126,10 +123,10 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
+        map_date.setYear(val);
       d3.select('p#value-time').text(
           map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
       );
-        map_date.setYear(val);
         voronoi_refresh();
     });
 
@@ -143,8 +140,6 @@ const gTime_slider = gTime
     .append('g');
     //.attr('transform', 'translate(30,30)');
 
-
-gTime_slider.call(sliderTime);
 d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
@@ -155,7 +150,10 @@ function start_history(svg) {
     var time_interval = setInterval(function(){
         if(map_date.getFullYear() <= controls.End) {
             map_date.addYears(controls.Step);
-            sliderTime.value(map_date.getFullYear());
+            d3.select('p#value-time').text(
+    map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
+);
+            voronoi_refresh();
      } else {
          clearInterval(time_interval);
      }
