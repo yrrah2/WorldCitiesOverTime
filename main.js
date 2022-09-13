@@ -107,41 +107,12 @@ const controls = {
 gui.add(controls, 'Cities');
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
     map_date.setFullYear(controls.Year);
-    sliderTime.value(controls.Year);
+    voronoi_refresh();
 });
 gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
 gui.add(controls, "End").min(1000).max(2030).step(1);
 gui.add(controls, "Step").min(1).max(100).step(1);
 gui.add(controls, 'Unit', ['Years', 'Months', 'Days'] );
-
-// Year slider
-const dataTime = d3.range(-1, 7).map( d => 338 * d );
-
-const sliderTime = d3
-    .sliderBottom()
-    .min(d3.min(dataTime))
-    .max(d3.max(dataTime))
-    .step(1)
-    .width(556)
-    .tickValues(dataTime)
-    .default(1500)
-    .on('onchange', val => {
-        map_date.setFullYear(val);
-      d3.select('p#value-time').text(
-          map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
-      );
-        voronoi_refresh();
-    });
-
-const gTime = d3
-    .select('div#slider-time')
-    .append('svg')
-    .attr('width', 600)
-    .attr('height', 100);
-    
-const gTime_slider = gTime
-    .append('g');
-    //.attr('transform', 'translate(30,30)');
 
 d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
