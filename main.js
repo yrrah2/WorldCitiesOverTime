@@ -1,7 +1,6 @@
-var map_date = new Date();
-map_date.setYear(1818);
-map_date.setMonth(5);
-map_date.setDay(5)
+var map_date = new Date("1818/05/05");
+
+var date_locale = "en-US"; //default locale
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -109,7 +108,9 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-      d3.select('p#value-time').text(Math.ceil(map_date.getFullYear()).toString());
+      d3.select('p#value-time').text(
+          map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' });
+      );
         map_date.setYear(val);
         voronoi_refresh();
     });
@@ -126,7 +127,9 @@ const gTime_slider = gTime
 
 
 gTime_slider.call(sliderTime);
-d3.select('p#value-time').text( Math.ceil(map_date.getFullYear()).toString());
+d3.select('p#value-time').text(
+          map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' });
+);
 
 // Start changing year every second
 function start_history(svg) {
