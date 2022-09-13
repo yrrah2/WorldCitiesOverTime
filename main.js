@@ -146,7 +146,7 @@ const gTime_slider = gTime
 
 gTime_slider.call(sliderTime);
 d3.select('p#value-time').text(
-    map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' });
+    map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
 
 // Start changing year every second
