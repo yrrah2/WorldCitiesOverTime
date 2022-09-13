@@ -149,7 +149,7 @@ function start_history(svg) {
     let time = controls.Beginning;
     var time_interval = setInterval(function(){
         if(map_date.getFullYear() <= controls.End) {
-            map_date.addYears(controls.Step);
+            map_date = map_date.addYears(controls.Step);
             d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
