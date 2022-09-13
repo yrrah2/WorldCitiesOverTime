@@ -1,4 +1,7 @@
-var map_date = {year: 1818, month: 5, day: 5};
+var map_date = new Date();
+map_date.setYear(1818);
+map_date.setMonth(5);
+map_date.setDay(5)
 
 // Convert year to decimal
 const convert_date = (date) => {
@@ -25,7 +28,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates) => {
-    const datesBefore = dates.filter(date => convert_date(date.year).year < map_date.year);
+    const datesBefore = dates.filter(date => convert_date(date.year).year < map_date.getFullYear());
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
@@ -87,7 +90,7 @@ gui.add(controls, 'Voronoi Layer').onChange( enabled => {
     d3.selectAll('.voronoi').style('display', enabled ? null : 'none');
 });
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
-    map_date.year = controls.Year;
+    map_date.setYear(controls.Year);
     sliderTime.value(controls.Year);
 });
 gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
@@ -106,8 +109,8 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-      d3.select('p#value-time').text(Math.ceil(map_date.year).toString());
-        map_date.year = val;
+      d3.select('p#value-time').text(Math.ceil(map_date.getFullYear()).toString());
+        map_date.setYear(val);
         voronoi_refresh();
     });
 
@@ -123,7 +126,7 @@ const gTime_slider = gTime
 
 
 gTime_slider.call(sliderTime);
-d3.select('p#value-time').text( Math.ceil(map_date.year).toString());
+d3.select('p#value-time').text( Math.ceil(map_date.getFullYear()).toString());
 
 // Start changing year every second
 function start_history(svg) {
@@ -131,7 +134,7 @@ function start_history(svg) {
     var time_interval = setInterval(function(){
         if(time <= controls.End) {
             time += 0.1*controls.Step;
-            map_date.year = time;
+            map_date.setYear(time);
             sliderTime.value(time);
      } else {
          clearInterval(time_interval);
