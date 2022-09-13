@@ -130,13 +130,13 @@ function start_history(svg) {
     let time = controls.Beginning;
     var time_interval = setInterval(function(){
         if(time <= controls.End) {
-            time += controls.Step;
+            time += 0.1*controls.Step;
             map_date.year = time;
             sliderTime.value(time);
      } else {
          clearInterval(time_interval);
      }
-    },1000);
+    },100);
 }
     
 // Button to start history
