@@ -109,9 +109,11 @@ d3.select('p#value-time').text(
 
 // Start changing year every second
 function start_history(svg) {
+    let end_date = new Date(0);
+    end_date.setFullYear(controls.End);
     map_date.setFullYear(controls.Beginning);
     var time_interval = setInterval(function(){
-        if(map_date.getFullYear() <= controls.End) {
+        if(map_date <= end_date) {
             map_date = map_date.addTime(controls.Step, controls.Unit);
             d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
