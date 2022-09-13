@@ -5,20 +5,8 @@ var date_locale = "en-US"; //default locale
 Date.prototype.addTime = function(amount, units) {
     var date = new Date(this.valueOf());
     if (units == "Years") {date.setFullYear(date.getFullYear() + amount)}
-            else if (units == "Months") {date.setMonth(date.getMonth() + amount)}
-            else {date.setDate(date.getDate() + amount)};
-    return date;
-}
-
-Date.prototype.addMonths = function(months) {
-    var date = new Date(this.valueOf());
-    date.setMonth(date.getMonth() + months);
-    return date;
-}
-
-Date.prototype.addDays = function(days) {
-    var date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
+    else if (units == "Months") {date.setMonth(date.getMonth() + amount)}
+    else {date.setDate(date.getDate() + amount)};
     return date;
 }
 
@@ -95,6 +83,7 @@ regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 
 // Controls
 const gui = new dat.GUI();
+gui.domElement.id = 'gui_css';
 const controls = {
   'Cities': false,
   'Year': 1800,
