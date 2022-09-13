@@ -4,7 +4,7 @@ var date_locale = "en-US"; //default locale
 
 Date.prototype.addYears = function(years) {
     var date = new Date(this.valueOf());
-    date.setYear(date.getFullYear() + years);
+    date.setFullYear(date.getFullYear() + years);
     return date;
 }
 
@@ -101,15 +101,16 @@ const controls = {
     'Step': 1,
     'Unit': "Years"
 };
-
+    
 gui.add(controls, 'Cities');
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
-    map_date.setYear(controls.Year);
+    map_date.setFullYear(controls.Year);
     sliderTime.value(controls.Year);
 });
 gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
 gui.add(controls, "End").min(1000).max(2030).step(1);
 gui.add(controls, "Step").min(1).max(100).step(1);
+gui.add(controls, 'Unit', ['Years', 'Months', 'Days'] );
 
 // Year slider
 const dataTime = d3.range(-1, 7).map( d => 338 * d );
@@ -123,7 +124,7 @@ const sliderTime = d3
     .tickValues(dataTime)
     .default(1500)
     .on('onchange', val => {
-        map_date.setYear(val);
+        map_date.setFullYear(val);
       d3.select('p#value-time').text(
           map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
       );
@@ -146,10 +147,12 @@ d3.select('p#value-time').text(
 
 // Start changing year every second
 function start_history(svg) {
-    map_date.setYear(controls.Beginning);
+    map_date.setFullYear(controls.Beginning);
     var time_interval = setInterval(function(){
         if(map_date.getFullYear() <= controls.End) {
-            map_date = map_date.addYears(controls.Step);
+            if (controls.Unit == "Years") {map_date = map_date.addYears(controls.Step)}
+            else if (controls.Unit == "Months") {map_date = map_date.addMonths(controls.Step)}
+            else (controls.Unit == "Days") {map_date = map_date.addDays(controls.Step)};
             d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
