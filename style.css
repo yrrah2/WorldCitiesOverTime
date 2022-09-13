@@ -78,7 +78,7 @@ body {
   font: 20px;
 }
 
-col-sm-2 {
+.col-sm-2 {
   position: absolute;
   font: 40px sans-serif;
   bottom: 200px;
