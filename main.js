@@ -146,7 +146,7 @@ d3.select('p#value-time').text(
 
 // Start changing year every second
 function start_history(svg) {
-    let time = controls.Beginning;
+    map_date.setYear(controls.Beginning);
     var time_interval = setInterval(function(){
         if(map_date.getFullYear() <= controls.End) {
             map_date = map_date.addYears(controls.Step);
