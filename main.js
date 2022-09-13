@@ -2,9 +2,11 @@ var map_date = new Date("1818/05/05");
 
 var date_locale = "en-US"; //default locale
 
-Date.prototype.addYears = function(years) {
+Date.prototype.addTime = function(amount, units) {
     var date = new Date(this.valueOf());
-    date.setFullYear(date.getFullYear() + years);
+    if (units == "Years") {date.setFullYear(date.getFullYear() + amount)}
+            else if (units == "Months") {date.setMonth(date.getMonth() + amount)}
+            else (units == "Days") {date.setDate(date.getDate() + amount)};
     return date;
 }
 
@@ -150,9 +152,7 @@ function start_history(svg) {
     map_date.setFullYear(controls.Beginning);
     var time_interval = setInterval(function(){
         if(map_date.getFullYear() <= controls.End) {
-            if (controls.Unit == "Years") {map_date = map_date.addYears(controls.Step)}
-            else if (controls.Unit == "Months") {map_date = map_date.addMonths(controls.Step)}
-            else (controls.Unit == "Days") {map_date = map_date.addDays(controls.Step)};
+            map_date = map_date.addTime(controls.Step, controls.Unit);
             d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
