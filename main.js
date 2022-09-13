@@ -6,7 +6,7 @@ Date.prototype.addTime = function(amount, units) {
     var date = new Date(this.valueOf());
     if (units == "Years") {date.setFullYear(date.getFullYear() + amount)}
             else if (units == "Months") {date.setMonth(date.getMonth() + amount)}
-            else (units == "Days") {date.setDate(date.getDate() + amount)};
+            else {date.setDate(date.getDate() + amount)};
     return date;
 }
 
