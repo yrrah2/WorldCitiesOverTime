@@ -77,3 +77,12 @@ body {
 #gui_css {
   font: 20px;
 }
+
+col-sm-2 {
+  position: absolute;
+  font: 40px sans-serif;
+  bottom: 200px;
+  left: 49%;
+  background: white;
+  color: black;
+}
