@@ -100,6 +100,7 @@ regimes.forEach(regime => regime_colors[regime] = getRandomColor());
 
 // Controls
 const gui = new dat.GUI();
+gui.width(300);
 gui.domElement.id = 'gui_css';
 const controls = {
   'Cities': false,
