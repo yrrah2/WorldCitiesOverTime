@@ -111,7 +111,7 @@
                 "event": "Sixth Coalition Occupation"
             },
             {
-                "year": "1814/04/06",
+                "year": "1814/03/30",
                 "event": "Kingdom of France"
             },
             {
@@ -965,10 +965,6 @@
             },
             {
                 "year": "1949/05/23",
-                "event": "West Germany"
-            },
-            {
-                "year": "1990/10/03",
                 "event": "Federal Republic of Germany"
             }
         ]
