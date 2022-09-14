@@ -1071,6 +1071,14 @@
                 "event": "First French Republic"
             },
             {
+                "year": "1804/05/18",
+                "event": "First French Empire"
+            },
+            {
+                "year": "1814/03/03",
+                "event": "Kingdom of France"
+            },
+            {
                 "year": "1958/10/04",
                 "event": "Fifth French Republic"
             }
@@ -1187,7 +1195,24 @@
         "city": "Berlin",
         "latitude": 52.52,
         "longitude": 13.405,
-        "dates": []
+        "dates": [
+            {
+                "year": "1945/03/02",
+                "event": "Red Army"
+            },
+            {
+                "year": "1945/06/05",
+                "event": "Soviet Occupation Zone"
+            },
+            {
+                "year": "1949/10/07",
+                "event": "German Democratic Republic"
+            },
+            {
+                "year": "1990/10/03",
+                "event": "Federal Republic of Germany"
+            }
+        ]
     },
     {
         "city": "Odessa",
@@ -1312,6 +1337,14 @@
             {
                 "year": "1792/09/21",
                 "event": "First French Republic"
+            },
+            {
+                "year": "1804/05/18",
+                "event": "First French Empire"
+            },
+            {
+                "year": "1814/03/03",
+                "event": "Kingdom of France"
             },
             {
                 "year": "1944/12/13",
