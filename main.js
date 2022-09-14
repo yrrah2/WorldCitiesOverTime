@@ -12,15 +12,32 @@ Date.prototype.addTime = function(amount, units) {
 
 // Convert year to decimal
 const convert_date = (date) => {
-    //if (date.charAt(0) === '-'){
-    //    date = date.substring(1);
-    //    var year = -date.slice(0, 4);
-    //} else {
-    //    var year = date.slice(0, 4);
-    //}
-    //let month = date.slice(5, 7);
-    //let day = date.slice(8, 10);
-    return new Date(date);
+    let converted_date = new Date(0);
+    
+    // Check for BCE vs CE    
+    let modifier = 1;
+    if (date.charAt(0) === '-'){
+        modifier = -1;
+        date = date.substring(1);
+    }
+    
+    // Get year
+    let year = date.slice(0, 4);
+    date = date.substring(5);
+    converted_date.setFullYear(parseInt(year)*modifier);
+    
+    // Get month if exists
+    if (date.length >= 2){
+        let month = date.slice(0, 2);
+        date = date.substring(3);
+        converted_date.setMonth(parseInt(month)-1);
+    }
+    
+    // Get day if exists
+    if (date.length == 2){
+        converted_date.setDate(parseInt(date));
+    }
+    return converted_date;
 }
 
 // Random Colour Generator
