@@ -1172,6 +1172,10 @@
         "longitude": 21.017532,
         "dates": [
             {
+                "year": "1815/06/09",
+                "event": "Russian Empire"
+            },
+            {
                 "year": "1939/09/27",
                 "event": "Nazi Germany"
             },
