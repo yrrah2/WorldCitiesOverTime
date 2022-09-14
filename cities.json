@@ -1444,5 +1444,54 @@
                 "event": "Union of Soviet Socialist Republics"
             }
         ]
+    },
+    {
+        "city": "Naples",
+        "latitude": 40.833333,
+        "longitude": 14.25,
+        "dates": [
+            {
+                "year": "1815/03/20",
+                "event": "Kingdom of the Two Sicilies"
+            },
+            {
+                "year": "1943/09/30",
+                "event": "Italian Resistance"
+            },
+            {
+                "year": "1943/10/01",
+                "event": "Allied Military Government of Occupied Territories"
+            },
+            {
+                "year": "1946/06/02",
+                "event": "Republic of Italy"
+            }
+        ]
+    },
+    {
+        "city": "Palermo",
+        "latitude": 38.111111,
+        "longitude": 13.351667,
+        "dates": [
+            {
+                "year": "1815/03/20",
+                "event": "Kingdom of the Two Sicilies"
+            }
+        ]
+    },
+    {
+        "city": "Trieste",
+        "latitude": 45.650278,
+        "longitude": 13.770278,
+        "dates": [
+            {
+                "year": "1947/01/10",
+                "event": "Free Territory of Trieste"
+            },
+            {
+                "year": "1975/11/10",
+                "event": "Republic of Italy"
+            }
+        ]
     }
 ]
