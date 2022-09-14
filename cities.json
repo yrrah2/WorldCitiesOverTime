@@ -5,7 +5,7 @@
         "latitude": 39.4675146,
         "dates": [
             {
-                "year": "-0138/01/01",
+                "year": "-0138",
                 "event": "Roman Republic"
             },
             {
@@ -13,7 +13,7 @@
                 "event": "Roman Empire"
             },
             {
-                "year": "0714/01/01",
+                "year": "0714",
                 "event": "Umayyad Caliphate"
             },
             {
@@ -21,7 +21,7 @@
                 "event": "Kingdom of Aragon"
             },
             {
-                "year": "1707/01/01",
+                "year": "1707",
                 "event": "Kingdom of Spain"
             }
         ]
@@ -32,7 +32,7 @@
         "latitude": 41.4037011,
         "dates": [
             {
-                "year": "-0133/01/01",
+                "year": "-0133",
                 "event": "Roman Republic"
             },
             {
@@ -51,7 +51,7 @@
         "latitude": 48.8565426,
         "dates": [
             {
-                "year": "-0052/01/01",
+                "year": "-0052",
                 "event": "Roman Republic"
             },
             {
@@ -75,7 +75,7 @@
                 "event": "Roman Empire"
             },
             {
-                "year": "0486/01/01",
+                "year": "0486",
                 "event": "Francia"
             },
             {
@@ -170,7 +170,7 @@
         "latitude": 51.5007096,
         "dates": [
             {
-                "year": "-0047/01/01",
+                "year": "-0047",
                 "event": "Roman Republic"
             },
             {
@@ -197,11 +197,11 @@
         "latitude": 49.7540291,
         "dates": [
             {
-                "year": "-0016/01/01",
+                "year": "-0016",
                 "event": "Roman Empire"
             },
             {
-                "year": "0870/01/01",
+                "year": "0870",
                 "event": "East Francia"
             },
             {
@@ -213,7 +213,7 @@
                 "event": "First French Republic"
             },
             {
-                "year": "1814/01/01",
+                "year": "1814",
                 "event": "Kingdom of Prussia"
             },
             {
@@ -252,11 +252,11 @@
         "latitude": 41.8902861,
         "dates": [
             {
-                "year": "-0753/01/01",
+                "year": "-0753",
                 "event": "Roman Kingdom"
             },
             {
-                "year": "-0509/01/01",
+                "year": "-0509",
                 "event": "Roman Republic"
             },
             {
@@ -279,7 +279,7 @@
         "latitude": 47.49641,
         "dates": [
             {
-                "year": "896/01/01",
+                "year": "896",
                 "event": "Kingdom of Hungary"
             },
             {
@@ -445,6 +445,14 @@
             {
                 "year": "1362/01/01",
                 "event": "Grand Duchy of Lithuania"
+            },
+            {
+                "year": "1654/01",
+                "event": "Tsardom of Russia"
+            },
+            {
+                "year": "1721/10/22",
+                "event": "Russian Empire"
             },
             {
                 "year": "1941/09/19",
@@ -708,6 +716,10 @@
         "longitude": 37.619899,
         "latitude": 55.7536697,
         "dates": [
+            {
+                "year": "1721/10/22",
+                "event": "Russian Empire"
+            },
             {
                 "year": "1922/12/30",
                 "event": "Union of Soviet Socialist Republics"
@@ -1028,6 +1040,10 @@
         "longitude": 73.366667,
         "latitude": 54.983333,
         "dates": [
+            {
+                "year": "1721/10/22",
+                "event": "Russian Empire"
+            },
             {
                 "year": "1919/11/14",
                 "event": "Russian Soviet Federative Socialist Republic"
@@ -1429,6 +1445,10 @@
         "longitude": 129.73,
         "dates": [
             {
+                "year": "1721/10/22",
+                "event": "Russian Empire"
+            },
+            {
                 "year": "1922/12/30",
                 "event": "Union of Soviet Socialist Republics"
             }
@@ -1439,6 +1459,10 @@
         "latitude": 56.5,
         "longitude": 84.966667,
         "dates": [
+            {
+                "year": "1721/10/22",
+                "event": "Russian Empire"
+            },
             {
                 "year": "1922/12/30",
                 "event": "Union of Soviet Socialist Republics"
