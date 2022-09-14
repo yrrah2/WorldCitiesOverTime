@@ -12,15 +12,15 @@ Date.prototype.addTime = function(amount, units) {
 
 // Convert year to decimal
 const convert_date = (date) => {
-    if (date.charAt(0) === '-'){
-        date = date.substring(1);
-        var year = -date.slice(0, 4);
-    } else {
-        var year = date.slice(0, 4);
-    }
-    let month = date.slice(5, 7);
-    let day = date.slice(8, 10);
-    return {"year": year, "month": month, "day": day};
+    //if (date.charAt(0) === '-'){
+    //    date = date.substring(1);
+    //    var year = -date.slice(0, 4);
+    //} else {
+    //    var year = date.slice(0, 4);
+    //}
+    //let month = date.slice(5, 7);
+    //let day = date.slice(8, 10);
+    return new Date(date);
 }
 
 // Random Colour Generator
@@ -35,7 +35,7 @@ const getRandomColor = () => {
 
 // Find recent event date
 const recentEvent = (dates) => {
-    const datesBefore = dates.filter(date => convert_date(date.year).year < map_date.getFullYear());
+    const datesBefore = dates.filter(date => convert_date(date.year) < map_date);
     let regime = datesBefore[datesBefore.length-1];
     if ( regime == undefined ){
         return "No one";
@@ -96,6 +96,9 @@ const controls = {
 gui.add(controls, 'Cities');
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
     map_date.setFullYear(controls.Year);
+    d3.select('p#value-time').text(
+        map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
+    );
     voronoi_refresh();
 });
 gui.add(controls, "Beginning").min(-1000).max(2030).step(1);
