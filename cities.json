@@ -1463,6 +1463,10 @@
                 "event": "Allied Military Government of Occupied Territories"
             },
             {
+                "year": "1944/02",
+                "event": "Allied Military Government"
+            },
+            {
                 "year": "1946/06/02",
                 "event": "Republic of Italy"
             }

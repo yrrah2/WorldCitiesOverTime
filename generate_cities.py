@@ -25,45 +25,57 @@ def add_city(city_list, name, latitude, longitude):
         print("Sorry, that city is already there!")
 
 def convert_date(date):
+    result = []
     modifier = 1
     if date[0] == '-':
         modifier = -1
         date = date[1:]
+    result.append(modifier)
     year = int(date[0:4])
-    month = int(date[5:7])
-    day = int(date[8:10])
-    return (modifier, year, month, day)
+    result.append(year)
+    if len(date) >= 5:
+        month = int(date[5:7])
+        result.append(month)
+    if len(date) >= 8:
+        day = int(date[8:10])
+        result.append(day)
+    return result
 
 def is_after(date1, date2):
-    m1, n1, y1, r1 = convert_date(date1)
-    m2, n2, y2, r2 = convert_date(date2)
+    date_list1 = convert_date(date1)
+    date_list2 = convert_date(date2)
 
-    if m1 == 1:
+    while len(date_list1) < 4:
+        date_list1.append(1)
+    while len(date_list2) < 4:
+        date_list2.append(1)
+
+    if date_list1[0] == 1:
         r = True
-    if m1 == -1:
+    if date_list1[0] == -1:
         r = False
 
-    if m2 < m1:
+    if date_list2[0] < date_list1[0]:
         return 1
-    elif m1 < m2:
+    elif date_list2[0] > date_list1[0]:
         return 0
     else:
-        if n2 < n1:
+        if date_list2[1] < date_list1[1]:
             return r
-        if n1 < n2:
+        if date_list2[1] > date_list1[1]:
             return not r
         else:
-            if y2 < y1:
+            if date_list2[2] < date_list1[2]:
                 return r
-            if y1 < y2:
+            if date_list2[2] > date_list1[2]:
                 return not r
             else:
-                if r2 < r1:
+                if date_list2[3] < date_list1[3]:
                     return r
-                if r1 < r2:
+                if date_list2[3] > date_list1[3]:
                     return not r
                 else:
-                    return Exception("The dates are the same.")
+                    return False
 
 
 def add_event(city_list, city_name, event, date):
@@ -92,11 +104,7 @@ def add_event(city_list, city_name, event, date):
 
 
 #add_city(contents, "Calais", 50.948056, 1.856389)
-add_event(contents, "Calais", "Kingdom of England", "1347/08/03")
-add_event(contents, "Calais", "Kingdom of France", "1558/01/08")
-add_event(contents, "Calais", "Spanish Empire", "1596/04/24")
-add_event(contents, "Calais", "Kingdom of France", "1598/05/02")
-add_event(contents, "Calais", "Nazi Military Occupation", "1940/05/26")
-add_event(contents, "Calais", "Provisional Government of the French Republic", "1944/10/01")
-add_event(contents, "Calais", "Fourth French Republic", "1946/10/27")
-add_event(contents, "Calais", "Fifth French Republic", "1958/10/04")
+#add_event(contents, "Manila", "Republic of the Phillipines", "1946/06/04")a
+add_event(contents, "Naples", "Allied Military Government", "1944/02")
+
+
