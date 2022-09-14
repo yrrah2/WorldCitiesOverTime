@@ -709,6 +709,10 @@
         "latitude": 55.7536697,
         "dates": [
             {
+                "year": "1922/12/30",
+                "event": "Union of Soviet Socialist Republics"
+            },
+            {
                 "year": "1990/06/12",
                 "event": "Russian Federation"
             }
@@ -1376,6 +1380,39 @@
             {
                 "year": "1946/06/04",
                 "event": "Republic of the Phillipines"
+            }
+        ]
+    },
+    {
+        "city": "Bishkek",
+        "latitude": 42.874722,
+        "longitude": 74.612222,
+        "dates": [
+            {
+                "year": "1922/12/30",
+                "event": "Union of Soviet Socialist Republics"
+            }
+        ]
+    },
+    {
+        "city": "Yakutsk",
+        "latitude": 62.03,
+        "longitude": 129.73,
+        "dates": [
+            {
+                "year": "1922/12/30",
+                "event": "Union of Soviet Socialist Republics"
+            }
+        ]
+    },
+    {
+        "city": "Tomsk",
+        "latitude": 56.5,
+        "longitude": 84.966667,
+        "dates": [
+            {
+                "year": "1922/12/30",
+                "event": "Union of Soviet Socialist Republics"
             }
         ]
     }
