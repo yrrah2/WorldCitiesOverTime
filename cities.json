@@ -1525,5 +1525,40 @@
                 "event": "Republic of Italy"
             }
         ]
+    },
+    {
+        "city": "Saint Petersburg",
+        "latitude": 59.9375,
+        "longitude": 30.308611,
+        "dates": [
+            {
+                "year": "1703/05/27",
+                "event": "Russian Empire"
+            },
+            {
+                "year": "1917/03/15",
+                "event": "Russian dual power"
+            },
+            {
+                "year": "1917/11/07",
+                "event": "Petrograd Soviet"
+            },
+            {
+                "year": "1918/01/25",
+                "event": "Russian Soviet Republic"
+            },
+            {
+                "year": "1918/07/10",
+                "event": "Russian Socialist Federative Soviet Republic"
+            },
+            {
+                "year": "1922/12/30",
+                "event": "Union of Soviet Socialist Republics"
+            },
+            {
+                "year": "1990/06/12",
+                "event": "Russian Federation"
+            }
+        ]
     }
 ]
