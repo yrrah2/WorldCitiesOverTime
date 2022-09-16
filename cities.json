@@ -1564,5 +1564,16 @@
                 "event": "Russian Federation"
             }
         ]
+    },
+    {
+        "city": "Vienna",
+        "latitude": 48.2,
+        "longitude": 16.366667,
+        "dates": [
+            {
+                "year": "1485/06/01",
+                "event": "Kingdom of Hungary"
+            }
+        ]
     }
 ]
