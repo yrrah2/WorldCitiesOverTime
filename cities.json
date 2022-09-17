@@ -1046,7 +1046,8 @@
         "history": [
             {
                 "date": "1721/10/22",
-                "regime": "Russian Empire"
+		"type": 0,
+                "regime": "Saint Petersburg"
             },
             {
                 "date": "1919/11/14",
