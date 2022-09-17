@@ -1,1582 +1,1582 @@
 [
     {
-        "city": "Valencia",
+        "name": "Valencia",
         "longitude": -0.3771437,
         "latitude": 39.4675146,
-        "dates": [
+        "history": [
             {
-                "year": "-0138",
-                "event": "Roman Republic"
+                "date": "-0138",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0714",
-                "event": "Umayyad Caliphate"
+                "date": "0714",
+                "regime": "Umayyad Caliphate"
             },
             {
-                "year": "1238/09/28",
-                "event": "Kingdom of Aragon"
+                "date": "1238/09/28",
+                "regime": "Kingdom of Aragon"
             },
             {
-                "year": "1707",
-                "event": "Kingdom of Spain"
+                "date": "1707",
+                "regime": "Kingdom of Spain"
             }
         ]
     },
     {
-        "city": "Barcelona",
+        "name": "Barcelona",
         "longitude": 2.1743431,
         "latitude": 41.4037011,
-        "dates": [
+        "history": [
             {
-                "year": "-0133",
-                "event": "Roman Republic"
+                "date": "-0133",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1931/04/14",
-                "event": "Second Spanish Republic"
+                "date": "1931/04/14",
+                "regime": "Second Spanish Republic"
             }
         ]
     },
     {
-        "city": "Paris",
+        "name": "Paris",
         "longitude": 2.352332,
         "latitude": 48.8565426,
-        "dates": [
+        "history": [
             {
-                "year": "-0052",
-                "event": "Roman Republic"
+                "date": "-0052",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0049/01/10",
-                "event": "Populares Faction"
+                "date": "-0049/01/10",
+                "regime": "Populares Faction"
             },
             {
-                "year": "-0045/03/17",
-                "event": "Roman Republic"
+                "date": "-0045/03/17",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0260/09/01",
-                "event": "Gallic Empire"
+                "date": "0260/09/01",
+                "regime": "Gallic Empire"
             },
             {
-                "year": "0274/02/01",
-                "event": "Roman Empire"
+                "date": "0274/02/01",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0486",
-                "event": "Francia"
+                "date": "0486",
+                "regime": "Francia"
             },
             {
-                "year": "0800/12/25",
-                "event": "Carolingian Empire"
+                "date": "0800/12/25",
+                "regime": "Carolingian Empire"
             },
             {
-                "year": "0843/08/01",
-                "event": "West Francia"
+                "date": "0843/08/01",
+                "regime": "West Francia"
             },
             {
-                "year": "0987/07/03",
-                "event": "Kingdom of France"
+                "date": "0987/07/03",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1420/05/21",
-                "event": "Kingdom of England"
+                "date": "1420/05/21",
+                "regime": "Kingdom of England"
             },
             {
-                "year": "1436/04/13",
-                "event": "Kingdom of France"
+                "date": "1436/04/13",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1792/09/21",
-                "event": "First French Republic"
+                "date": "1792/09/21",
+                "regime": "First French Republic"
             },
             {
-                "year": "1804/05/18",
-                "event": "First French Empire"
+                "date": "1804/05/18",
+                "regime": "First French Empire"
             },
             {
-                "year": "1814/03/31",
-                "event": "Sixth Coalition Occupation"
+                "date": "1814/03/31",
+                "regime": "Sixth Coalition Occupation"
             },
             {
-                "year": "1814/03/30",
-                "event": "Kingdom of France"
+                "date": "1814/03/30",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1815/03/20",
-                "event": "First French Empire"
+                "date": "1815/03/20",
+                "regime": "First French Empire"
             },
             {
-                "year": "1815/07/06",
-                "event": "Seventh Coalition Occupation"
+                "date": "1815/07/06",
+                "regime": "Seventh Coalition Occupation"
             },
             {
-                "year": "1815/07/08",
-                "event": "Kingdom of France"
+                "date": "1815/07/08",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1848/02/24",
-                "event": "Second French Republic"
+                "date": "1848/02/24",
+                "regime": "Second French Republic"
             },
             {
-                "year": "1852/01/14",
-                "event": "Second French Empire"
+                "date": "1852/01/14",
+                "regime": "Second French Empire"
             },
             {
-                "year": "1870/09/04",
-                "event": "Third French Republic"
+                "date": "1870/09/04",
+                "regime": "Third French Republic"
             },
             {
-                "year": "1871/03/18",
-                "event": "Paris Commune"
+                "date": "1871/03/18",
+                "regime": "Paris Commune"
             },
             {
-                "year": "1871/05/28",
-                "event": "Third French Republic"
+                "date": "1871/05/28",
+                "regime": "Third French Republic"
             },
             {
-                "year": "1940/06/14",
-                "event": "Nazi Military Occupation"
+                "date": "1940/06/14",
+                "regime": "Nazi Military Occupation"
             },
             {
-                "year": "1944/08/25",
-                "event": "Provisional Government of the French Republic"
+                "date": "1944/08/25",
+                "regime": "Provisional Government of the French Republic"
             },
             {
-                "year": "1946/10/27",
-                "event": "Fourth French Republic"
+                "date": "1946/10/27",
+                "regime": "Fourth French Republic"
             },
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "London",
+        "name": "London",
         "longitude": -0.1245586,
         "latitude": 51.5007096,
-        "dates": [
+        "history": [
             {
-                "year": "-0047",
-                "event": "Roman Republic"
+                "date": "-0047",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0927/07/12",
-                "event": "Kingdom of England"
+                "date": "0927/07/12",
+                "regime": "Kingdom of England"
             },
             {
-                "year": "1701/05/01",
-                "event": "Kingdom of Great Britain"
+                "date": "1701/05/01",
+                "regime": "Kingdom of Great Britain"
             },
             {
-                "year": "1801/01/01",
-                "event": "United Kingdom of Great Britain and Ireland"
+                "date": "1801/01/01",
+                "regime": "United Kingdom of Great Britain and Ireland"
             }
         ]
     },
     {
-        "city": "Trier",
+        "name": "Trier",
         "longitude": 6.635907,
         "latitude": 49.7540291,
-        "dates": [
+        "history": [
             {
-                "year": "-0016",
-                "event": "Roman Empire"
+                "date": "-0016",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0870",
-                "event": "East Francia"
+                "date": "0870",
+                "regime": "East Francia"
             },
             {
-                "year": "0962/02/02",
-                "event": "Holy Roman Empire"
+                "date": "0962/02/02",
+                "regime": "Holy Roman Empire"
             },
             {
-                "year": "1794/08/01",
-                "event": "First French Republic"
+                "date": "1794/08/01",
+                "regime": "First French Republic"
             },
             {
-                "year": "1814",
-                "event": "Kingdom of Prussia"
+                "date": "1814",
+                "regime": "Kingdom of Prussia"
             },
             {
-                "year": "1871/01/08",
-                "event": "German Empire"
+                "date": "1871/01/08",
+                "regime": "German Empire"
             },
             {
-                "year": "1918/11/09",
-                "event": "Weimar Republic"
+                "date": "1918/11/09",
+                "regime": "Weimar Republic"
             },
             {
-                "year": "1933/01/30",
-                "event": "Nazi Germany"
+                "date": "1933/01/30",
+                "regime": "Nazi Germany"
             },
             {
-                "year": "1945/05/02",
-                "event": "United States of America"
+                "date": "1945/05/02",
+                "regime": "United States of America"
             },
             {
-                "year": "1945/06/26",
-                "event": "Fourth French Republic"
+                "date": "1945/06/26",
+                "regime": "Fourth French Republic"
             },
             {
-                "year": "1949/03/23",
-                "event": "West Germany"
+                "date": "1949/03/23",
+                "regime": "West Germany"
             },
             {
-                "year": "1990/10/03",
-                "event": "Federal Republic of Germany"
+                "date": "1990/10/03",
+                "regime": "Federal Republic of Germany"
             }
         ]
     },
     {
-        "city": "Rome",
+        "name": "Rome",
         "longitude": 12.4922896,
         "latitude": 41.8902861,
-        "dates": [
+        "history": [
             {
-                "year": "-0753",
-                "event": "Roman Kingdom"
+                "date": "-0753",
+                "regime": "Roman Kingdom"
             },
             {
-                "year": "-0509",
-                "event": "Roman Republic"
+                "date": "-0509",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0476/09/02",
-                "event": "Kingdom of Italy"
+                "date": "0476/09/02",
+                "regime": "Kingdom of Italy"
             },
             {
-                "year": "1946/06/02",
-                "event": "Republic of Italy"
+                "date": "1946/06/02",
+                "regime": "Republic of Italy"
             }
         ]
     },
     {
-        "city": "Budapest",
+        "name": "Budapest",
         "longitude": 19.0399215,
         "latitude": 47.49641,
-        "dates": [
+        "history": [
             {
-                "year": "896",
-                "event": "Kingdom of Hungary"
+                "date": "896",
+                "regime": "Kingdom of Hungary"
             },
             {
-                "year": "1241/12/25",
-                "event": "Golden Horde"
+                "date": "1241/12/25",
+                "regime": "Golden Horde"
             },
             {
-                "year": "1242/05/01",
-                "event": "Kingdom of Hungary"
+                "date": "1242/05/01",
+                "regime": "Kingdom of Hungary"
             },
             {
-                "year": "1526/11/26",
-                "event": "Exalted Ottoman State"
+                "date": "1526/11/26",
+                "regime": "Exalted Ottoman State"
             },
             {
-                "year": "1686/09/09",
-                "event": "Kingdom of Hungary"
+                "date": "1686/09/09",
+                "regime": "Kingdom of Hungary"
             },
             {
-                "year": "1920/02/29",
-                "event": "Kingdom of Hungary"
+                "date": "1920/02/29",
+                "regime": "Kingdom of Hungary"
             },
             {
-                "year": "1944/10/16",
-                "event": "Nazi Occupation"
+                "date": "1944/10/16",
+                "regime": "Nazi Occupation"
             },
             {
-                "year": "1945/02/13",
-                "event": "Soviet Occupation"
+                "date": "1945/02/13",
+                "regime": "Soviet Occupation"
             },
             {
-                "year": "1946/02/01",
-                "event": "Second Hungarian Republic"
+                "date": "1946/02/01",
+                "regime": "Second Hungarian Republic"
             },
             {
-                "year": "1949/08/20",
-                "event": "People's Republic of Hungary"
+                "date": "1949/08/20",
+                "regime": "People's Republic of Hungary"
             },
             {
-                "year": "1989/10/23",
-                "event": "Third Hungarian Republic"
+                "date": "1989/10/23",
+                "regime": "Third Hungarian Republic"
             }
         ]
     },
     {
-        "city": "Athens",
+        "name": "Athens",
         "longitude": 23.7279086,
         "latitude": 37.9818287,
-        "dates": [
+        "history": [
             {
-                "year": "-0086/03/01",
-                "event": "Roman Republic"
+                "date": "-0086/03/01",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1458/01/01",
-                "event": "Ottoman Empire"
+                "date": "1458/01/01",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1832/08/30",
-                "event": "Kingdom of Greece"
+                "date": "1832/08/30",
+                "regime": "Kingdom of Greece"
             },
             {
-                "year": "1924/03/25",
-                "event": "Second Hellenic Republic"
+                "date": "1924/03/25",
+                "regime": "Second Hellenic Republic"
             },
             {
-                "year": "1935/10/10",
-                "event": "Kingdom of Greece"
+                "date": "1935/10/10",
+                "regime": "Kingdom of Greece"
             },
             {
-                "year": "1941/04/27",
-                "event": "Nazi Germany"
+                "date": "1941/04/27",
+                "regime": "Nazi Germany"
             },
             {
-                "year": "1941/04/30",
-                "event": "Hellenic State"
+                "date": "1941/04/30",
+                "regime": "Hellenic State"
             },
             {
-                "year": "1944/10/13",
-                "event": "Kingdom of Greece"
+                "date": "1944/10/13",
+                "regime": "Kingdom of Greece"
             },
             {
-                "year": "1967/04/21",
-                "event": "Greek Military Junta"
+                "date": "1967/04/21",
+                "regime": "Greek Military Junta"
             },
             {
-                "year": "1973/06/01",
-                "event": "Third Hellenic Republic"
+                "date": "1973/06/01",
+                "regime": "Third Hellenic Republic"
             }
         ]
     },
     {
-        "city": "Kaliningrad",
+        "name": "Kaliningrad",
         "longitude": 20.5112906,
         "latitude": 54.7064419,
-        "dates": [
+        "history": [
             {
-                "year": "1758/01/16",
-                "event": "Russian Empire"
+                "date": "1758/01/16",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1764/01/01",
-                "event": "Kingdom of Prussia"
+                "date": "1764/01/01",
+                "regime": "Kingdom of Prussia"
             },
             {
-                "year": "1871/01/18",
-                "event": "German Empire"
+                "date": "1871/01/18",
+                "regime": "German Empire"
             },
             {
-                "year": "1918/11/09",
-                "event": "Weimar Republic"
+                "date": "1918/11/09",
+                "regime": "Weimar Republic"
             },
             {
-                "year": "1933/01/30",
-                "event": "Nazi Germany"
+                "date": "1933/01/30",
+                "regime": "Nazi Germany"
             },
             {
-                "year": "1945/08/02",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1945/08/02",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Istanbul",
+        "name": "Istanbul",
         "longitude": 28.9800877,
         "latitude": 41.0085506,
-        "dates": [
+        "history": [
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1453/05/29",
-                "event": "Ottoman Empire"
+                "date": "1453/05/29",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1923/09/23",
-                "event": "Republic of Turkey"
+                "date": "1923/09/23",
+                "regime": "Republic of Turkey"
             }
         ]
     },
     {
-        "city": "Kiev",
+        "name": "Kiev",
         "longitude": 30.5267693,
         "latitude": 50.4531709,
-        "dates": [
+        "history": [
             {
-                "year": "1240/12/06",
-                "event": "Mongol Empire"
+                "date": "1240/12/06",
+                "regime": "Mongol Empire"
             },
             {
-                "year": "1242/01/01",
-                "event": "Golden Horde"
+                "date": "1242/01/01",
+                "regime": "Golden Horde"
             },
             {
-                "year": "1362/01/01",
-                "event": "Grand Duchy of Lithuania"
+                "date": "1362/01/01",
+                "regime": "Grand Duchy of Lithuania"
             },
             {
-                "year": "1654/01",
-                "event": "Tsardom of Russia"
+                "date": "1654/01",
+                "regime": "Tsardom of Russia"
             },
             {
-                "year": "1721/10/22",
-                "event": "Russian Empire"
+                "date": "1721/10/22",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1941/09/19",
-                "event": "Reichskommissariat Ukraine"
+                "date": "1941/09/19",
+                "regime": "Reichskommissariat Ukraine"
             },
             {
-                "year": "1943/11/13",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1943/11/13",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1991/08/24",
-                "event": "Ukrainian Soviet Socialist Republic"
+                "date": "1991/08/24",
+                "regime": "Ukrainian Soviet Socialist Republic"
             },
             {
-                "year": "1996/06/28",
-                "event": "Ukraine"
+                "date": "1996/06/28",
+                "regime": "Ukraine"
             }
         ]
     },
     {
-        "city": "Kerch",
+        "name": "Kerch",
         "longitude": 36.4883031,
         "latitude": 45.3664864,
-        "dates": [
+        "history": [
             {
-                "year": "2014/03/18",
-                "event": "Russian Federation"
+                "date": "2014/03/18",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Chengdu",
+        "name": "Chengdu",
         "longitude": 104.0633702,
         "latitude": 30.6598555,
-        "dates": [
+        "history": [
             {
-                "year": "1271/11/05",
-                "event": "Yuan Dynasty"
+                "date": "1271/11/05",
+                "regime": "Yuan Dynasty"
             }
         ]
     },
     {
-        "city": "Xi'an",
+        "name": "Xi'an",
         "longitude": 108.9593612,
         "latitude": 34.2846319,
-        "dates": [
+        "history": [
             {
-                "year": "-0203/12/01",
-                "event": "Han Dynasty"
+                "date": "-0203/12/01",
+                "regime": "Han Dynasty"
             },
             {
-                "year": "-0195/01/01",
-                "event": "Han Dynasty"
+                "date": "-0195/01/01",
+                "regime": "Han Dynasty"
             },
             {
-                "year": "0557/01/01",
-                "event": "Northern Zhou"
+                "date": "0557/01/01",
+                "regime": "Northern Zhou"
             },
             {
-                "year": "1271/11/05",
-                "event": "Yuan Dynasty"
+                "date": "1271/11/05",
+                "regime": "Yuan Dynasty"
             },
             {
-                "year": "1949/05/20",
-                "event": "Chinese Communist Control"
+                "date": "1949/05/20",
+                "regime": "Chinese Communist Control"
             },
             {
-                "year": "1949/10/01",
-                "event": "People's Republic of China"
+                "date": "1949/10/01",
+                "regime": "People's Republic of China"
             }
         ]
     },
     {
-        "city": "Beijing",
+        "name": "Beijing",
         "longitude": 116.3914548,
         "latitude": 39.9031576,
-        "dates": [
+        "history": [
             {
-                "year": "1271/11/05",
-                "event": "Yuan Dynasty"
+                "date": "1271/11/05",
+                "regime": "Yuan Dynasty"
             },
             {
-                "year": "1644/04/25",
-                "event": "Shun Dynasty"
+                "date": "1644/04/25",
+                "regime": "Shun Dynasty"
             },
             {
-                "year": "1644/05/27",
-                "event": "Qing Dynasty"
+                "date": "1644/05/27",
+                "regime": "Qing Dynasty"
             },
             {
-                "year": "1949/10/01",
-                "event": "People's Republic of China"
+                "date": "1949/10/01",
+                "regime": "People's Republic of China"
             }
         ]
     },
     {
-        "city": "Nanjing",
+        "name": "Nanjing",
         "longitude": 118.7901488,
         "latitude": 32.0622951,
-        "dates": [
+        "history": [
             {
-                "year": "1271/11/05",
-                "event": "Yuan Dynasty"
+                "date": "1271/11/05",
+                "regime": "Yuan Dynasty"
             },
             {
-                "year": "1368/01/23",
-                "event": "Ming Dynasty"
+                "date": "1368/01/23",
+                "regime": "Ming Dynasty"
             },
             {
-                "year": "1853/03/01",
-                "event": "Taiping Heavenly Kingdom"
+                "date": "1853/03/01",
+                "regime": "Taiping Heavenly Kingdom"
             },
             {
-                "year": "1864/07/19",
-                "event": "Qing Dynasty"
+                "date": "1864/07/19",
+                "regime": "Qing Dynasty"
             },
             {
-                "year": "1949/04/23",
-                "event": "Chinese Communist Control"
+                "date": "1949/04/23",
+                "regime": "Chinese Communist Control"
             },
             {
-                "year": "1949/10/01",
-                "event": "People's Republic of China"
+                "date": "1949/10/01",
+                "regime": "People's Republic of China"
             }
         ]
     },
     {
-        "city": "Damascus",
+        "name": "Damascus",
         "longitude": 36.3066396,
         "latitude": 33.5116617,
-        "dates": [
+        "history": [
             {
-                "year": "-0064/01/01",
-                "event": "Roman Republic"
+                "date": "-0064/01/01",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1516/10/02",
-                "event": "Ottoman Empire"
+                "date": "1516/10/02",
+                "regime": "Ottoman Empire"
             }
         ]
     },
     {
-        "city": "Al-Quds",
+        "name": "Al-Quds",
         "longitude": 35.2353456,
         "latitude": 31.7780275,
-        "dates": [
+        "history": [
             {
-                "year": "-0063/01/01",
-                "event": "Roman Republic"
+                "date": "-0063/01/01",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0636/10/20",
-                "event": "Rashidun Caliphate"
+                "date": "0636/10/20",
+                "regime": "Rashidun Caliphate"
             },
             {
-                "year": "1099/07/15",
-                "event": "Kingdom of Jerusalem"
+                "date": "1099/07/15",
+                "regime": "Kingdom of Jerusalem"
             },
             {
-                "year": "1516/08/24",
-                "event": "Ottoman Empire"
+                "date": "1516/08/24",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1703/05/01",
-                "event": "Naqib al-Ashraf"
+                "date": "1703/05/01",
+                "regime": "Naqib al-Ashraf"
             },
             {
-                "year": "1705/10/01",
-                "event": "Ottoman Empire"
+                "date": "1705/10/01",
+                "regime": "Ottoman Empire"
             }
         ]
     },
     {
-        "city": "Havana",
+        "name": "Havana",
         "longitude": -82.3597175,
         "latitude": 23.1351719,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Delhi",
+        "name": "Delhi",
         "longitude": 77.2081548,
         "latitude": 28.617198,
-        "dates": [
+        "history": [
             {
-                "year": "1858/11/01",
-                "event": "British Raj"
+                "date": "1858/11/01",
+                "regime": "British Raj"
             },
             {
-                "year": "1947/08/15",
-                "event": "Dominion of India"
+                "date": "1947/08/15",
+                "regime": "Dominion of India"
             },
             {
-                "year": "1950/01/26",
-                "event": "Republic of India"
+                "date": "1950/01/26",
+                "regime": "Republic of India"
             }
         ]
     },
     {
-        "city": "Timbuktu",
+        "name": "Timbuktu",
         "longitude": -3.0081944,
         "latitude": 16.7706622,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Phnom Penh",
+        "name": "Phnom Penh",
         "longitude": 104.9411733,
         "latitude": 11.5508992,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Jakarta",
+        "name": "Jakarta",
         "longitude": 106.8271062,
         "latitude": -6.1753966,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Osaka",
+        "name": "Osaka",
         "longitude": 135.5259539,
         "latitude": 34.6873247,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Seoul",
+        "name": "Seoul",
         "longitude": 126.9771824,
         "latitude": 37.5361295,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Pyongyang",
+        "name": "Pyongyang",
         "longitude": 125.7495338,
         "latitude": 39.0285613,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Marrakesh",
+        "name": "Marrakesh",
         "longitude": -7.9888835,
         "latitude": 31.6259785,
-        "dates": [
+        "history": [
             {
-                "year": "1070/01/01",
-                "event": "Kingdom of Morocco"
+                "date": "1070/01/01",
+                "regime": "Kingdom of Morocco"
             }
         ]
     },
     {
-        "city": "Cusco",
+        "name": "Cusco",
         "longitude": -71.9787846,
         "latitude": -13.5167484,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Moscow",
+        "name": "Moscow",
         "longitude": 37.619899,
         "latitude": 55.7536697,
-        "dates": [
+        "history": [
             {
-                "year": "1721/10/22",
-                "event": "Russian Empire"
+                "date": "1721/10/22",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Sydney",
+        "name": "Sydney",
         "longitude": 151.2118054,
         "latitude": -33.8709063,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Kerikeri",
+        "name": "Kerikeri",
         "longitude": 173.9659323,
         "latitude": -35.2181665,
-        "dates": [
+        "history": [
             {
-                "year": "1947/11/25",
-                "event": "New Zealand"
+                "date": "1947/11/25",
+                "regime": "New Zealand"
             }
         ]
     },
     {
-        "city": "Strasbourg",
+        "name": "Strasbourg",
         "longitude": 7.7458381,
         "latitude": 48.5834531,
-        "dates": [
+        "history": [
             {
-                "year": "-0012/01/01",
-                "event": "Roman Empire"
+                "date": "-0012/01/01",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0451/01/01",
-                "event": "Hunnic Empire"
+                "date": "0451/01/01",
+                "regime": "Hunnic Empire"
             },
             {
-                "year": "0843/01/01",
-                "event": "Middle Francia"
+                "date": "0843/01/01",
+                "regime": "Middle Francia"
             },
             {
-                "year": "0855/09/19",
-                "event": "Kingdom of Lotharingia"
+                "date": "0855/09/19",
+                "regime": "Kingdom of Lotharingia"
             },
             {
-                "year": "0870/08/08",
-                "event": "East Francia"
+                "date": "0870/08/08",
+                "regime": "East Francia"
             },
             {
-                "year": "0962/02/02",
-                "event": "Holy Roman Empire"
+                "date": "0962/02/02",
+                "regime": "Holy Roman Empire"
             },
             {
-                "year": "1681/09/30",
-                "event": "French Occupation"
+                "date": "1681/09/30",
+                "regime": "French Occupation"
             },
             {
-                "year": "1697/10/30",
-                "event": "Kingdom of France"
+                "date": "1697/10/30",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1870/09/28",
-                "event": "North German Confederation"
+                "date": "1870/09/28",
+                "regime": "North German Confederation"
             },
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "Skopje",
+        "name": "Skopje",
         "longitude": 21.43145,
         "latitude": 41.9959442,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Zanzibar",
+        "name": "Zanzibar",
         "longitude": 39.199725,
         "latitude": -6.1658215,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Singapore",
+        "name": "Singapore",
         "longitude": 103.8639086,
         "latitude": 1.2819681,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Cairo",
+        "name": "Cairo",
         "longitude": 31.2243187,
         "latitude": 30.0459684,
-        "dates": [
+        "history": [
             {
-                "year": "-0030/01/01",
-                "event": "Roman Republic"
+                "date": "-0030/01/01",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "0642/01/01",
-                "event": "Rashidun Caliphate"
+                "date": "0642/01/01",
+                "regime": "Rashidun Caliphate"
             },
             {
-                "year": "0969/07/09",
-                "event": "Fatamid Caliphate"
+                "date": "0969/07/09",
+                "regime": "Fatamid Caliphate"
             },
             {
-                "year": "1517/01/30",
-                "event": "Ottoman Empire"
+                "date": "1517/01/30",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1798/07/21",
-                "event": "First French Republic"
+                "date": "1798/07/21",
+                "regime": "First French Republic"
             },
             {
-                "year": "1801/06/22",
-                "event": "Ottoman Empire"
+                "date": "1801/06/22",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1914/12/19",
-                "event": "Sultanate of Egypt"
+                "date": "1914/12/19",
+                "regime": "Sultanate of Egypt"
             },
             {
-                "year": "1922/02/28",
-                "event": "Kingdom of Egypt"
+                "date": "1922/02/28",
+                "regime": "Kingdom of Egypt"
             },
             {
-                "year": "1952/07/23",
-                "event": "Republic of Egypt"
+                "date": "1952/07/23",
+                "regime": "Republic of Egypt"
             },
             {
-                "year": "1958/02/22",
-                "event": "United Arab Republic"
+                "date": "1958/02/22",
+                "regime": "United Arab Republic"
             },
             {
-                "year": "1971/09/11",
-                "event": "Arab Republic of Egypt"
+                "date": "1971/09/11",
+                "regime": "Arab Republic of Egypt"
             }
         ]
     },
     {
-        "city": "Mexico",
+        "name": "Mexico",
         "longitude": -99.1313738,
         "latitude": 19.4349302,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Baghdad",
+        "name": "Baghdad",
         "longitude": 44.383333,
         "latitude": 33.333333,
-        "dates": [
+        "history": [
             {
-                "year": "0762/07/30",
-                "event": "Abbasid Caliphate"
+                "date": "0762/07/30",
+                "regime": "Abbasid Caliphate"
             },
             {
-                "year": "1252/02/10",
-                "event": "Mongol Empire"
+                "date": "1252/02/10",
+                "regime": "Mongol Empire"
             },
             {
-                "year": "1534/12/01",
-                "event": "Ottoman Empire"
+                "date": "1534/12/01",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1932/10/03",
-                "event": "Hashemite Kingdom of Iraq"
+                "date": "1932/10/03",
+                "regime": "Hashemite Kingdom of Iraq"
             }
         ]
     },
     {
-        "city": "Ankara",
+        "name": "Ankara",
         "longitude": 32.8387,
         "latitude": 39.9358,
-        "dates": [
+        "history": [
             {
-                "year": "-0546/01/01",
-                "event": "Achaemenid Empire"
+                "date": "-0546/01/01",
+                "regime": "Achaemenid Empire"
             },
             {
-                "year": "-0334/01/01",
-                "event": "Macedonia"
+                "date": "-0334/01/01",
+                "regime": "Macedonia"
             },
             {
-                "year": "-0278/01/01",
-                "event": "Galatia"
+                "date": "-0278/01/01",
+                "regime": "Galatia"
             },
             {
-                "year": "-0025/01/01",
-                "event": "Roman Empire"
+                "date": "-0025/01/01",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1073/01/01",
-                "event": "Seljuk Empire"
+                "date": "1073/01/01",
+                "regime": "Seljuk Empire"
             },
             {
-                "year": "1356/01/01",
-                "event": "Ottoman Empire"
+                "date": "1356/01/01",
+                "regime": "Ottoman Empire"
             }
         ]
     },
     {
-        "city": "Tunis",
+        "name": "Tunis",
         "longitude": 10.181667,
         "latitude": 36.806389,
-        "dates": [
+        "history": [
             {
-                "year": "-0146/01/01",
-                "event": "Roman Republic"
+                "date": "-0146/01/01",
+                "regime": "Roman Republic"
             },
             {
-                "year": "-0027/01/16",
-                "event": "Roman Empire"
+                "date": "-0027/01/16",
+                "regime": "Roman Empire"
             },
             {
-                "year": "1574/09/13",
-                "event": "Ottoman Empire"
+                "date": "1574/09/13",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1881/05/12",
-                "event": "Third French Republic"
+                "date": "1881/05/12",
+                "regime": "Third French Republic"
             },
             {
-                "year": "1957/07/25",
-                "event": "Republic of Tunisia"
+                "date": "1957/07/25",
+                "regime": "Republic of Tunisia"
             }
         ]
     },
     {
-        "city": "Stuttgart",
+        "name": "Stuttgart",
         "longitude": 9.18,
         "latitude": 48.7775,
-        "dates": [
+        "history": [
             {
-                "year": "0843/08/10",
-                "event": "East Francia"
+                "date": "0843/08/10",
+                "regime": "East Francia"
             },
             {
-                "year": "1805/12/26",
-                "event": "Kingdom of Wurttemberg"
+                "date": "1805/12/26",
+                "regime": "Kingdom of Wurttemberg"
             },
             {
-                "year": "1918/11/09",
-                "event": "Weimar Republic"
+                "date": "1918/11/09",
+                "regime": "Weimar Republic"
             },
             {
-                "year": "1933/01/30",
-                "event": "Nazi Germany"
+                "date": "1933/01/30",
+                "regime": "Nazi Germany"
             },
             {
-                "year": "1945/06/05",
-                "event": "United States of America"
+                "date": "1945/06/05",
+                "regime": "United States of America"
             },
             {
-                "year": "1949/05/23",
-                "event": "Federal Republic of Germany"
+                "date": "1949/05/23",
+                "regime": "Federal Republic of Germany"
             }
         ]
     },
     {
-        "city": "Medina",
+        "name": "Medina",
         "longitude": 39.61,
         "latitude": 24.47,
-        "dates": [
+        "history": [
             {
-                "year": "0622/01/01",
-                "event": "Islamic rule in Medina"
+                "date": "0622/01/01",
+                "regime": "Islamic rule in Medina"
             },
             {
-                "year": "0632/06/08",
-                "event": "Rashidun Caliphate"
+                "date": "0632/06/08",
+                "regime": "Rashidun Caliphate"
             },
             {
-                "year": "0661/01/01",
-                "event": "Umayyad Caliphate"
+                "date": "0661/01/01",
+                "regime": "Umayyad Caliphate"
             },
             {
-                "year": "0750/01/25",
-                "event": "Abbasid Caliphate"
+                "date": "0750/01/25",
+                "regime": "Abbasid Caliphate"
             },
             {
-                "year": "0978/01/01",
-                "event": "Fatamid Caliphate"
+                "date": "0978/01/01",
+                "regime": "Fatamid Caliphate"
             },
             {
-                "year": "1525/01/01",
-                "event": "Ottoman Empire"
+                "date": "1525/01/01",
+                "regime": "Ottoman Empire"
             },
             {
-                "year": "1919/01/10",
-                "event": "Hashemite Kingdom of Hejaz"
+                "date": "1919/01/10",
+                "regime": "Hashemite Kingdom of Hejaz"
             },
             {
-                "year": "1925/12/19",
-                "event": "Kingdom of Hejaz and Nejd"
+                "date": "1925/12/19",
+                "regime": "Kingdom of Hejaz and Nejd"
             },
             {
-                "year": "1932/09/23",
-                "event": "Kingdom of Saudi Arabia"
+                "date": "1932/09/23",
+                "regime": "Kingdom of Saudi Arabia"
             }
         ]
     },
     {
-        "city": "Montpellier",
+        "name": "Montpellier",
         "longitude": 3.8772,
         "latitude": 43.6119,
-        "dates": [
+        "history": [
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "Omsk",
+        "name": "Omsk",
         "longitude": 73.366667,
         "latitude": 54.983333,
-        "dates": [
+        "history": [
             {
-                "year": "1721/10/22",
-                "event": "Russian Empire"
+                "date": "1721/10/22",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1919/11/14",
-                "event": "Russian Soviet Federative Socialist Republic"
+                "date": "1919/11/14",
+                "regime": "Russian Soviet Federative Socialist Republic"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Vladivostok",
+        "name": "Vladivostok",
         "longitude": 131.9,
         "latitude": 43.133333,
-        "dates": [
+        "history": [
             {
-                "year": "1922/10/25",
-                "event": "Russian Soviet Federative Socialist Republic"
+                "date": "1922/10/25",
+                "regime": "Russian Soviet Federative Socialist Republic"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Lille",
+        "name": "Lille",
         "longitude": 3.0583,
         "latitude": 50.6278,
-        "dates": [
+        "history": [
             {
-                "year": "1792/10/08",
-                "event": "First French Republic"
+                "date": "1792/10/08",
+                "regime": "First French Republic"
             },
             {
-                "year": "1804/05/18",
-                "event": "First French Empire"
+                "date": "1804/05/18",
+                "regime": "First French Empire"
             },
             {
-                "year": "1814/03/03",
-                "event": "Kingdom of France"
+                "date": "1814/03/03",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "Lhasa",
+        "name": "Lhasa",
         "longitude": 91.1174,
         "latitude": 29.6487,
-        "dates": [
+        "history": [
             {
-                "year": "1271/11/05",
-                "event": "Yuan Dynasty"
+                "date": "1271/11/05",
+                "regime": "Yuan Dynasty"
             },
             {
-                "year": "1912/02/12",
-                "event": "Tibetan Army of China"
+                "date": "1912/02/12",
+                "regime": "Tibetan Army of China"
             },
             {
-                "year": "1950/10/24",
-                "event": "People's Republic of China"
+                "date": "1950/10/24",
+                "regime": "People's Republic of China"
             }
         ]
     },
     {
-        "city": "Milan",
+        "name": "Milan",
         "longitude": 9.19,
         "latitude": 45.466944,
-        "dates": [
+        "history": [
             {
-                "year": "1515/09/14",
-                "event": "Kingdom of France"
+                "date": "1515/09/14",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1797/06/29",
-                "event": "Cisalpine Republic"
+                "date": "1797/06/29",
+                "regime": "Cisalpine Republic"
             },
             {
-                "year": "1802/01/26",
-                "event": "Italian Republic"
+                "date": "1802/01/26",
+                "regime": "Italian Republic"
             },
             {
-                "year": "1805/03/17",
-                "event": "Kingdom of Italy (Napoleon)"
+                "date": "1805/03/17",
+                "regime": "Kingdom of Italy (Napoleon)"
             },
             {
-                "year": "1815/06/09",
-                "event": "Kingdom of Lombardy\u2013Venetia"
+                "date": "1815/06/09",
+                "regime": "Kingdom of Lombardy\u2013Venetia"
             },
             {
-                "year": "1848/03/18",
-                "event": "Five Days of Milan"
+                "date": "1848/03/18",
+                "regime": "Five Days of Milan"
             },
             {
-                "year": "1848/03/22",
-                "event": "Kingdom of Lombardy\u2013Venetia"
+                "date": "1848/03/22",
+                "regime": "Kingdom of Lombardy\u2013Venetia"
             },
             {
-                "year": "1859/11/10",
-                "event": "Second French Empire"
+                "date": "1859/11/10",
+                "regime": "Second French Empire"
             },
             {
-                "year": "1861/03/17",
-                "event": "Kingdom of Italy"
+                "date": "1861/03/17",
+                "regime": "Kingdom of Italy"
             },
             {
-                "year": "1946/06/02",
-                "event": "Republic of Italy"
+                "date": "1946/06/02",
+                "regime": "Republic of Italy"
             }
         ]
     },
     {
-        "city": "Warsaw",
+        "name": "Warsaw",
         "latitude": 52.237049,
         "longitude": 21.017532,
-        "dates": [
+        "history": [
             {
-                "year": "1815/06/09",
-                "event": "Russian Empire"
+                "date": "1815/06/09",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1939/09/27",
-                "event": "Nazi Germany"
+                "date": "1939/09/27",
+                "regime": "Nazi Germany"
             },
             {
-                "year": "1939/10/26",
-                "event": "General Governorate for the Occupied Polish Region"
+                "date": "1939/10/26",
+                "regime": "General Governorate for the Occupied Polish Region"
             },
             {
-                "year": "1945/01/17",
-                "event": "Provisional Government of the Republic of Poland"
+                "date": "1945/01/17",
+                "regime": "Provisional Government of the Republic of Poland"
             },
             {
-                "year": "1945/06/28",
-                "event": "Provisional Government of National Unity"
+                "date": "1945/06/28",
+                "regime": "Provisional Government of National Unity"
             },
             {
-                "year": "1947/02/19",
-                "event": "Republic of Poland"
+                "date": "1947/02/19",
+                "regime": "Republic of Poland"
             },
             {
-                "year": "1952/07/22",
-                "event": "Polish People's Republic"
+                "date": "1952/07/22",
+                "regime": "Polish People's Republic"
             },
             {
-                "year": "1989/12/31",
-                "event": "Third Polish Republic"
+                "date": "1989/12/31",
+                "regime": "Third Polish Republic"
             }
         ]
     },
     {
-        "city": "Sevastopol",
+        "name": "Sevastopol",
         "latitude": 44.6,
         "longitude": 33.5333,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Berlin",
+        "name": "Berlin",
         "latitude": 52.52,
         "longitude": 13.405,
-        "dates": [
+        "history": [
             {
-                "year": "1945/03/02",
-                "event": "Red Army"
+                "date": "1945/03/02",
+                "regime": "Red Army"
             },
             {
-                "year": "1945/06/05",
-                "event": "Soviet Occupation Zone"
+                "date": "1945/06/05",
+                "regime": "Soviet Occupation Zone"
             },
             {
-                "year": "1949/10/07",
-                "event": "German Democratic Republic"
+                "date": "1949/10/07",
+                "regime": "German Democratic Republic"
             },
             {
-                "year": "1990/10/03",
-                "event": "Federal Republic of Germany"
+                "date": "1990/10/03",
+                "regime": "Federal Republic of Germany"
             }
         ]
     },
     {
-        "city": "Odessa",
+        "name": "Odessa",
         "latitude": 46.485722,
         "longitude": 30.743444,
-        "dates": []
+        "history": []
     },
     {
-        "city": "Calais",
+        "name": "Calais",
         "latitude": 50.948056,
         "longitude": 1.856389,
-        "dates": [
+        "history": [
             {
-                "year": "1347/08/03",
-                "event": "Kingdom of England"
+                "date": "1347/08/03",
+                "regime": "Kingdom of England"
             },
             {
-                "year": "1558/01/08",
-                "event": "Kingdom of France"
+                "date": "1558/01/08",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1596/04/24",
-                "event": "Spanish Empire"
+                "date": "1596/04/24",
+                "regime": "Spanish Empire"
             },
             {
-                "year": "1598/05/02",
-                "event": "Kingdom of France"
+                "date": "1598/05/02",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1940/05/26",
-                "event": "Nazi Military Occupation"
+                "date": "1940/05/26",
+                "regime": "Nazi Military Occupation"
             },
             {
-                "year": "1944/10/01",
-                "event": "Provisional Government of the French Republic"
+                "date": "1944/10/01",
+                "regime": "Provisional Government of the French Republic"
             },
             {
-                "year": "1946/10/27",
-                "event": "Fourth French Republic"
+                "date": "1946/10/27",
+                "regime": "Fourth French Republic"
             },
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "Fenghao",
+        "name": "Fenghao",
         "latitude": 34.21,
         "longitude": 108.72,
-        "dates": [
+        "history": [
             {
-                "year": "-1051/01/01",
-                "event": "Western Zhou Dynasty"
+                "date": "-1051/01/01",
+                "regime": "Western Zhou Dynasty"
             },
             {
-                "year": "-0771/01/01",
-                "event": "Abandoned"
+                "date": "-0771/01/01",
+                "regime": "Abandoned"
             }
         ]
     },
     {
-        "city": "Kabul",
+        "name": "Kabul",
         "latitude": 34.525278,
         "longitude": 69.178333,
-        "dates": [
+        "history": [
             {
-                "year": "1504/01/01",
-                "event": "Timurid Empire"
+                "date": "1504/01/01",
+                "regime": "Timurid Empire"
             },
             {
-                "year": "1526/04/20",
-                "event": "Mughal Empire"
+                "date": "1526/04/20",
+                "regime": "Mughal Empire"
             },
             {
-                "year": "1926/06/09",
-                "event": "Kingdom of Afghanistan"
+                "date": "1926/06/09",
+                "regime": "Kingdom of Afghanistan"
             },
             {
-                "year": "1978/04/28",
-                "event": "Democratic Republic of Afghanistan"
+                "date": "1978/04/28",
+                "regime": "Democratic Republic of Afghanistan"
             },
             {
-                "year": "2001/11/14",
-                "event": "Islamic State of Afghanistan"
+                "date": "2001/11/14",
+                "regime": "Islamic State of Afghanistan"
             },
             {
-                "year": "2021/08/15",
-                "event": "Islamic Emirate of Aghanistan"
+                "date": "2021/08/15",
+                "regime": "Islamic Emirate of Aghanistan"
             }
         ]
     },
     {
-        "city": "Metz",
+        "name": "Metz",
         "latitude": 49.120278,
         "longitude": 6.177778,
-        "dates": [
+        "history": [
             {
-                "year": "0843/01/01",
-                "event": "Middle Francia"
+                "date": "0843/01/01",
+                "regime": "Middle Francia"
             },
             {
-                "year": "0855/09/19",
-                "event": "Kingdom of Lotharingia"
+                "date": "0855/09/19",
+                "regime": "Kingdom of Lotharingia"
             },
             {
-                "year": "0959/01/01",
-                "event": "East Francia"
+                "date": "0959/01/01",
+                "regime": "East Francia"
             },
             {
-                "year": "0962/02/02",
-                "event": "Holy Roman Empire"
+                "date": "0962/02/02",
+                "regime": "Holy Roman Empire"
             },
             {
-                "year": "1553/01/02",
-                "event": "R\u00e9publique messine"
+                "date": "1553/01/02",
+                "regime": "R\u00e9publique messine"
             },
             {
-                "year": "1648/10/24",
-                "event": "Kingdom of France"
+                "date": "1648/10/24",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1792/09/21",
-                "event": "First French Republic"
+                "date": "1792/09/21",
+                "regime": "First French Republic"
             },
             {
-                "year": "1804/05/18",
-                "event": "First French Empire"
+                "date": "1804/05/18",
+                "regime": "First French Empire"
             },
             {
-                "year": "1814/03/03",
-                "event": "Kingdom of France"
+                "date": "1814/03/03",
+                "regime": "Kingdom of France"
             },
             {
-                "year": "1944/12/13",
-                "event": "United States of America"
+                "date": "1944/12/13",
+                "regime": "United States of America"
             },
             {
-                "year": "1958/10/04",
-                "event": "Fifth French Republic"
+                "date": "1958/10/04",
+                "regime": "Fifth French Republic"
             }
         ]
     },
     {
-        "city": "Mariupol",
+        "name": "Mariupol",
         "latitude": 47.095833,
         "longitude": 37.549444,
-        "dates": [
+        "history": [
             {
-                "year": "2022/05/20",
-                "event": "Donetsk People's Republic"
+                "date": "2022/05/20",
+                "regime": "Donetsk People's Republic"
             }
         ]
     },
     {
-        "city": "Donetsk",
+        "name": "Donetsk",
         "latitude": 48.002778,
         "longitude": 37.805278,
-        "dates": [
+        "history": [
             {
-                "year": "2014/04/07",
-                "event": "Donetsk People's Republic"
+                "date": "2014/04/07",
+                "regime": "Donetsk People's Republic"
             }
         ]
     },
     {
-        "city": "Rostov-on-Don",
+        "name": "Rostov-on-Don",
         "latitude": 47.233333,
         "longitude": 39.7,
-        "dates": [
+        "history": [
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Manila",
+        "name": "Manila",
         "latitude": 14.5958,
         "longitude": 120.9772,
-        "dates": [
+        "history": [
             {
-                "year": "0900/01/01",
-                "event": "Tondo"
+                "date": "0900/01/01",
+                "regime": "Tondo"
             },
             {
-                "year": "1570/05/24",
-                "event": "Spanish East Indies"
+                "date": "1570/05/24",
+                "regime": "Spanish East Indies"
             },
             {
-                "year": "1935/11/15",
-                "event": "Commonwealth of the Phillipines"
+                "date": "1935/11/15",
+                "regime": "Commonwealth of the Phillipines"
             },
             {
-                "year": "1946/06/04",
-                "event": "Republic of the Phillipines"
+                "date": "1946/06/04",
+                "regime": "Republic of the Phillipines"
             }
         ]
     },
     {
-        "city": "Bishkek",
+        "name": "Bishkek",
         "latitude": 42.874722,
         "longitude": 74.612222,
-        "dates": [
+        "history": [
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             }
         ]
     },
     {
-        "city": "Yakutsk",
+        "name": "Yakutsk",
         "latitude": 62.03,
         "longitude": 129.73,
-        "dates": [
+        "history": [
             {
-                "year": "1721/10/22",
-                "event": "Russian Empire"
+                "date": "1721/10/22",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             }
         ]
     },
     {
-        "city": "Tomsk",
+        "name": "Tomsk",
         "latitude": 56.5,
         "longitude": 84.966667,
-        "dates": [
+        "history": [
             {
-                "year": "1721/10/22",
-                "event": "Russian Empire"
+                "date": "1721/10/22",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             }
         ]
     },
     {
-        "city": "Naples",
+        "name": "Naples",
         "latitude": 40.833333,
         "longitude": 14.25,
-        "dates": [
+        "history": [
             {
-                "year": "1815/03/20",
-                "event": "Kingdom of the Two Sicilies"
+                "date": "1815/03/20",
+                "regime": "Kingdom of the Two Sicilies"
             },
             {
-                "year": "1943/09/30",
-                "event": "Italian Resistance"
+                "date": "1943/09/30",
+                "regime": "Italian Resistance"
             },
             {
-                "year": "1943/10/01",
-                "event": "Allied Military Government of Occupied Territories"
+                "date": "1943/10/01",
+                "regime": "Allied Military Government of Occupied Territories"
             },
             {
-                "year": "1944/02",
-                "event": "Allied Military Government"
+                "date": "1944/02",
+                "regime": "Allied Military Government"
             },
             {
-                "year": "1946/06/02",
-                "event": "Republic of Italy"
+                "date": "1946/06/02",
+                "regime": "Republic of Italy"
             }
         ]
     },
     {
-        "city": "Palermo",
+        "name": "Palermo",
         "latitude": 38.111111,
         "longitude": 13.351667,
-        "dates": [
+        "history": [
             {
-                "year": "1815/03/20",
-                "event": "Kingdom of the Two Sicilies"
+                "date": "1815/03/20",
+                "regime": "Kingdom of the Two Sicilies"
             }
         ]
     },
     {
-        "city": "Trieste",
+        "name": "Trieste",
         "latitude": 45.650278,
         "longitude": 13.770278,
-        "dates": [
+        "history": [
             {
-                "year": "1947/01/10",
-                "event": "Free Territory of Trieste"
+                "date": "1947/01/10",
+                "regime": "Free Territory of Trieste"
             },
             {
-                "year": "1975/11/10",
-                "event": "Republic of Italy"
+                "date": "1975/11/10",
+                "regime": "Republic of Italy"
             }
         ]
     },
     {
-        "city": "Saint Petersburg",
+        "name": "Saint Petersburg",
         "latitude": 59.9375,
         "longitude": 30.308611,
-        "dates": [
+        "history": [
             {
-                "year": "1703/05/27",
-                "event": "Tsardom of Russia"
+                "date": "1703/05/27",
+                "regime": "Tsardom of Russia"
             },
             {
-                "year": "1721/11/02",
-                "event": "Russian Empire"
+                "date": "1721/11/02",
+                "regime": "Russian Empire"
             },
             {
-                "year": "1917/03/15",
-                "event": "Russian dual power"
+                "date": "1917/03/15",
+                "regime": "Russian dual power"
             },
             {
-                "year": "1917/11/07",
-                "event": "Petrograd Soviet"
+                "date": "1917/11/07",
+                "regime": "Petrograd Soviet"
             },
             {
-                "year": "1918/01/25",
-                "event": "Russian Soviet Republic"
+                "date": "1918/01/25",
+                "regime": "Russian Soviet Republic"
             },
             {
-                "year": "1918/07/10",
-                "event": "Russian Socialist Federative Soviet Republic"
+                "date": "1918/07/10",
+                "regime": "Russian Socialist Federative Soviet Republic"
             },
             {
-                "year": "1922/12/30",
-                "event": "Union of Soviet Socialist Republics"
+                "date": "1922/12/30",
+                "regime": "Union of Soviet Socialist Republics"
             },
             {
-                "year": "1990/06/12",
-                "event": "Russian Federation"
+                "date": "1990/06/12",
+                "regime": "Russian Federation"
             }
         ]
     },
     {
-        "city": "Vienna",
+        "name": "Vienna",
         "latitude": 48.2,
         "longitude": 16.366667,
-        "dates": [
+        "history": [
             {
-                "year": "1485/06/01",
-                "event": "Kingdom of Hungary"
+                "date": "1485/06/01",
+                "regime": "Kingdom of Hungary"
             }
         ]
     }

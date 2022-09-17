@@ -161,24 +161,22 @@ gui.add(controls, "start_history").name("Start");
     
     // Find recent event date
     
-    const recentEvent = (dates) => {
-        const datesBefore = dates.filter(date => convert_date(date.year) < map_date);
-        let regime = datesBefore[datesBefore.length-1];
-        if ( regime == undefined ){
+    const recentEvent = (events) => {
+        const eventsBefore = events.filter(event => convert_date(event.date) < map_date);
+        let event = eventsBefore[eventsBefore.length-1];
+        if ( event == undefined ){
             return "No one";
+        } else if (event.type == 0) {
+                let superior = cities.find(city => city.name == event.regime);
+                return recentEvent(superior.history);
         } else {
-            if (regime.type == 0) {
-                let superior = regimes.find(r => r.city == regime.event);
-                return recentEvent(superior.dates);
-            } else {
-                return regime.event.toString()
-            }
+                return event.regime.toString()
         }
     }
     
     function voronoi_render(){
         let cities_now = cities.filter(city => {
-            let event = recentEvent(city.dates);
+            let event = recentEvent(city.history);
             return !(event == "No one" || event == "Unknown" || event == "Abandoned");
             });
         
@@ -207,7 +205,7 @@ gui.add(controls, "start_history").name("Start");
         });
         
         voronoi.polygons().features.forEach(item => {
-            let regime_index = indexes[recentEvent(item.properties.site.dates)];
+            let regime_index = indexes[recentEvent(item.properties.site.history)];
             item.geometry.coordinates.forEach(coord => {
                 if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll[regime_index].geometry.coordinates.push(coord);
