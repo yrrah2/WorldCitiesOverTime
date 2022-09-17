@@ -1055,11 +1055,8 @@
             },
             {
                 "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
-            },
-            {
-                "date": "1990/06/12",
-                "regime": "Russian Federation"
+		"type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -1074,12 +1071,9 @@
             },
             {
                 "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
-            },
-            {
-                "date": "1990/06/12",
-                "regime": "Russian Federation"
-            }
+		"type": 0,
+                "regime": "Moscow"
+	    }
         ]
     },
     {
