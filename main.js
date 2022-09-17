@@ -50,16 +50,7 @@ const getRandomColor = () => {
     return colour;
 }
 
-// Find recent event date
-const recentEvent = (dates) => {
-    const datesBefore = dates.filter(date => convert_date(date.year) < map_date);
-    let regime = datesBefore[datesBefore.length-1];
-    if ( regime == undefined ){
-        return "No one";
-    } else {
-        return regime.event.toString();
-    };
-}
+
 
 // Get screen size
 const width = window.innerWidth;
@@ -149,23 +140,40 @@ function start_history(svg) {
 controls.start_history = () => start_history(svg);
 gui.add(controls, "start_history").name("Start");
 
-const getCityDesc = d => `
-  <div>Regime: <b>${d}</b></div>
-`;
+    const getCityDesc = d => `
+    <div>Regime: <b>${d}</b></div>
+    `;
+    
+    // ---   Earth projection   ---
+    d3.geoZoom()
+        .projection(projection)
+        .onMove(render)
+    (svg.node());
 
-// ---   Earth projection   ---
-d3.geoZoom()
-  .projection(projection)
-  .onMove(render)
-  (svg.node());
-
-  // Sphere (Land)
-  svg.append('path').attr('class', 'geo sphere')
-    .datum({ type: 'Sphere' });
-
+    // Sphere (Land)
+    svg.append('path').attr('class', 'geo sphere')
+        .datum({ type: 'Sphere' });
+    
     function remove_voronois(){
         svg.selectAll("g").remove();
         svg.selectAll(".ocean").remove();
+    }
+    
+    // Find recent event date
+    
+    const recentEvent = (dates) => {
+        const datesBefore = dates.filter(date => convert_date(date.year) < map_date);
+        let regime = datesBefore[datesBefore.length-1];
+        if ( regime == undefined ){
+            return "No one";
+        } else {
+            if (regime.type == 0) {
+                let superior = regimes.find(r => r.city == regime.event);
+                return recentEvent(superior.dates);
+            } else {
+                return regime.event.toString()
+            }
+        }
     }
     
     function voronoi_render(){
