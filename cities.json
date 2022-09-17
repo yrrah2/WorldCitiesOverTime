@@ -382,7 +382,8 @@
         "history": [
             {
                 "date": "1758/01/16",
-                "regime": "Russian Empire"
+		"type": 0,
+                "regime": "Moscow"
             },
             {
                 "date": "1764/01/01",
@@ -390,23 +391,13 @@
             },
             {
                 "date": "1871/01/18",
-                "regime": "German Empire"
-            },
-            {
-                "date": "1918/11/09",
-                "regime": "Weimar Republic"
-            },
-            {
-                "date": "1933/01/30",
-                "regime": "Nazi Germany"
+		"type": 0,
+                "regime": "Berlin"
             },
             {
                 "date": "1945/08/02",
-                "regime": "Union of Soviet Socialist Republics"
-            },
-            {
-                "date": "1990/06/12",
-                "regime": "Russian Federation"
+		"type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -491,6 +482,11 @@
             {
                 "date": "1271/11/05",
                 "regime": "Yuan Dynasty"
+            },
+            {
+                "date": "1949/10/01",
+		"type": 0,
+                "regime": "Beijing"
             }
         ]
     },
@@ -1035,7 +1031,8 @@
         "history": [
             {
                 "date": "1958/10/04",
-                "regime": "Fifth French Republic"
+		"type": 0,
+                "regime": "Paris"
             }
         ]
     },
@@ -1270,11 +1267,8 @@
             },
             {
                 "date": "1946/10/27",
-                "regime": "Fourth French Republic"
-            },
-            {
-                "date": "1958/10/04",
-                "regime": "Fifth French Republic"
+		"type": 0,
+                "regime": "Paris"
             }
         ]
     },
