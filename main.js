@@ -205,7 +205,10 @@ gui.add(controls, "start_history").name("Start");
         });
         
         voronoi.polygons().features.forEach(item => {
+            console.log(item.properties.site.history);
+            console.log(recentEvent(item.properties.site.history));
             let regime_index = indexes[recentEvent(item.properties.site.history)];
+            console.log(regime_index);
             item.geometry.coordinates.forEach(coord => {
                 if (coll[regime_index].geometry.coordinates.indexOf(coord) === -1){
                     coll[regime_index].geometry.coordinates.push(coord);
