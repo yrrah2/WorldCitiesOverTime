@@ -10,12 +10,18 @@ contents = json.load(d)
 
 regimes = []
 
-dates = [item.get('dates') for item in contents]
-for date in dates:
+history = [item.get('history') for item in contents]
+for date in history:
     for entry in date:
-        event = entry['event']
-        if event not in regimes:
-            regimes.append(event)
+        regime = entry["regime"]
+        event_bool = 1
+        if "type" in entry:
+            event_type = entry["type"]
+            print(event_type)
+            if event_type == 0:
+                event_bool = 0
+        if regime not in regimes and event_bool:
+            regimes.append(regime)
 
 s = json.dumps(regimes, indent=4)
 

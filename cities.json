@@ -382,7 +382,7 @@
         "history": [
             {
                 "date": "1758/01/16",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             },
             {
@@ -391,12 +391,12 @@
             },
             {
                 "date": "1871/01/18",
-		"type": 0,
+                "type": 0,
                 "regime": "Berlin"
             },
             {
                 "date": "1945/08/02",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             }
         ]
@@ -485,7 +485,7 @@
             },
             {
                 "date": "1949/10/01",
-		"type": 0,
+                "type": 0,
                 "regime": "Beijing"
             }
         ]
@@ -1031,7 +1031,7 @@
         "history": [
             {
                 "date": "1958/10/04",
-		"type": 0,
+                "type": 0,
                 "regime": "Paris"
             }
         ]
@@ -1043,7 +1043,7 @@
         "history": [
             {
                 "date": "1721/10/22",
-		"type": 0,
+                "type": 0,
                 "regime": "Saint Petersburg"
             },
             {
@@ -1052,7 +1052,7 @@
             },
             {
                 "date": "1922/12/30",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             }
         ]
@@ -1068,9 +1068,9 @@
             },
             {
                 "date": "1922/12/30",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
-	    }
+            }
         ]
     },
     {
@@ -1080,19 +1080,8 @@
         "history": [
             {
                 "date": "1792/10/08",
-                "regime": "First French Republic"
-            },
-            {
-                "date": "1804/05/18",
-                "regime": "First French Empire"
-            },
-            {
-                "date": "1814/03/03",
-                "regime": "Kingdom of France"
-            },
-            {
-                "date": "1958/10/04",
-                "regime": "Fifth French Republic"
+                "type": 0,
+                "regime": "Paris"
             }
         ]
     },
@@ -1267,7 +1256,7 @@
             },
             {
                 "date": "1946/10/27",
-		"type": 0,
+                "type": 0,
                 "regime": "Paris"
             }
         ]
@@ -1566,6 +1555,98 @@
             {
                 "date": "1485/06/01",
                 "regime": "Kingdom of Hungary"
+            }
+        ]
+    },
+    {
+        "name": "Taipei",
+        "latitude": 25.066667,
+        "longitude": 121.516667,
+        "history": [
+            {
+                "date": "1949/10/01",
+                "type": 1,
+                "regime": "Occupied Taiwan Province of China"
+            }
+        ]
+    },
+    {
+        "name": "Fujian",
+        "latitude": 25.9,
+        "longitude": 118.3,
+        "history": [
+            {
+                "date": "1949/10/01",
+                "type": 0,
+                "regime": "Beijing"
+            }
+        ]
+    },
+    {
+        "name": "Hong Kong",
+        "latitude": 22.3,
+        "longitude": 114.2,
+        "history": [
+            {
+                "date": "1841/01/26",
+                "type": 0,
+                "regime": "London"
+            },
+            {
+                "date": "1949/10/01",
+                "type": 1,
+                "regime": "Occupied Hong Kong"
+            },
+            {
+                "date": "1997/07/01",
+                "type": 0,
+                "regime": "Beijing"
+            }
+        ]
+    },
+    {
+        "name": "Macau",
+        "latitude": 22.166667,
+        "longitude": 113.55,
+        "history": [
+            {
+                "date": "1557",
+                "type": 0,
+                "regime": "Lisbon"
+            },
+            {
+                "date": "1949/10/01",
+                "type": 1,
+                "regime": "Occupied Macau"
+            },
+            {
+                "date": "1999/12/20",
+                "type": 0,
+                "regime": "Beijing"
+            }
+        ]
+    },
+    {
+        "name": "Lisbon",
+        "latitude": 38.725267,
+        "longitude": -9.150019,
+        "history": [
+            {
+                "date": "1147/10/25",
+                "type": 1,
+                "regime": "Kingdom of Portugal"
+            }
+        ]
+    },
+    {
+        "name": "Guangzhou",
+        "latitude": 23.13,
+        "longitude": 113.26,
+        "history": [
+            {
+                "date": "1949/10/01",
+                "type": 0,
+                "regime": "Beijing"
             }
         ]
     }

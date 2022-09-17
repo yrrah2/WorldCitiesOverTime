@@ -7,14 +7,14 @@ contents = json.load(d)
 def add_city(city_list, name, latitude, longitude):
     already = True
     for city in city_list:
-        if city["city"] == name:
+        if city["name"] == name:
             already = False
     if already:
         new_city = {}
-        new_city["city"] = name
+        new_city["name"] = name
         new_city["latitude"] = latitude
         new_city["longitude"] = longitude
-        new_city["dates"] = []
+        new_city["history"] = []
 
         city_list.append(new_city)
 
@@ -78,24 +78,24 @@ def is_after(date1, date2):
                     return False
 
 
-def add_event(city_list, city_name, event, date):
+def add_event(city_list, city_name, event_type, event, date):
     for city in city_list:
-        if city["city"] == city_name:
-            event_entry = {"year": date, "event": event}
-            dates = city["dates"]
-            if event_entry in dates:
+        if city["name"] == city_name:
+            event_entry = {"date": date, "type": event_type, "regime": event}
+            history = city["history"]
+            if event_entry in history:
                 print("Event already in the event list")
             else:
-                if len(dates) == 0:
-                    dates.append(event_entry)
+                if len(history) == 0:
+                    history.append(event_entry)
                 else:
                     n = -1
-                    for i in range(len(dates)):
-                        if is_after(date, dates[i]["year"]):
+                    for i in range(len(history)):
+                        if is_after(date, history[i]["date"]):
                             n = i
-                    dates.insert(n+1, event_entry)
+                    history.insert(n+1, event_entry)
 
-                city["dates"] = dates
+                city["history"] = history
                 s = json.dumps(city_list, indent=4)
 
                 with open("cities.json", 'w') as f:
@@ -105,6 +105,3 @@ def add_event(city_list, city_name, event, date):
 
 #add_city(contents, "Calais", 50.948056, 1.856389)
 #add_event(contents, "Manila", "Republic of the Phillipines", "1946/06/04")a
-add_event(contents, "Naples", "Allied Military Government", "1944/02")
-
-
