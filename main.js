@@ -101,7 +101,7 @@ const controls = {
     'Unit': "Years"
 };
     
-gui.add(controls, 'Cities').onchange(enabled => d3.selectAll('.voronoi').style('stroke', enabled ? null : 'black'));
+gui.add(controls, 'Cities').onChange(enabled => d3.selectAll('.voronoi').style('stroke', enabled ? null : 'black'));
 gui.add(controls, "Year").min(-2000).max(2030).step(1).onChange(function(){
     map_date.setFullYear(controls.Year);
     d3.select('p#value-time').text(
