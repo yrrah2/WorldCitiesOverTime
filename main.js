@@ -118,6 +118,8 @@ d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
 
+var time_interval;
+
 function stop_history(svg) {
 	clearInterval(time_interval);
 	gui.remove(stop_history_button);
@@ -133,7 +135,7 @@ function start_history(svg) {
 	let end_date = new Date(0);
 	end_date.setFullYear(controls.End);
 	map_date.setFullYear(controls.Beginning);
-	var time_interval = setInterval(function(){
+	time_interval = setInterval(function(){
 		if(map_date <= end_date) {
 			map_date = map_date.addTime(controls.Step, controls.Unit);
 			d3.select('p#value-time').text(
