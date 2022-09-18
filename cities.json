@@ -1666,8 +1666,8 @@
             },
             {
                 "date": "1569",
-                "type": 1,
-                "regime": "Polish-Lithuanian Commonwealth"
+                "type": 0,
+                "regime": "Vilnius"
             }
         ]
     },
@@ -1776,6 +1776,30 @@
                 "date": "1360/05/08",
                 "type": 0,
                 "regime": "Nantes"
+            }
+        ]
+    },
+    {
+        "name": "ar-Raqqah",
+        "latitude": 35.95,
+        "longitude": 39.01,
+        "history": [
+            {
+                "date": "2017/10/17",
+                "type": 1,
+                "regime": "Autonomous Administration of North and East Syria"
+            }
+        ]
+    },
+    {
+        "name": "Bayonne",
+        "latitude": 43.49,
+        "longitude": -1.48,
+        "history": [
+            {
+                "date": "1451/08/20",
+                "type": 0,
+                "regime": "Paris"
             }
         ]
     }
