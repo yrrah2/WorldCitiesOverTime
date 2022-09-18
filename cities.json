@@ -1802,5 +1802,27 @@
                 "regime": "Paris"
             }
         ]
+    },
+    {
+        "name": "Vilnius",
+        "latitude": 54.687222,
+        "longitude": 25.28,
+        "history": [
+            {
+                "date": "1569",
+                "type": 1,
+                "regime": "Polish-Lithuanian Commonwealth"
+            },
+            {
+                "date": "1655/08/08",
+                "type": 0,
+                "regime": "Moscow"
+            },
+            {
+                "date": "1990/03/11",
+                "type": 1,
+                "regime": "Republic of Lithuania"
+            }
+        ]
     }
 ]
