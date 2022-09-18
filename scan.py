@@ -17,7 +17,6 @@ for date in history:
         event_bool = 1
         if "type" in entry:
             event_type = entry["type"]
-            print(event_type)
             if event_type == 0:
                 event_bool = 0
         if regime not in regimes and event_bool:

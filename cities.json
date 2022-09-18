@@ -426,6 +426,11 @@
         "latitude": 50.4531709,
         "history": [
             {
+                "date": "882",
+                "type": 1,
+                "regime": "Kievan Rus'"
+            },
+            {
                 "date": "1240/12/06",
                 "regime": "Mongol Empire"
             },
@@ -1515,6 +1520,7 @@
         "history": [
             {
                 "date": "1703/05/27",
+                "type": 1,
                 "regime": "Tsardom of Russia"
             },
             {
@@ -1539,11 +1545,8 @@
             },
             {
                 "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
-            },
-            {
-                "date": "1990/06/12",
-                "regime": "Russian Federation"
+                "type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -1554,6 +1557,7 @@
         "history": [
             {
                 "date": "1485/06/01",
+                "type": 1,
                 "regime": "Kingdom of Hungary"
             }
         ]
@@ -1647,6 +1651,131 @@
                 "date": "1949/10/01",
                 "type": 0,
                 "regime": "Beijing"
+            }
+        ]
+    },
+    {
+        "name": "Trakai",
+        "latitude": 54.633333,
+        "longitude": 24.933333,
+        "history": [
+            {
+                "date": "1337",
+                "type": 1,
+                "regime": "Grand Duchy of Lithuania"
+            },
+            {
+                "date": "1569",
+                "type": 1,
+                "regime": "Polish-Lithuanian Commonwealth"
+            }
+        ]
+    },
+    {
+        "name": "Minsk",
+        "latitude": 53.9,
+        "longitude": 27.566667,
+        "history": [
+            {
+                "date": "1242",
+                "type": 0,
+                "regime": "Trakai"
+            },
+            {
+                "date": "1793/07/22",
+                "type": 0,
+                "regime": "Saint Petersburg"
+            },
+            {
+                "date": "1922/12/30",
+                "type": 0,
+                "regime": "Moscow"
+            },
+            {
+                "date": "1991/08/25",
+                "type": 1,
+                "regime": "Byelorussian Soviet Socialist Republic"
+            },
+            {
+                "date": "1994/03/15",
+                "type": 1,
+                "regime": "Republic of Belarus"
+            }
+        ]
+    },
+    {
+        "name": "Brest, Belarus",
+        "latitude": 52.134722,
+        "longitude": 23.656944,
+        "history": [
+            {
+                "date": "1019",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
+                "date": "1241",
+                "type": 1,
+                "regime": "Destroyed"
+            },
+            {
+                "date": "1390",
+                "type": 0,
+                "regime": "Trakai"
+            },
+            {
+                "date": "1794/09/19",
+                "type": 0,
+                "regime": "Saint Petersburg"
+            },
+            {
+                "date": "1915/08/25",
+                "type": 0,
+                "regime": "Berlin"
+            },
+            {
+                "date": "1944/07/28",
+                "type": 0,
+                "regime": "Minsk"
+            }
+        ]
+    },
+    {
+        "name": "Nantes",
+        "latitude": 48.39,
+        "longitude": -4.49,
+        "history": [
+            {
+                "date": "992",
+                "type": 1,
+                "regime": "Duchy of Brittany"
+            },
+            {
+                "date": "1547/08/13",
+                "type": 0,
+                "regime": "Paris"
+            }
+        ]
+    },
+    {
+        "name": "Brest, France",
+        "latitude": 48.39,
+        "longitude": -4.49,
+        "history": [
+            {
+                "date": "1240",
+                "type": 0,
+                "regime": "Nantes"
+            },
+            {
+                "date": "1342/08/18",
+                "type": 0,
+                "regime": "London"
+            },
+            {
+                "date": "1360/05/08",
+                "type": 0,
+                "regime": "Nantes"
             }
         ]
     }

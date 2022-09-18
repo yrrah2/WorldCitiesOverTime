@@ -103,5 +103,52 @@ def add_event(city_list, city_name, event_type, event, date):
 
 
 
-#add_city(contents, "Calais", 50.948056, 1.856389)
-#add_event(contents, "Manila", "Republic of the Phillipines", "1946/06/04")a
+#add_city(contents, "City name", latitude, longitude)
+#add_event(contents, "Manila", 1, "Republic of the Phillipines", "1946/06/04")
+
+#add_city(contents, "", )
+#add_event(contents, "", 0, "", "")
+
+add_city(contents, "Trakai", 54.633333, 24.933333)
+add_event(contents, "Trakai", 1, "Grand Duchy of Lithuania", "1337")
+add_event(contents, "Trakai", 1, "Polish-Lithuanian Commonwealth", "1569")
+
+add_event(contents, "Kiev", 1, "Kievan Rus'", "882")
+
+add_city(contents, "Minsk", 53.9, 27.566667)
+add_event(contents, "Minsk", 0, "Trakai", "1242")
+add_event(contents, "Minsk", 0, "Saint Petersburg", "1793/07/22")
+add_event(contents, "Minsk", 0, "Moscow", "1922/12/30")
+add_event(contents, "Minsk", 1, "Byelorussian Soviet Socialist Republic", "1991/08/25")
+add_event(contents, "Minsk", 1, "Republic of Belarus", "1994/03/15")
+
+add_city(contents, "Brest, Belarus", 52.134722, 23.656944)
+add_event(contents, "Brest, Belarus", 0, "Kiev", "1019")
+add_event(contents, "Brest, Belarus", 1, "Destroyed", "1241")
+add_event(contents, "Brest, Belarus", 0, "Trakai", "1390")
+add_event(contents, "Brest, Belarus", 0, "Saint Petersburg", "1794/09/19")
+add_event(contents, "Brest, Belarus", 0, "Berlin", "1915/08/25")
+add_event(contents, "Brest, Belarus", 0, "Minsk", "1944/07/28")
+
+add_city(contents, "Nantes", 48.39, -4.49)
+add_event(contents, "Nantes", 1, "Duchy of Brittany", "992")
+add_event(contents, "Nantes", 0, "Paris", "1547/08/13")
+
+add_city(contents, "Brest, France", 48.39, -4.49)
+add_event(contents, "Brest, France", 0, "Nantes", "1240")
+add_event(contents, "Brest, France", 0, "London", "1342/08/18")
+add_event(contents, "Brest, France", 0, "Nantes", "1360/05/08")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
