@@ -120,16 +120,16 @@ d3.select('p#value-time').text(
 
 function stop_history(svg) {
 	clearInterval(time_interval);
-	gui.remove(controls, "stop_history");
-	gui.add(controls, "start_history").name("Start");
+	gui.remove(stop_history_button);
+	start_history_button = gui.add(controls, "start_history").name("Start");
 }
 
 controls.stop_history = () => stop_history(svg);
 
 // Start changing year every second
 function start_history(svg) {
-	gui.remove(controls, "start_history");
-	gui.add(controls, "stop_history").name("Stop");
+	gui.remove(start_history_button);
+	stop_history_button = gui.add(controls, "stop_history").name("Stop");
 	let end_date = new Date(0);
 	end_date.setFullYear(controls.End);
 	map_date.setFullYear(controls.Beginning);
@@ -148,7 +148,7 @@ function start_history(svg) {
     
 // Button to start history
 controls.start_history = () => start_history(svg);
-gui.add(controls, "start_history").name("Start");
+start_history_button = gui.add(controls, "start_history").name("Start");
 
     const getCityDesc = d => `
     <div>Regime: <b>${d}</b></div>
