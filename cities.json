@@ -481,7 +481,8 @@
             },
             {
                 "date": "1943/11/13",
-                "regime": "Union of Soviet Socialist Republics"
+		"type": 0,
+                "regime": "Moscow"
             },
             {
                 "date": "1991/08/24",
@@ -1451,7 +1452,8 @@
         "history": [
             {
                 "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
+		"type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -1462,11 +1464,8 @@
         "history": [
             {
                 "date": "1721/10/22",
-                "regime": "Russian Empire"
-            },
-            {
-                "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
+		"type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -1475,13 +1474,10 @@
         "latitude": 56.5,
         "longitude": 84.966667,
         "history": [
-            {
+                     {
                 "date": "1721/10/22",
-                "regime": "Russian Empire"
-            },
-            {
-                "date": "1922/12/30",
-                "regime": "Union of Soviet Socialist Republics"
+		"type": 0,
+                "regime": "Moscow"
             }
         ]
     },

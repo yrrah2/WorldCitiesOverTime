@@ -118,22 +118,32 @@ d3.select('p#value-time').text(
     map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
 );
 
+function stop_history(svg) {
+	clearInterval(time_interval);
+	gui.remove(controls, "stop_history");
+	gui.add(controls, "start_history").name("Start");
+}
+
+controls.stop_history = () => stop_history(svg);
+
 // Start changing year every second
 function start_history(svg) {
-    let end_date = new Date(0);
-    end_date.setFullYear(controls.End);
-    map_date.setFullYear(controls.Beginning);
-    var time_interval = setInterval(function(){
-        if(map_date <= end_date) {
-            map_date = map_date.addTime(controls.Step, controls.Unit);
-            d3.select('p#value-time').text(
-    map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
-);
-            voronoi_refresh();
-     } else {
-         clearInterval(time_interval);
-     }
-    },100);
+	gui.remove(controls, "start_history");
+	gui.add(controls, "stop_history").name("Stop");
+	let end_date = new Date(0);
+	end_date.setFullYear(controls.End);
+	map_date.setFullYear(controls.Beginning);
+	var time_interval = setInterval(function(){
+		if(map_date <= end_date) {
+			map_date = map_date.addTime(controls.Step, controls.Unit);
+			d3.select('p#value-time').text(
+				map_date.toLocaleDateString(date_locale, { year: 'numeric', month: 'long', day: 'numeric' })
+			);
+			voronoi_refresh();
+		} else {
+			clearInterval(time_interval);
+		}
+	},100);
 }
     
 // Button to start history
