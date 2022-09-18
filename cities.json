@@ -40,6 +40,31 @@
                 "regime": "Roman Empire"
             },
             {
+                "date": "0414",
+                "type": 1,
+                "regime": "Kingdom of the Visigoths"
+            },
+            {
+                "date": "713",
+                "type": 0,
+                "regime": "Cordoba, Spain"
+            },
+            {
+                "date": "0801/04/04",
+                "type": 0,
+                "regime": "Metz"
+            },
+            {
+                "date": "1359/06/11",
+                "type": 1,
+                "regime": "Crown of Aragon"
+            },
+            {
+                "date": "1652/10",
+                "type": 0,
+                "regime": "Madrid"
+            },
+            {
                 "date": "1931/04/14",
                 "regime": "Second Spanish Republic"
             }
@@ -1822,6 +1847,70 @@
                 "date": "1990/03/11",
                 "type": 1,
                 "regime": "Republic of Lithuania"
+            }
+        ]
+    },
+    {
+        "name": "Cordoba, Spain",
+        "latitude": 37.884507,
+        "longitude": -4.779568,
+        "history": [
+            {
+                "date": "-0152",
+                "type": 0,
+                "regime": "Rome"
+            },
+            {
+                "date": "0571",
+                "type": 1,
+                "regime": "Kingdom of the Visigoths"
+            },
+            {
+                "date": "0712",
+                "type": 1,
+                "regime": "Umayyad Caliphate"
+            },
+            {
+                "date": "0756/05/15",
+                "type": 1,
+                "regime": "Emirate of Cordoba"
+            },
+            {
+                "date": "0929/01/16",
+                "type": 1,
+                "regime": "Caliphate of Cordoba"
+            },
+            {
+                "date": "1091/03",
+                "type": 1,
+                "regime": "Almoravid dynasty"
+            },
+            {
+                "date": "1236/06/30",
+                "type": 0,
+                "regime": "Madrid"
+            }
+        ]
+    },
+    {
+        "name": "Madrid",
+        "latitude": 37.884507,
+        "longitude": -4.779568,
+        "history": [
+            {
+                "date": "1085",
+                "type": 1,
+                "regime": "Kingdom of Castile"
+            },
+            {
+                "date": "1230/09/23",
+                "type": 1,
+                "regime": "Crown of Castile"
+            },
+            {
+                "date": "1715",
+                "type": 1,
+                "regime": "Kingdom of Spain"
             }
         ]
     }
