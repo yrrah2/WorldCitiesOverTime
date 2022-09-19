@@ -36,32 +36,13 @@ body {
   fill: #59c8ea;
   fill-opacity: 1;
 }
-
-.graticule {
-  stroke: black;
-  stroke-width: 0.1;
-  stroke-opacity: 0.3;
-  fill: none;
-}
-
-.plate {
-  fill: darkslategrey;
-  fill-opacity: 0;
-  stroke: darkslategrey;
-  stroke-width: 0.3;
-  stroke-opacity: 0.5;
-}
-
-.plate:hover {
-  fill-opacity: 0.07;
-}
-
+  
 .voronoi {
   fill-opacity: 0.45;
 }
 
 .voronoi:hover {
-  fill-opacity: 0.6;
+  fill-opacity: 0.65;
 }
 
 .tooltip {
