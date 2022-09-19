@@ -119,6 +119,8 @@ d3.select('p#value-time').text(
 );
 
 var time_interval;
+var start_history_button;
+var stop_history_button;
 
 function stop_history(svg) {
 	clearInterval(time_interval);
