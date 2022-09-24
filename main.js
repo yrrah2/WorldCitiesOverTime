@@ -82,8 +82,9 @@ function render() {
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
-]).then(([world, cities, regimes]) => {
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json()),
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/countries-temp.json').then(r => r.json())
+]).then(([world, cities, regimes, borders]) => {
 
 // Set colors for each area
 var regime_colors = {"No one": "#353535"};
@@ -169,6 +170,12 @@ start_history_button = gui.add(controls, "start_history").name("Start");
     // Sphere (Land)
     svg.append('path').attr('class', 'geo sphere')
         .datum({ type: 'Sphere' });
+
+    svg.append("path")
+      .datum(topojson.feature(borders, borders.objects.land))
+      .attr("class", "land")
+      .attr("d", path);
+
     
     function remove_voronois(){
         svg.selectAll("g").remove();
