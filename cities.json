@@ -63,10 +63,6 @@
                 "date": "1652/10",
                 "type": 0,
                 "regime": "Madrid"
-            },
-            {
-                "date": "1931/04/14",
-                "regime": "Second Spanish Republic"
             }
         ]
     },
@@ -362,7 +358,8 @@
             },
             {
                 "date": "1458/01/01",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1832/08/30",
@@ -623,7 +620,8 @@
             },
             {
                 "date": "1516/10/02",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1958/02/22",
@@ -655,7 +653,8 @@
             },
             {
                 "date": "1516/08/24",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1703/05/01",
@@ -663,7 +662,8 @@
             },
             {
                 "date": "1705/10/01",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             }
         ]
     },
@@ -821,11 +821,13 @@
             },
             {
                 "date": "1870/09/28",
-                "regime": "North German Confederation"
+                "type": 0,
+                "regime": "Berlin"
             },
             {
                 "date": "1958/10/04",
-                "regime": "Fifth French Republic"
+                "type": 0,
+                "regime": "Paris"
             }
         ]
     },
@@ -870,7 +872,8 @@
             },
             {
                 "date": "1517/01/30",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1798/07/21",
@@ -878,7 +881,8 @@
             },
             {
                 "date": "1801/06/22",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1914/12/19",
@@ -928,7 +932,8 @@
             },
             {
                 "date": "1534/12/01",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1932/10/03",
@@ -982,7 +987,8 @@
             },
             {
                 "date": "1574/09/13",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1881/05/12",
@@ -1052,7 +1058,8 @@
             },
             {
                 "date": "1525/01/01",
-                "regime": "Ottoman Empire"
+		"type": 0,
+                "regime": "Istanbul"
             },
             {
                 "date": "1919/01/10",
@@ -1424,19 +1431,23 @@
             },
             {
                 "date": "1648/10/24",
-                "regime": "Kingdom of France"
+		"type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1792/09/21",
-                "regime": "First French Republic"
+		"type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1804/05/18",
-                "regime": "First French Empire"
+		"type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1814/03/03",
-                "regime": "Kingdom of France"
+		"type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1944/12/13",
@@ -1444,7 +1455,8 @@
             },
             {
                 "date": "1958/10/04",
-                "regime": "Fifth French Republic"
+		"type": 0,
+                "regime": "Paris"
             }
         ]
     },
@@ -2249,8 +2261,8 @@
         "history": [
             {
                 "date": "1815/06/09",
-                "type": 1,
-                "regime": "Kingdom of Prussia"
+                "type": 0,
+                "regime": "Berlin"
             },
             {
                 "date": "1949/05/23",
