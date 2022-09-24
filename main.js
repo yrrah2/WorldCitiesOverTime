@@ -184,7 +184,12 @@ start_history_button = gui.add(controls, "start_history").name("Start");
             return "No one";
         } else if (event.type == 0) {
                 let superior = cities.find(city => city.name == event.regime);
-                return recentEvent(superior.history);
+		if (superior == undefined){
+			console.log(cities)
+			return "No one"
+		} else {
+                	return recentEvent(superior.history)
+		}
         } else {
                 return event.regime.toString()
         }
