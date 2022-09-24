@@ -501,6 +501,11 @@
         "latitude": 45.3664864,
         "history": [
             {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
                 "date": "2014/03/18",
                 "regime": "Russian Federation"
             }
@@ -1226,7 +1231,23 @@
         "name": "Sevastopol",
         "latitude": 44.6,
         "longitude": 33.5333,
-        "history": []
+        "history": [
+            {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
+                "date": "2014/02/27",
+                "type": 1,
+                "regime": "Republic of Crimea"
+            },
+            {
+                "date": "2014/03/18",
+                "type": 0,
+                "regime": "Moscow"
+            }
+        ]
     },
     {
         "name": "Berlin",
@@ -1255,7 +1276,18 @@
         "name": "Odessa",
         "latitude": 46.485722,
         "longitude": 30.743444,
-        "history": []
+        "history": [
+            {
+                "date": "1794",
+                "type": 0,
+                "regime": "Saint Petersburg"
+            },
+            {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            }
+        ]
     },
     {
         "name": "Calais",
@@ -1396,6 +1428,11 @@
         "longitude": 37.549444,
         "history": [
             {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
                 "date": "2022/05/20",
                 "regime": "Donetsk People's Republic"
             }
@@ -1406,6 +1443,11 @@
         "latitude": 48.002778,
         "longitude": 37.805278,
         "history": [
+            {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            },
             {
                 "date": "2014/04/07",
                 "regime": "Donetsk People's Republic"
@@ -1989,6 +2031,146 @@
                 "date": "1793/12/19",
                 "type": 0,
                 "regime": "Paris"
+            }
+        ]
+    },
+    {
+        "name": "Kherson",
+        "latitude": 46.6425,
+        "longitude": 32.625,
+        "history": [
+            {
+                "date": "1778/06/18",
+                "type": 0,
+                "regime": "Saint Petersburg"
+            },
+            {
+                "date": "1991/08/24",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
+                "date": "2022/03/02",
+                "type": 1,
+                "regime": "Kherson military-civilian administration"
+            }
+        ]
+    },
+    {
+        "name": "Ho Chi Minh City",
+        "latitude": 10.775556,
+        "longitude": 106.701944,
+        "history": [
+            {
+                "date": "1949/07/02",
+                "type": 1,
+                "regime": "State of Vietnam"
+            },
+            {
+                "date": "1975/04/30",
+                "type": 1,
+                "regime": "Republic of South Vietnam"
+            },
+            {
+                "date": "1976/07/02",
+                "type": 0,
+                "regime": "Hanoi"
+            }
+        ]
+    },
+    {
+        "name": "Hanoi",
+        "latitude": 21.028333,
+        "longitude": 105.854167,
+        "history": [
+            {
+                "date": "1873/11/20",
+                "type": 0,
+                "regime": "Paris"
+            },
+            {
+                "date": "1976/07/02",
+                "type": 1,
+                "regime": "Socialist Republic of Vietnam"
+            }
+        ]
+    },
+    {
+        "name": "Lugansk",
+        "latitude": 48.566667,
+        "longitude": 39.333333,
+        "history": [
+            {
+                "date": "2014/04/27",
+                "type": 1,
+                "regime": "Lugansk People's Republic"
+            }
+        ]
+    },
+    {
+        "name": "Lvov",
+        "latitude": 49.8425,
+        "longitude": 24.032222,
+        "history": [
+            {
+                "date": "1675/08/24",
+                "type": 0,
+                "regime": "Krakow"
+            },
+            {
+                "date": "1939/09/22",
+                "type": 0,
+                "regime": "Kiev"
+            },
+            {
+                "date": "1941/06/30",
+                "type": 0,
+                "regime": "Ukrainian National Government (Banderite)"
+            },
+            {
+                "date": "1941/09/01",
+                "type": 0,
+                "regime": "Reichskommissariat Ukraine"
+            },
+            {
+                "date": "1944/08/29",
+                "type": 0,
+                "regime": "Kiev"
+            }
+        ]
+    },
+    {
+        "name": "Zaporizhzhia",
+        "latitude": 47.85,
+        "longitude": 35.1175,
+        "history": []
+    },
+    {
+        "name": "Dnipropetrovsk",
+        "latitude": 48.4675,
+        "longitude": 35.04,
+        "history": []
+    },
+    {
+        "name": "Nikolaev",
+        "latitude": 46.966667,
+        "longitude": 32,
+        "history": []
+    },
+    {
+        "name": "Krakow",
+        "latitude": 50.061389,
+        "longitude": 19.937222,
+        "history": [
+            {
+                "date": "1569/07/01",
+                "type": 1,
+                "regime": "Polish-Lithuanian Commonwealth"
+            },
+            {
+                "date": "1989/12/31",
+                "type": 1,
+                "regime": "Third Republic of Poland"
             }
         ]
     }
