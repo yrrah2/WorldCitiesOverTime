@@ -9,8 +9,7 @@
     "Second Spanish Republic",
     "Populares Faction",
     "Gallic Empire",
-    "Francia",
-    "Carolingian Empire",
+    "Roman Empire (Francia)",
     "West Francia",
     "Kingdom of France",
     "Kingdom of England",
@@ -39,6 +38,7 @@
     "Federal Republic of Germany",
     "Roman Kingdom",
     "Kingdom of Italy",
+    "Papal States",
     "Republic of Italy",
     "Kingdom of Hungary",
     "Golden Horde",
@@ -61,7 +61,6 @@
     "Tsardom of Russia",
     "Russian Empire",
     "Reichskommissariat Ukraine",
-    "Union of Soviet Socialist Republics",
     "Ukrainian Soviet Socialist Republic",
     "Ukraine",
     "Russian Federation",
@@ -81,6 +80,7 @@
     "Dominion of India",
     "Republic of India",
     "Kingdom of Morocco",
+    "Union of Soviet Socialist Republics",
     "New Zealand",
     "Hunnic Empire",
     "Middle Francia",
@@ -160,5 +160,8 @@
     "Caliphate of Cordoba",
     "Almoravid dynasty",
     "Kingdom of Castile",
-    "Crown of Castile"
+    "Crown of Castile",
+    "Visigothic Empire",
+    "Kingdom of Navarre",
+    "Duchy of Savoy"
 ]

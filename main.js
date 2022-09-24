@@ -82,9 +82,8 @@ function render() {
 Promise.all([
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/ocean.json').then(r => r.json()),
   fetch('https://yrrah2.github.io/WorldCitiesOverTime/cities.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json()),
-  fetch('https://yrrah2.github.io/WorldCitiesOverTime/countries-temp.json').then(r => r.json())
-]).then(([world, cities, regimes, borders]) => {
+  fetch('https://yrrah2.github.io/WorldCitiesOverTime/regimes.json').then(r => r.json())
+]).then(([world, cities, regimes]) => {
 
 // Set colors for each area
 var regime_colors = {"No one": "#353535"};
@@ -171,23 +170,6 @@ start_history_button = gui.add(controls, "start_history").name("Start");
     svg.append('path').attr('class', 'geo sphere')
         .datum({ type: 'Sphere' });
 
-    svg.append("path")
-      .datum(topojson.feature(borders, borders.objects.land))
-      .attr("class", "land")
-      .attr("d", path);
-
-	console.log(borders);
-    for (var j = 0; j < borders.length; j++) {
-console.log(borders[j]);
-        svg.append("path", ".graticule")
-          .datum(borders[j])
-          .attr("fill", colors.clickable)
-          .attr("d", path)
-          .attr("class", "clickable")
-          .attr("data-country-id", j)
-    }
-
-    
     function remove_voronois(){
         svg.selectAll("g").remove();
         svg.selectAll(".ocean").remove();

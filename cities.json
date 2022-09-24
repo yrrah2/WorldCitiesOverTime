@@ -101,11 +101,7 @@
             },
             {
                 "date": "0486",
-                "regime": "Francia"
-            },
-            {
-                "date": "0800/12/25",
-                "regime": "Carolingian Empire"
+                "regime": "Roman Empire (Francia)"
             },
             {
                 "date": "0843/08/01",
@@ -291,6 +287,11 @@
             {
                 "date": "0476/09/02",
                 "regime": "Kingdom of Italy"
+            },
+            {
+                "date": "0756",
+                "type": 1,
+                "regime": "Papal States"
             },
             {
                 "date": "1946/06/02",
@@ -481,7 +482,7 @@
             },
             {
                 "date": "1943/11/13",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             },
             {
@@ -1452,7 +1453,7 @@
         "history": [
             {
                 "date": "1922/12/30",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             }
         ]
@@ -1464,7 +1465,7 @@
         "history": [
             {
                 "date": "1721/10/22",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             }
         ]
@@ -1474,9 +1475,9 @@
         "latitude": 56.5,
         "longitude": 84.966667,
         "history": [
-                     {
+            {
                 "date": "1721/10/22",
-		"type": 0,
+                "type": 0,
                 "regime": "Moscow"
             }
         ]
@@ -1516,6 +1517,11 @@
             {
                 "date": "1815/03/20",
                 "regime": "Kingdom of the Two Sicilies"
+            },
+            {
+                "date": "1860/05/30",
+                "type": 0,
+                "regime": "Turin"
             }
         ]
     },
@@ -1907,6 +1913,82 @@
                 "date": "1715",
                 "type": 1,
                 "regime": "Kingdom of Spain"
+            }
+        ]
+    },
+    {
+        "name": "Pamplona",
+        "latitude": 42.816667,
+        "longitude": -1.65,
+        "history": [
+            {
+                "date": "-0074",
+                "type": 0,
+                "regime": "Rome"
+            },
+            {
+                "date": "0466",
+                "type": 1,
+                "regime": "Visigothic Empire"
+            },
+            {
+                "date": "0542",
+                "type": 0,
+                "regime": "Paris"
+            },
+            {
+                "date": "0824",
+                "type": 1,
+                "regime": "Kingdom of Navarre"
+            },
+            {
+                "date": "1512/07/25",
+                "type": 0,
+                "regime": "Madrid"
+            }
+        ]
+    },
+    {
+        "name": "Turin",
+        "latitude": 45.079167,
+        "longitude": 7.676111,
+        "history": [
+            {
+                "date": "-0027",
+                "type": 0,
+                "regime": "Rome"
+            },
+            {
+                "date": "0773",
+                "type": 0,
+                "regime": "Paris"
+            },
+            {
+                "date": "1562",
+                "type": 1,
+                "regime": "Duchy of Savoy"
+            },
+            {
+                "date": "1861/03/17",
+                "type": 1,
+                "regime": "Kingdom of Italy"
+            }
+        ]
+    },
+    {
+        "name": "Toulon",
+        "latitude": 43.125833,
+        "longitude": 5.930556,
+        "history": [
+            {
+                "date": "1707/08/21",
+                "type": 0,
+                "regime": "Paris"
+            },
+            {
+                "date": "1793/12/19",
+                "type": 0,
+                "regime": "Paris"
             }
         ]
     }
