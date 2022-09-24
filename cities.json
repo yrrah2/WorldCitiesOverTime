@@ -413,10 +413,6 @@
             },
             {
                 "date": "1764/01/01",
-                "regime": "Kingdom of Prussia"
-            },
-            {
-                "date": "1871/01/18",
                 "type": 0,
                 "regime": "Berlin"
             },
@@ -1148,7 +1144,8 @@
         "history": [
             {
                 "date": "1515/09/14",
-                "regime": "Kingdom of France"
+                "type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1797/06/29",
@@ -1176,7 +1173,8 @@
             },
             {
                 "date": "1859/11/10",
-                "regime": "Second French Empire"
+                "type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1861/03/17",
@@ -1255,6 +1253,11 @@
         "longitude": 13.405,
         "history": [
             {
+                "date": "1701/01/18",
+                "type": 1,
+                "regime": "Kingdom of Prussia"
+            },
+            {
                 "date": "1945/03/02",
                 "regime": "Red Army"
             },
@@ -1300,7 +1303,8 @@
             },
             {
                 "date": "1558/01/08",
-                "regime": "Kingdom of France"
+                "type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1596/04/24",
@@ -1308,7 +1312,8 @@
             },
             {
                 "date": "1598/05/02",
-                "regime": "Kingdom of France"
+                "type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1940/05/26",
@@ -1626,8 +1631,13 @@
         "history": [
             {
                 "date": "1485/06/01",
+                "type": 0,
+                "regime": "Budapest"
+            },
+            {
+                "date": "1804/08/11",
                 "type": 1,
-                "regime": "Kingdom of Hungary"
+                "regime": "Austrian Empire"
             }
         ]
     },
@@ -2169,8 +2179,138 @@
             },
             {
                 "date": "1989/12/31",
+                "type": 0,
+                "regime": "Warsaw"
+            }
+        ]
+    },
+    {
+        "name": "Munich",
+        "latitude": 48.1375,
+        "longitude": 11.575,
+        "history": [
+            {
+                "date": "1805/12/26",
                 "type": 1,
-                "regime": "Third Republic of Poland"
+                "regime": "Kingdom of Bavaria"
+            },
+            {
+                "date": "1918/11/08",
+                "type": 1,
+                "regime": "People's State of Bavaria"
+            },
+            {
+                "date": "1919/04/06",
+                "type": 1,
+                "regime": "Bavarian Council Republic"
+            },
+            {
+                "date": "1919/05/01",
+                "type": 0,
+                "regime": "Berlin"
+            },
+            {
+                "date": "1949/05/23",
+                "type": 0,
+                "regime": "Bonn"
+            },
+            {
+                "date": "1990/10/03",
+                "type": 0,
+                "regime": "Berlin"
+            }
+        ]
+    },
+    {
+        "name": "Bonn",
+        "latitude": 50.733333,
+        "longitude": 7.1,
+        "history": [
+            {
+                "date": "1815/06/09",
+                "type": 1,
+                "regime": "Kingdom of Prussia"
+            },
+            {
+                "date": "1949/05/23",
+                "type": 1,
+                "regime": "Federal Republic of Germany"
+            }
+        ]
+    },
+    {
+        "name": "Prague",
+        "latitude": 50.0875,
+        "longitude": 14.421389,
+        "history": [
+            {
+                "date": "1198",
+                "type": 1,
+                "regime": "Kingdom of Bohemia"
+            },
+            {
+                "date": "1648/10/24",
+                "type": 0,
+                "regime": "Vienna"
+            },
+            {
+                "date": "1948/02/25",
+                "type": 1,
+                "regime": "Fourth Czechoslovak Republic"
+            },
+            {
+                "date": "1960/07/11",
+                "type": 1,
+                "regime": "Czechoslovak Socialist Republic"
+            },
+            {
+                "date": "1990/04/23",
+                "type": 1,
+                "regime": "Czech and Slovak Federative Republic"
+            },
+            {
+                "date": "1992/12/31",
+                "type": 1,
+                "regime": "Czech Republic"
+            }
+        ]
+    },
+    {
+        "name": "Zagreb",
+        "latitude": 45.816667,
+        "longitude": 15.983333,
+        "history": [
+            {
+                "date": "1094",
+                "type": 0,
+                "regime": "Budapest"
+            },
+            {
+                "date": "1918/10/29",
+                "type": 1,
+                "regime": "State of Slovenes, Croats and Serbs"
+            },
+            {
+                "date": "1918/12/01",
+                "type": 0,
+                "regime": "Belgrade"
+            },
+            {
+                "date": "1991/06/25",
+                "type": 1,
+                "regime": "Republic of Croatia"
+            }
+        ]
+    },
+    {
+        "name": "Belgrade",
+        "latitude": 44.817778,
+        "longitude": 20.456944,
+        "history": [
+            {
+                "date": "1918/12/01",
+                "type": 1,
+                "regime": "Kingdom of Serbs, Croats and Slovenes"
             }
         ]
     }
