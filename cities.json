@@ -259,11 +259,8 @@
             },
             {
                 "date": "1949/03/23",
-                "regime": "West Germany"
-            },
-            {
-                "date": "1990/10/03",
-                "regime": "Federal Republic of Germany"
+                "type": 0,
+                "regime": "Bonn"
             }
         ]
     },
@@ -811,7 +808,8 @@
             },
             {
                 "date": "1697/10/30",
-                "regime": "Kingdom of France"
+                "type": 0,
+                "regime": "Paris"
             },
             {
                 "date": "1870/09/28",
@@ -1256,6 +1254,16 @@
                 "date": "1701/01/18",
                 "type": 1,
                 "regime": "Kingdom of Prussia"
+            },
+            {
+                "date": "1871/01/18",
+                "type": 1,
+                "regime": "German Empire"
+            },
+            {
+                "date": "1933/01/30",
+                "type": 1,
+                "regime": "Nazi Germany"
             },
             {
                 "date": "1945/03/02",
