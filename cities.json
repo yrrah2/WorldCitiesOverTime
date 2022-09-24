@@ -471,6 +471,7 @@
             },
             {
                 "date": "1941/09/19",
+                "type": 1,
                 "regime": "Reichskommissariat Ukraine"
             },
             {
@@ -500,7 +501,8 @@
             },
             {
                 "date": "2014/03/18",
-                "regime": "Russian Federation"
+                "type": 0,
+                "regime": "Moscow"
             }
         ]
     },
@@ -601,7 +603,8 @@
             },
             {
                 "date": "1949/10/01",
-                "regime": "People's Republic of China"
+                "type": 0,
+                "regime": "Beijing"
             }
         ]
     },
@@ -621,6 +624,11 @@
             {
                 "date": "1516/10/02",
                 "regime": "Ottoman Empire"
+            },
+            {
+                "date": "1958/02/22",
+                "type": 0,
+                "regime": "Cairo"
             }
         ]
     },
@@ -883,6 +891,11 @@
             {
                 "date": "1952/07/23",
                 "regime": "Republic of Egypt"
+            },
+            {
+                "date": "1958/02/22",
+                "type": 1,
+                "regime": "United Arab Republic"
             },
             {
                 "date": "1958/02/22",
@@ -2147,7 +2160,7 @@
             },
             {
                 "date": "1941/09/01",
-                "type": 0,
+                "type": 1,
                 "regime": "Reichskommissariat Ukraine"
             },
             {
