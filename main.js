@@ -176,6 +176,15 @@ start_history_button = gui.add(controls, "start_history").name("Start");
       .attr("class", "land")
       .attr("d", path);
 
+    for (j = 0; j < borders.length; j++) {
+        svg.append("path", ".graticule")
+          .datum(borders[j])
+          .attr("fill", colors.clickable)
+          .attr("d", path)
+          .attr("class", "clickable")
+          .attr("data-country-id", j)
+    }
+
     
     function remove_voronois(){
         svg.selectAll("g").remove();
